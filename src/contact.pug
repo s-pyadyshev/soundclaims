@@ -1,0 +1,36 @@
+extends pug/base
+
+prepend vars
+  - title = 'Contact'
+
+append vars
+
+block content
+  .contact-us.contact-us--aside.contact-us--moon&attributes(attributes)
+    .container.container-lg
+      .contact-us__wrap
+        .contact-us__bg-wrap
+          img.contact-us__bg(src='images/contact1.jpg' alt="" width="1920", height="1280" loading="lazy")
+        .contact-us__wrapper
+          img.contact-us__bg.contact-us__bg--inner(src='images/contact1.jpg' alt="" width="1920", height="1280" loading="lazy")
+          .contact-us__inner
+            .contact-us__text
+              h3 Let’s talk solutions.
+              p How can we help you? Reach out today and experience service that’s fast, straightforward, and effective.
+            .contact-us__form
+              form.form-contact(action="" method="post")
+                .form-contact__inputs
+                  .form-control
+                    label.label(for="fullname") Full name
+                    input.input.input--default#fullname(type="text" name="text" placeholder="First and last name")
+                  .form-control
+                    label.label(for="email") Email Address
+                    input.input.input--default#email(type="email" name="email" placeholder="E-mail Address")
+                .form-contact__message.full-width
+                  .form-control
+                    label.label(for="message") Message
+                    textarea.textarea.textarea--default#message(name="message" placeholder="How can we help you?" rows="3")
+                .full-width
+                  button.button.button--primary(type="submit")
+                    span Submit
+                    +svg("arrow-right").button__icon

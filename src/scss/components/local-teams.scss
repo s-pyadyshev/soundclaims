@@ -1,0 +1,47 @@
+.local-teams {
+  margin-bottom: 80px;
+
+  h2 {
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: flex;
+    overflow: auto hidden;
+    column-gap: 30px;
+    margin-inline: calc(var(--container-padding) * -1);
+    padding-inline: var(--container-padding);
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    margin-bottom: 100px;
+
+    h2 {
+      font-size: 36px;
+      line-height: 50px;
+    }
+
+    &__list {
+      margin-inline: min(calc(var(--container-padding) * -1),
+          calc(var(--container-padding) * -1 - ((100vw - 1290px) / 2)));
+      padding-inline: max(var(--container-padding), calc(var(--container-padding) + ((100vw - 1290px) / 2)));
+    }
+  }
+
+  @media (min-width: 1511px) {
+    &__list {
+      margin-inline: -160px;
+      padding-inline: 160px;
+    }
+  }
+}

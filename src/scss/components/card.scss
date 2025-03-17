@@ -1,0 +1,180 @@
+.card {
+  max-width: 405px;
+  padding: 25px;
+  box-shadow: 0 4px 45px 0 #00000014;
+  background-color: #fff;
+
+  @include desktop {
+    padding: 50px;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-family: $font-secondary;
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  p {
+    font-size: 15px;
+
+    @include laptop {
+      font-size: 20px;
+    }
+  }
+}
+
+.card--contact {
+  background-color: $color-primary;
+  color: #fff;
+
+  @include desktop {
+    margin-right: 0 !important;
+  }
+}
+
+.card--contact h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+
+  @include desktop {
+    font-size: 30px;
+  }
+}
+
+.card--contact p {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-family: $font-secondary;
+
+  @include desktop {
+    font-size: 18px;
+  }
+
+  @include desktop-l {
+    font-size: 20px;
+  }
+}
+
+.card--contact b {
+  font-weight: 300;
+  font-size: 18px;
+
+  @include desktop {
+    font-size: 24px;
+  }
+}
+
+.card--contact__section {
+  margin-top: 50px;
+}
+
+.card--contact__section a {
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+
+  &:focus,
+  &:hover {
+    border-bottom: 1px solid transparent;
+  }
+}
+
+.card__body {
+  padding: 24px 40px;
+}
+
+.card__footer {
+  padding-top: 42px;
+
+  @include tablet {
+    padding: 34px 0;
+  }
+}
+
+.card-aside {
+  max-width: 480px;
+  padding: 52px;
+
+  @include tablet {
+    padding: 25px;
+  }
+
+  @include laptop {
+    padding: 52px;
+  }
+}
+
+.card-contact {
+  z-index: 4;
+  width: 334px;
+  padding: 35px;
+  box-shadow: 0px 4px 46.7px 0px #D620284D;
+
+  @include tablet {
+    padding: 35px;
+  }
+
+  @include laptop {
+    width: auto;
+  }
+
+  @media (min-width: 1800px) {
+    padding: 70px 70px 40px;
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+
+  .card__footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.card.card--service {
+  display: block;
+  background-color: #fff;
+  padding: 0;
+  text-decoration: none;
+  box-shadow: 0px 4px 46.7px 10px rgba(0, 0, 0, 0.1);
+
+
+  &:focus,
+  &:hover {
+    .card__body {
+      background-color: $color-primary;
+      color: #fff;
+    }
+
+    h3 {
+      color: #fff;
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    font-family: $font-primary;
+    margin-bottom: 0;
+    color: $color-primary;
+    transition: color 0.2s;
+
+    @include desktop {
+      font-size: 28px;
+    }
+  }
+
+  p {
+    font-weight: 300;
+    font-family: $font-secondary;
+    transition: color 0.2s;
+  }
+}
+
+.card.card--service .card__body {
+  background-color: #fff;
+  transition: background-color 0.2s;
+}

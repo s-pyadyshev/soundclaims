@@ -1,0 +1,9 @@
+include ./card-employee
+
+mixin local-teams(title, arr)
+    .local-teams
+        .container.container-sm
+            h2 !{title}
+            .local-teams__list
+                each item, key in arr
+                    +card-employee(item)

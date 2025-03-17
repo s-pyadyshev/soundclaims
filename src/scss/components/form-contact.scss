@@ -1,0 +1,29 @@
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px 67px;
+  }
+
+  label {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.form-contact__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+
+  @include desktop {
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+  }
+}

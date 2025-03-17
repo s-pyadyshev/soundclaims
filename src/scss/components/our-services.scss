@@ -1,0 +1,203 @@
+.our-services {
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(0deg, rgb(24, 9, 1) 42.5%, rgba(24, 9, 1, 0) 50%),
+    url("../../images/our-services.jpg");
+  -repeat: no-repeat;
+  background-size: cover, cover;
+  background-position:
+    center center,
+    top 0px right -350px;
+  padding-top: 315px;
+  padding-bottom: 100px;
+  border-radius: 0px 0px 20px 20px;
+  margin-top: -40px;
+  margin-bottom: 60px;
+
+  &__header,
+  &__title,
+  &__desc {
+    color: $color-white;
+  }
+
+  @include desktop {
+    padding-top: 422px;
+    padding-bottom: 142px;
+    background-image: linear-gradient(0deg, rgb(24, 9, 1) 55%, rgba(24, 9, 1, 0) 70%),
+      url("../../images/our-services.jpg");
+    background-position:
+      center center,
+      top right;
+    background-size: cover, contain;
+    margin-inline: auto;
+    max-width: 1920px;
+    margin-top: -160px;
+    margin-bottom: 120px;
+
+    .container {
+      padding-inline: 170px;
+
+      .our-services__header,
+      .our-services__title,
+      .our-services__desc {
+        padding-inline: 40px;
+      }
+
+      .button--our-services {
+        margin-inline: 40px;
+      }
+    }
+  }
+
+  @include desktop-l {
+    background-image: linear-gradient(0deg, rgb(24, 9, 1) 40%, rgba(24, 9, 1, 0) 70%),
+      url("../../images/our-services.jpg");
+  }
+}
+
+.our-services__desc {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 170%;
+  margin-bottom: 38px;
+  margin-top: 0;
+
+
+  @include laptop {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  br {
+    display: none;
+
+    @include laptop {
+      display: block;
+    }
+  }
+}
+
+.our-services__swiper-slide {
+  height: 100%;
+  border-radius: 12px;
+  border: 1px solid $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  color: $color-primary;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: $font-secondary;
+}
+
+.our-services__slider {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+
+  @include desktop {
+    padding: 20px 40px;
+  }
+
+  .swiper-slide {
+    width: 240px;
+    height: 110px;
+  }
+}
+
+.out-services__slider-block {
+  position: relative;
+  margin-bottom: 27px;
+
+  .swiper-pagination {
+    top: 50%;
+    left: -40px;
+    width: calc(100% + var(--container-padding) * 2);
+    height: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      background: transparent;
+      width: 100%;
+      height: 100%;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: $color-secondary;
+
+        @include laptop {
+          padding: 0;
+        }
+      }
+
+      @include desktop {
+        width: 20px;
+      }
+    }
+
+    @include desktop {
+      left: 50%;
+      transform: translateX(calc(-50%));
+      max-width: 1510px;
+      width: 100vw;
+    }
+  }
+
+  .mask {
+    height: 148px;
+    display: flex;
+    align-items: center;
+    width: 78px;
+
+    @include desktop {
+      width: 320px;
+    }
+
+    &:has(.swiper-button-disabled) {
+      opacity: 0;
+      width: 0px;
+    }
+  }
+
+  .mask-left {
+    background: linear-gradient(91.17deg, rgb(24, 9, 1) 36.313%, rgba(24, 9, 1, 0) 97.205%);
+    padding-right: 20px;
+
+    @include desktop {
+      background: linear-gradient(91.17deg, rgb(24, 9, 1) 88.876%, rgba(24, 9, 1, 0) 99.825%);
+      padding-right: 110px;
+      justify-content: end;
+    }
+  }
+
+  .mask-right {
+    justify-content: end;
+    background: linear-gradient(91.17deg, rgba(24, 9, 1, 0) 2.795%, rgb(24, 9, 1) 63.687%);
+    padding-left: 20px;
+
+    @include desktop {
+      background: linear-gradient(91.17deg, rgba(24, 9, 1, 0) 0.175%, rgb(24, 9, 1) 11.124%);
+      padding-left: 110px;
+      justify-content: start;
+    }
+  }
+}
+
+.our-services__title {
+  font-family: $font-secondary;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+  margin: 0;
+  margin-bottom: 19px;
+
+  @include laptop {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+}

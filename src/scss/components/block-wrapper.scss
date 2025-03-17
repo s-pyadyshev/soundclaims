@@ -1,0 +1,133 @@
+.block-wrapper {
+  background: transparent;
+
+  .wrapper-bot,
+  .wrapper-top {
+    width: 100%;
+    height: 27px;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    @include desktop {
+      height: 40px;
+    }
+  }
+
+  .wrapper-bot {
+    .wrapper__radius {
+      width: 27px;
+      height: 100%;
+      background-image: url("../../images/sprites/png/mobile-border-bot-left.png");
+      background-size: contain;
+
+      &:last-of-type {
+        background-image: url("../../images/sprites/png/mobile-border-bot-right.png");
+      }
+
+      @include desktop {
+        width: 40px;
+        background-image: url("../../images/sprites/png/desktop-border-bot-left.png");
+
+        &:last-of-type {
+          background-image: url("../../images/sprites/png/desktop-border-bot-right.png");
+        }
+      }
+    }
+
+    .wrapper__line {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      width: calc(100% - 54px);
+      background-image: url("../../images/sprites/png/mobile-border-line-bot.png");
+      background-repeat: repeat-x;
+      background-position: bottom;
+      background-size: contain;
+
+      @include desktop {
+        width: calc(100% - 80px);
+        background-image: url("../../images/sprites/png/desktop-border-line-bot.png");
+      }
+    }
+  }
+
+  .wrapper-mid {
+    height: auto;
+    min-height: 103px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-height: 203px;
+
+    .wrapper__content {
+      width: calc(100% - 54px);
+
+      @include desktop {
+        width: calc(100% - 80px);
+      }
+    }
+
+    .wrapper__line {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      width: 27px;
+      background-image: url("../../images/sprites/png/mobile-border-line-left.png");
+      background-repeat: repeat-y;
+      background-position: left;
+      background-size: contain;
+
+      &:last-of-type {
+        background-image: url("../../images/sprites/png/mobile-border-line-right.png");
+        background-position: right;
+      }
+
+      @include desktop {
+        width: 40px;
+        background-image: url("../../images/sprites/png/desktop-border-line-left.png");
+
+        &:last-of-type {
+          background-image: url("../../images/sprites/png/desktop-border-line-right.png");
+        }
+      }
+    }
+  }
+
+  .wrapper-top {
+    .wrapper__radius {
+      width: 27px;
+      height: 100%;
+      background-image: url("../../images/sprites/png/mobile-border-top-left.png");
+      background-size: contain;
+
+      &:last-of-type {
+        background-image: url("../../images/sprites/png/mobile-border-top-right.png");
+      }
+
+      @include desktop {
+        width: 40px;
+        background-image: url("../../images/sprites/png/desktop-border-top-left.png");
+
+        &:last-of-type {
+          background-image: url("../../images/sprites/png/desktop-border-top-right.png");
+        }
+      }
+    }
+
+    .wrapper__line {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      width: calc(100% - 54px);
+      background-image: url("../../images/sprites/png/mobile-border-line-top.png");
+      background-repeat: repeat-x;
+      background-position: top;
+
+      @include desktop {
+        width: calc(100% - 80px);
+      }
+    }
+  }
+}

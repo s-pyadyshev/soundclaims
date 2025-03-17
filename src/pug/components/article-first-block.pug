@@ -1,0 +1,11 @@
+mixin article-first-block(obj)
+    .article-first-block
+        .container.container-sm
+            .article-first-block__wrap
+                .article-first-block__wrapper
+                    h1 !{obj.title}
+                    span.article-first-block__author !{obj.author}
+                    span.article-first-block__date !{obj.date}
+                    if obj.badge
+                        .badge.badge--article-first-block
+                            span.badge__wrap Success Story

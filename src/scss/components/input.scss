@@ -1,0 +1,58 @@
+.input {
+  appearance: none;
+  border: 1px solid $color-secondary;
+  padding: 14px 20px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  border-radius: 10px;
+  background-color: $input-background-color;
+  color: $input-color;
+  transition-property: border-color;
+  transition-duration: $transition-duration;
+
+  @include tablet {
+    padding: 14px 30px;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border-color: $input-color;
+    outline: none;
+  }
+
+  &:hover {
+    border-color: $input-color;
+  }
+
+  &:active {
+    border-color: $input-color;
+  }
+
+  &[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &::placeholder {
+    font-weight: 300;
+    transition: $transition-duration;
+    color: $input-placeholder-color;
+  }
+}
+
+.input--default {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  color: #fff;
+
+  &:focus,
+  &:focus-visible {
+    border-color: rgba(255, 255, 255, 0.1);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #fff;
+  }
+}

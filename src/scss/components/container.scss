@@ -1,0 +1,26 @@
+:root {
+  --container-max-width: 1410px;
+}
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  max-width: calc(var(--container-padding) * 2 + var(--container-max-width));
+  padding-inline: var(--container-padding);
+
+  &-sm {
+    --container-max-width: 1190px;
+  }
+
+  &-lg {
+    --container-max-width: 1920px;
+  }
+
+  &-text {
+    --container-max-width: 752px;
+  }
+}
+
+.container--fluid {
+  max-width: 100%;
+}

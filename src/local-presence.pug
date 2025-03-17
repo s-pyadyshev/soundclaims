@@ -1,0 +1,80 @@
+extends pug/base
+
+prepend vars
+  - title = 'Local presence'
+
+append vars
+
+block content
+
+block content
+  include pug/components/local-teams
+
+  +page-header({
+    title: `Local presence`,
+    desc: "At Soundclaims, we believe that true success in debt recovery comes from being present where it matters most. With a network spanning over 40 countries, we bring expert local knowledge, legal expertise, and hands-on service directly to the heart of Africa’s business hubs."
+  }).decor.decor--page-header
+
+  +where-we-operate
+
+  +local-teams('Local teams',[
+    {
+      src: 'images/local-teams-img1.jpeg',
+      srcFlag: 'images/local-teams-imgFlag1.jpeg'
+    },
+    {
+      src: 'images/local-teams-img1.jpeg',
+      srcFlag: 'images/local-teams-imgFlag1.jpeg'
+    },
+    {
+      src: 'images/local-teams-img1.jpeg',
+      srcFlag: 'images/local-teams-imgFlag1.jpeg'
+    },
+    {
+      src: 'images/local-teams-img1.jpeg',
+      srcFlag: 'images/local-teams-imgFlag1.jpeg'
+    },
+    {
+      src: 'images/local-teams-img1.jpeg',
+      srcFlag: 'images/local-teams-imgFlag1.jpeg'
+    },
+    {
+      src: 'images/local-teams-img1.jpeg',
+      srcFlag: 'images/local-teams-imgFlag1.jpeg'
+    },
+    {
+      src: 'images/local-teams-img1.jpeg',
+      srcFlag: 'images/local-teams-imgFlag1.jpeg'
+    }
+  ])
+
+  +block-hero({
+    background_img: "images/market.png",
+    title: "Our boots on <br> the ground",
+    text: "Our local teams operate with a ‘boots on the ground’ mindset, ensuring that every case receives dedicated, in-region attention. Our specialists understand local laws, business practices, and cultural dynamics. This enables fast, effective, and transparent claims resolution tailored to each market.",
+    button : {
+      text: "Discover our services",
+      href: "#",
+    }
+  })
+
+  +block-news({
+    title: 'News',
+    subtitle: 'Supporting African Creativity',
+    text: 'As part of our social responsibility initiative, Soundclaims has partnered with African artists and cultural organizations to support creative projects. We believe that fostering local talent contributes to economic empowerment and cultural preservation. Our latest...',
+    list: [
+      {
+        text: 'Expanding our presence in Africa'
+      },
+      {
+        text: 'Successful debt recovery in challenging markets',
+        badge: true
+      }
+    ]
+  }).block-news--other-news
+
+  +contact-us({
+    subtitle: 'Let’s talk solutions.',
+    text: 'How can we help you? Reach out today and experience service that’s fast, straightforward, and effective.',
+    bgImg: 'images/contact2.jpeg'
+  }).contact-us--local.contact-us--sun

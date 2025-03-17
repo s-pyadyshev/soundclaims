@@ -1,0 +1,19 @@
+mixin page-header(obj)
+  .page-header&attributes(attributes)
+    .page-header__top
+      .container.container-sm
+        if (obj.title) 
+          h1.page-header__title !{obj.title}
+        if (obj.subheader)  
+          div.page-header__subheader !{obj.subheader}
+        if (obj.desc) 
+          div.page-header__desc !{obj.desc}
+        if (obj.button)
+          a.button(href=obj.button.href ? obj.button.href : "#" )
+            span !{obj.button.text}
+            +svg('arrow-right').button__icon
+    .page-header__bot 
+      .page-header__bot__left 
+      .page-header__mask
+      .page-header__bot__right
+

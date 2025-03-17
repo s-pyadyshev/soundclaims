@@ -1,0 +1,138 @@
+.where-we-operate {
+  margin-top: 90px;
+  margin-bottom: 70px;
+
+  @include desktop {
+    margin-top: 120px;
+    margin-bottom: 133px;
+  }
+
+  .where-we-operate__content {
+    @include desktop {
+      max-width: 535px;
+    }
+
+    .where-we-operate__text {
+      color: rgb(0, 0, 0);
+      font-family: $font-primary;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 170%;
+
+      p {
+        margin: 0;
+        font-size: inherit;
+      }
+
+      ul {
+        margin-left: 20px;
+        font-size: inherit;
+
+        @include desktop {
+          margin-left: 25px;
+        }
+      }
+
+      @include laptop {
+        font-size: 20px;
+      }
+    }
+
+    .where-we-operate__title {
+      font-family: $font-secondary;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 18px;
+
+      @include laptop {
+        font-size: 36px;
+      }
+
+      @include desktop {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .wrapper-mid {
+    .wrapper__content {
+      padding: 396px 20px 20px;
+
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 64px 67px;
+      }
+    }
+
+    .wrapper__line {
+      background-image: none;
+
+      @include desktop {
+        background-image: url("../../images/sprites/png/desktop-border-line-left.png");
+      }
+
+      &:first-child {
+        .line__block {
+          background-image: url("../../images/sprites/png/mobile-border-line-left.png");
+          background-repeat: repeat-y;
+          background-position: left;
+          background-size: contain;
+
+          @include desktop {
+            background: transparent;
+          }
+
+          &:first-child {
+            height: 189px;
+          }
+
+          &:last-child {
+            height: calc(100% - 102px - 189px);
+          }
+        }
+
+        .line__mask {
+          height: 102px;
+          background-image: url("../../images/sprites/png/mobile-border-curve-left.png");
+          background-repeat: no-repeat;
+          background-position: left;
+          background-size: contain;
+
+          @include desktop {
+            background: transparent;
+          }
+        }
+      }
+
+      &:last-child {
+        @include desktop {
+          background-image: none;
+
+          .line__block {
+            background-image: url("../../images/sprites/png/desktop-border-line-right.png");
+            background-repeat: repeat-y;
+            background-position: right;
+            background-size: contain;
+            height: 225px;
+
+            &:last-child {
+              height: calc(100% - 225px - 95px);
+            }
+          }
+
+          .line__mask {
+            background-image: url("../../images/sprites/png/desktop-border-curve-right.png");
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: contain;
+            height: 95px;
+          }
+        }
+      }
+    }
+  }
+}

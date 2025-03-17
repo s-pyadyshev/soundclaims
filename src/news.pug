@@ -1,0 +1,15 @@
+extends pug/base
+
+prepend vars
+  - title = 'News'
+  - pageWrapperClass = 'decor'
+
+append vars
+
+block content
+  +news-and-stories
+  +contact-us({
+    subtitle: 'Let’s talk solutions.',
+    text: 'How can we help you? Reach out today and experience service that’s fast, straightforward, and effective.',
+    bgImg: 'images/contact1.jpg'
+  })

@@ -1,0 +1,34 @@
+.form-cv {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px 67px;
+  }
+}
+
+.form-cv__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include tablet {
+    max-width: calc(100% - 228px - 67px);
+    width: 100%;
+    gap: 20px;
+  }
+}
+
+.form-cv__upload {
+  display: flex;
+  justify-content: center;
+
+  @include tablet {
+    flex-shrink: 0;
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+}

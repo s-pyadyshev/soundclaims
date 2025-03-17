@@ -1,0 +1,27 @@
+mixin our-services(obj)
+  .our-services&attributes(attributes)
+    .container.container-sm
+      .our-services__header.section-title
+        h2 our services
+      h2.our-services__title
+        | Local expertise.
+        | Global impact.
+      p.our-services__desc
+        | With local presence in over 40 African countries, we ensure fast, transparent, <br>
+        | and effective debt recovery services. Trust us to deliver results where it matters most.
+      .out-services__slider-block
+        .swiper.our-services__slider
+          .swiper-wrapper 
+            each item in obj.slides
+              .swiper-slide
+                a.our-services__swiper-slide(href=item.href ? item.href : "#" ) !{item.text}
+        .swiper-pagination
+          .mask.mask-left
+            button.swiper-button-prev
+              +svg('arrow-left-rounded')
+          .mask.mask-right
+            button.swiper-button-next
+              +svg('arrow-right-rounded')
+      a.button.button--our-services(href=obj.button.href ? obj.button.href : "#"  )
+            span !{obj.button.text}
+            +svg('arrow-right').button__icon

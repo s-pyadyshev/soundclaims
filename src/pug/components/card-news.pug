@@ -1,0 +1,18 @@
+mixin card-news(obj)
+    .card-news&attributes(attributes)
+        if obj.boldTitle
+            h4
+                b !{obj.boldTitle}
+                | !{obj.title}
+
+            p !{obj.text}
+        else
+            h4 !{obj.text}
+
+        if !obj.boldTitle
+            a.link.link--small.link--primary(href="javascript: void(0);" title="Read more")
+                span Read more
+                +svg('arrow-right').link__icon-right
+        if obj.badge
+            .badge.badge--card-news
+                span.badge__wrap Success Story

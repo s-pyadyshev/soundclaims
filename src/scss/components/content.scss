@@ -1,0 +1,25 @@
+.content {
+  margin-bottom: 70px;
+
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 27px;
+    margin-top: 0;
+    margin-bottom: 27px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include desktop {
+    margin-bottom: 118px;
+
+    p {
+      font-size: 20px;
+      line-height: 34px;
+      margin-bottom: 34px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+extends pug/base
+
+prepend vars
+  - title = 'Careers'
+
+append vars
+
+block content
+  +page-header({
+    title: `Careers`,
+    desc: "Join our team! Soundclaims is always on the lookout for talented professionals. We want to hear from you! Even if there are no openings listed, we encourage you to send in your resume. "
+  }).decor.decor--page-header
+  section.section-jobs
+    .container.container-sm
+      .section-jobs__wrap
+        aside.section-jobs__aside
+          h2 Current job openings
+        .section-jobs__list 
+          .job
+            h3 Angola, Morocco, Algeria
+            h4 Debt Collector
+            p Soundclaims is searching for experienced Debt Collectors to join our teams in Angola, Morocco, and Algeria.
+
+            b Qualifications:
+            ul
+              li Fluent in English and French
+              li Strong negotiation skills
+              li Knowledge of local business practices and culture
+              li Entrepreneurial mindset with a focus on results
+          .job
+            h3 Ghana, Kenya, Nigeria
+            h4 Lawyer
+            p We are seeking skilled Lawyers to represent our clients and handle debt recovery cases in Ghana, Kenya, and Nigeria.
+
+            b Qualifications:
+            ul
+              li Fluent in English; additional local languages are a plus
+              li Expertise in commercial and debt recovery law
+              li Experience in litigation and negotiation
+              li Deep understanding of local legal systems and practices
+  include pug/components/section-apply-now
+  +contact-us({
+    subtitle: 'Let’s talk solutions.',
+    text: 'How can we help you? Reach out today and experience service that’s fast, straightforward, and effective.',
+    bgImg: 'images/contact1.jpg'
+  })(style="margin-top: 50px")

@@ -1,0 +1,57 @@
+.input-file {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 240px;
+  gap: 20px;
+  padding: 50px;
+  font-family: $font-secondary;
+  font-size: 16px;
+  background-color: transparent;
+  border-radius: 10px;
+  color: $color-secondary;
+  transition-duration: $transition-duration;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none'%3E%3Crect width='227' height='271' x='.5' y='.5' stroke='%23E72A33' stroke-dasharray='10 10' rx='10'/%3E%3C/svg%3E");
+  width: 228px;
+  height: 272px;
+  text-align: center;
+
+  &:focus,
+  &:hover,
+  &:active {
+    .input-file__hint {
+      opacity: 1;
+    }
+  }
+
+}
+
+.input-file__hint {
+  position: absolute;
+  bottom: 24px;
+  opacity: 0;
+  max-width: 130px;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #757575;
+  text-transform: none;
+  transition: opacity 0.2s;
+}
+
+.input-file__icon svg {
+  width: 36px;
+  height: 45px;
+  fill: none;
+  stroke: $color-secondary;
+}
+
+.input-file__name {
+  max-width: 122px;
+  margin: 0 auto;
+  overflow: hidden;
+  word-break: break-all;
+  max-height: 84px;
+}

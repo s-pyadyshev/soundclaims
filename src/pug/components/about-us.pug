@@ -1,0 +1,30 @@
+mixin about-us
+  .about-us&attributes(attributes)
+    .block-wrapper
+      .container.container-sm
+        .wrapper-top 
+          .wrapper__radius 
+          .wrapper__line
+          .wrapper__radius 
+        .wrapper-mid 
+          .wrapper__line
+          .wrapper__content
+            .about-us__content
+              .section-title
+                h2 about us
+              .about-us__title 
+                | Your bridge <br> to Africa
+              p.about-us__text 
+                | Our deep local knowledge and global expertise help international credit insurers, export credit agencies, and financial institutions succeed in even the most complex markets.    
+              a.button.button--about-us(href="#")
+                span Get to know us
+                +svg("arrow-right").button__icon
+              img.about-us__img(src="images/about-us.png" alt="people." width="773" height="515")
+          .wrapper__line
+            .line__block 
+            .line__mask 
+            .line__block
+        .wrapper-bot
+          .wrapper__radius 
+          .wrapper__line
+          .wrapper__radius 

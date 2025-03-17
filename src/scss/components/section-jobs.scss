@@ -1,0 +1,39 @@
+.section-jobs {
+  margin-top: 47px;
+  margin-bottom: 40px;
+}
+
+.section-jobs__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 90px;
+  }
+}
+
+.section-jobs__aside {
+  width: 100%;
+  margin: 0;
+
+  @include laptop {
+    max-width: 231px;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.4;
+
+    @include laptop {
+      font-size: 32px;
+    }
+  }
+}
+
+.section-jobs__list {
+  width: 100%;
+  margin-top: 13px;
+}

@@ -1,0 +1,63 @@
+extends pug/base
+
+prepend vars
+  - title = 'Services'
+
+append vars
+
+block content
+  include pug/components/from-start-to-finish.pug
+  +page-header({
+    title: `Services`,
+    desc: "We offer comprehensive debt recovery and claims management solutions tailored to the complexities of the African market. Our expertise lies in navigating diverse legal environments, ensuring that our clients achieve successful outcomes swiftly and efficiently."
+  }).decor.decor--page-header.content-blocks-margin 
+  +from-start-to-finish({
+    title: 'From start to finish',
+    text: 'We handle the entire debt recovery process, from investigation to resolution, ensuring maximum returns for our clients.',
+    src: 'images/from-start-to-finish.jpeg',
+    steps: [
+      {
+        title: 'Investigations & claims assessment',
+        text: 'Thorough analysis and validation of claims to determine the best course of action. We gather the necessary information to build strong cases and guide the recovery process effectively.'
+      },
+      {
+        title: 'Asset Tracing',
+        text: 'Locating hidden or undisclosed assets to facilitate debt recovery. This service helps uncover financial trails that debtors may attempt to obscure.'
+      },
+      {
+        title: 'Debtor Visits',
+        text: 'On-the-ground engagement with debtors to expedite payment processes. Personal visits often lead to faster resolutions by fostering direct communication.'
+      },
+      {
+        title: 'Dispute Resolution',
+        text: 'Managing negotiations and resolving conflicts through legal and commercial channels. We work towards amicable settlements while protecting our clients’ interests.'
+      },
+      {
+        title: 'Debt Recovery Litigation',
+        text: 'Filing lawsuits and pursuing legal remedies to secure outstanding debts. Our legal teams ensure that litigation is efficient and results-oriented.'
+      },
+      {
+        title: 'Restructuring & Rescheduling',
+        text: 'Working with debtors to create feasible repayment plans. This approach maximizes recovery by offering debtors sustainable solutions.'
+      }
+    ]
+  })
+  +block-news({
+    title: 'News',
+    subtitle: 'Expanding our presence in Africa',
+    text: 'To better serve our clients, Soundclaims has expanded its presence in several African countries, including Ghana, Kenya, and South Africa. Our growing network ensures quicker response times, localized expertise, and more efficient claim resolutions dkfhgkjdfhgkjdfhgjkdfhgkjdhgkdhfgdkjfghkjdfghkdfjg',
+    list: [
+      {
+        text: 'Supporting African Creativity'
+      },
+      {
+        text: 'Successful debt recovery in challenging markets',
+        badge: true
+      }
+    ]
+  }).block-news--other-news
+  +contact-us({
+    subtitle: 'Let’s talk solutions.',
+    text: 'Need assistance with debt recovery in Africa? Our specialized teams are ready to help.',
+    bgImg: 'images/contact3.jpeg'
+  }).contact-us--services

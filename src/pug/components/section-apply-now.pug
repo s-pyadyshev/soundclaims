@@ -1,0 +1,29 @@
+section.section-accent
+  .container
+    .section-accent-wrap
+      h2 Apply now
+      form.form-cv(action="" method="post")
+        .form-cv__inputs
+          .form-control
+            label.label(for="position") Position
+            select.select#position(name="select")
+              option Debt Collector
+              option Lawyer
+          .form-control
+            label.label(for="fullname") Full name
+            input.input#fullname(type="text" name="text" placeholder="First and last name")
+          .form-control
+            label.label(for="email") Email Address
+            input.input#email(type="email" name="email" placeholder="E-mail Address")
+        .form-cv__upload
+          label.input-file.js-file-input(for="upload")
+            .input-file__icon
+              +svg('upload')
+            .input-file__placeholder Upload your resume (PDF)
+            .input-file__name.hidden
+            .input-file__hint Click to upload or drop your file here
+            input.visually-hidden#upload(type="file" name="upload")
+        .full-width
+          button.button.button--secondary(type="submit")
+            span Submit
+            +svg('arrow-right').button__icon

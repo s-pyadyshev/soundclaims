@@ -1,0 +1,51 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+  font-size: 20px;
+}
+
+.list.list--services {
+  gap: 30px;
+  line-height: 1;
+  font-size: 15px;
+
+  @include laptop {
+    font-size: 20px;
+    line-height: normal;
+    gap: 66px;
+  }
+}
+
+.list.list--services li {
+  font-weight: 400;
+
+  @include laptop {
+    font-weight: 600;
+  }
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: $font-secondary;
+  font-weight: 200;
+
+  &::before {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8.5px 14px;
+    border-color: transparent transparent $color-primary;
+    transform: rotate(90deg);
+
+    .background-primary & {
+      border-color: transparent transparent #fff;
+    }
+  }
+}

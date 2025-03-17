@@ -1,0 +1,179 @@
+.help {
+  margin-top: 90px;
+  margin-bottom: 51px;
+
+  .container {
+    position: relative;
+  }
+
+  @include desktop {
+    margin-top: 120px;
+    margin-bottom: 120px;
+
+    .wrapper-bot {
+      .line__block {
+        width: 190px;
+        background-image: url("../../images/sprites/png/desktop-border-line-bot.png");
+        background-repeat: repeat-x;
+        background-position: bottom;
+        background-size: contain;
+
+        &:last-of-type {
+          width: calc(100% - 190px - 95px);
+        }
+      }
+
+      .line__mask {
+        width: 95px;
+        background-image: url("../../images/sprites/png/desktop-border-curve-bot.png");
+        background-position: bottom;
+        background-size: contain;
+      }
+
+      .wrapper__line {
+        background-image: none;
+      }
+    }
+  }
+
+  .wrapper-mid {
+    .wrapper__content {
+      padding: 13px 13px 320px;
+
+      @include laptop {
+        padding: 27px 133px 358px 133px;
+      }
+
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        padding: 28px 52px;
+      }
+    }
+
+    .wrapper__line {
+      .line__block {
+        background-repeat: repeat-y;
+        background-image: url("../../images/sprites/png/mobile-border-line-right.png");
+        background-position: right;
+        background-size: contain;
+        height: 100px;
+
+        &:last-of-type {
+          height: calc(100% - 100px - 102px);
+        }
+
+        @include desktop {
+          background-image: url("../../images/sprites/png/desktop-border-line-right.png");
+          height: 80px;
+
+          &:last-of-type {
+            height: calc(100% - 80px - 95px);
+          }
+        }
+      }
+
+      .line__mask {
+        height: 102px;
+        background-image: url("../../images/sprites/png/mobile-border-curve-right.png");
+        background-position: right;
+        background-size: contain;
+
+        @include desktop {
+          height: 95px;
+          background-image: url("../../images/sprites/png/desktop-border-line-right.png");
+          background-repeat: repeat-y;
+        }
+      }
+
+      &:last-of-type {
+        background: transparent;
+      }
+    }
+  }
+}
+
+.help__content {
+  width: 100%;
+
+  @include desktop {
+    max-width: 620px;
+  }
+}
+
+.about-us__header {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 170%;
+  letter-spacing: 4px;
+  margin-bottom: 31px;
+
+  @include desktop {
+    letter-spacing: 10px;
+    font-size: 14px;
+  }
+
+  .about-us__header__line {
+    width: 20px;
+    height: 0px;
+    border: 1px solid rgb(231, 42, 51);
+  }
+}
+
+.help__img {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: calc(100% - 46px);
+  max-width: 270px;
+
+  @include laptop {
+    max-width: 330px;
+  }
+
+  @include desktop {
+    width: 35%;
+    max-width: 490px;
+    left: auto;
+    right: 16.5px;
+    margin-inline: 0;
+  }
+}
+
+.help__text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 170%;
+    margin: 0;
+    text-align: left;
+    margin: 0;
+
+    @include desktop {
+      font-size: 20px;
+    }
+  }
+}
+
+.help__title {
+  font-family: $font-secondary;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 18px;
+
+  @include desktop {
+    font-size: 36px;
+  }
+}

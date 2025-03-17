@@ -1,0 +1,20 @@
+mixin from-start-to-finish(obj)
+    .from-start-to-finish
+        .container.container-sm
+            .from-start-to-finish__wrapper
+                .from-start-to-finish__banner
+                    img(src=obj.src, alt="", width="360", height="795").from-start-to-finish__img
+                    h2 !{obj.title}
+                    p !{obj.text}
+                    a.button.button--contact-us.button--from-start-to-finish(href="/contact.html" title="Contact us")
+                        span Contact us
+                        +svg('arrow-right').button__icon
+                .swiper.from-start-to-finish__swiper.js-swiper-services
+                    .swiper-pagination
+                    .swiper-wrapper
+                        each item, key in obj.steps
+                            .swiper-slide
+                                .step
+                                    .step__number 0!{key + 1}
+                                    h3 !{item.title}
+                                    p !{item.text}

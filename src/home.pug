@@ -1,0 +1,80 @@
+extends pug/base
+
+prepend vars
+  - title = 'Homepage'
+
+append vars
+
+block content
+  +page-header({
+    subheader: `Navigating Africa’s <span>financial landscape</span> can be complex. With <span>unmatched</span> local expertise and global standards, <span>Soundclaims</span> connects you to success.`,
+    button: {
+      text: "Learn more"
+    }
+  })
+  +our-services({
+    button: {
+      text: "Discover our services",
+      href: "#"
+    },
+    slides: [
+      {
+      text: `Investigations & <br> claims assessment`,
+      href: "#",
+      },
+      {
+        text: `Asset tracing`,
+        href: "#",
+      },
+      {
+        text: `Debtor visits`,
+        href: "#",
+      },
+      {
+        text: `Resceduling <br> of debts`,
+        href: "#",
+      },
+      {
+        text: `Dispute <br> handling`,
+        href: "#",
+      },
+      {
+        text: `Debt recovery <br> litigation`,
+        href: "#",
+      },
+      {
+        text: `Arresting assets <br> and bank accounts`,
+        href: "#",
+      },
+      {
+        text: `Filing claims in <br> bankruptcy proceedings`,
+        href: "#",
+      },
+      {
+        text: `Filing criminal <br> charges`,
+        href: "#",
+      },
+    ]
+  })
+  +about-us
+  +block-news({
+    title: 'News',
+    text: 'The latest updates, insights, and stories from Soundclaims',
+    list: [
+      {
+        text: 'Expanding our presence in Africa'
+      },
+      {
+        text: 'Successful debt recovery in challenging markets',
+        badge: true
+      },
+      {
+        text: 'Supporting African creativity'
+      }
+    ]
+  })
+  +contact-us({
+    subtitle: 'Let’s talk solutions.',
+    text: 'How can we help you? Reach out today and experience service that’s fast, straightforward, and effective.',
+    bgImg: 'images/contact1.jpg'
+  }).contact-us--moon

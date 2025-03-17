@@ -1,0 +1,129 @@
+.page-header {
+  width: 100%;
+  position: relative;
+}
+
+.page-header__bot {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 18px;
+
+  & div {
+    background-color: $color-pink;
+  }
+
+  @include laptop {
+    height: 40px;
+  }
+}
+
+.page-header__bot__left {
+  height: 100%;
+  width: calc(77% - 35px);
+  border-bottom-left-radius: 20px;
+  background: linear-gradient(111.69deg,
+      rgb(243, 247, 255) -60.944%,
+      rgb(255, 246, 252) -12.215%,
+      rgb(255, 243, 243) 36.514%,
+      rgb(255, 239, 235) 85.243%);
+
+  @include laptop {
+    width: calc(77% - 78px);
+    border-bottom-left-radius: 40px;
+  }
+}
+
+.page-header__bot__right {
+  width: calc(23% - 35px);
+  border-bottom-right-radius: 20px;
+
+  @include laptop {
+    width: calc(23% - 77px);
+    border-bottom-right-radius: 40px;
+  }
+}
+
+.page-header__desc {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 170%;
+
+  @include laptop {
+    font-size: 20px;
+  }
+}
+
+.page-header__mask {
+  height: 102%;
+  width: 70px;
+  mask-image: url("../../images/page-header-path.svg");
+  mask-repeat: no-repeat;
+  mask-position: center bottom;
+  mask-size: 101%;
+
+  @include laptop {
+    width: 155px;
+  }
+}
+
+.page-header__subheader {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 25px;
+
+  & span {
+    font-weight: 500;
+    color: $color-secondary;
+  }
+
+  @include laptop {
+    font-size: 22px;
+    margin-bottom: 34px;
+  }
+}
+
+.page-header__subheader,
+.page-header__title,
+.page-header__desc {
+
+  @include laptop {
+    max-width: 840px;
+  }
+}
+
+.page-header__title {
+  font-size: 24px;
+  font-family: $font-secondary, sans-serif;
+  line-height: 1.4;
+  font-weight: 300;
+  color: $color-secondary;
+  margin-bottom: 4px;
+
+  @include laptop {
+    font-size: 32px;
+  }
+}
+
+.page-header__top {
+  background: linear-gradient(111.69deg,
+      rgb(243, 247, 255) -60.944%,
+      rgb(255, 246, 252) -12.215%,
+      rgb(255, 243, 243) 36.514%,
+      rgb(255, 239, 235) 85.243%);
+  padding-top: 10px;
+  padding-bottom: 45px;
+
+  @include desktop {
+    padding-top: 20px;
+  }
+
+  & .container .button {
+    background-color: $color-black;
+    color: $color-white;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

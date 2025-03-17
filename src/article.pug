@@ -1,0 +1,43 @@
+extends pug/base
+
+prepend vars
+  - title = 'News Article'
+  - pageWrapperClass = 'decor'
+
+block content
+    include pug/components/article-first-block.pug
+
+    +article-first-block({
+        title: 'Strengthening debt recovery network across Africa',
+        author: 'By Peer Besselaar',
+        date: '08.01.2025',
+        badge: true
+    })
+
+    .content
+        .container.container-text
+            p Soundclaims expands its reach with new partnerships in key African regions, enhancing local expertise for faster, more efficient debt recovery.
+            p To meet the growing demand for reliable debt recovery services, Soundclaims has forged strategic partnerships with legal experts and agencies across West and East Africa. This expansion brings a more robust local presence, allowing our teams to navigate the nuances of diverse legal systems and economic climates.
+            p By enhancing our local networks, we can accelerate case resolutions and improve communication channels between creditors and debtors. This means faster results for clients, more transparent processes, and improved outcomes for businesses operating in complex African markets.
+            p Soundclaims remains committed to strengthening our footprint across the continent. We believe that local knowledge and personal connections are essential to success, and these new partnerships reflect our ongoing dedication to providing exceptional service.
+
+    +block-news({
+        title: 'News',
+        subtitle: 'Supporting African Creativity',
+        text: 'As part of our social responsibility initiative, Soundclaims has partnered with African artists and cultural organizations to support creative projects. We believe that fostering local talent contributes to economic empowerment and cultural preservation. Our latest asdsadasdsadsadasdasdsadasd',
+        list: [
+            {
+                text: 'Expanding our presence in Africa'
+            },
+            {
+                text: 'Successful debt recovery in challenging markets',
+                badge: true
+            }
+        ]
+    }).block-news--other-news
+
+    +contact-us({
+        subtitle: 'Let’s talk solutions.',
+        text: 'How can we help you? Reach out today and experience service that’s fast, straightforward, and effective.',
+        bgImg: 'images/contact2.jpeg'
+    }).contact-us--local.contact-us--sun

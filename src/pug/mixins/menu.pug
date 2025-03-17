@@ -1,0 +1,18 @@
+mixin menu()
+  nav.menu
+    ul.menu__list
+      li.menu__item
+        a.menu__link.active(href='home.html') home
+      li.menu__item
+        a.menu__link(href='about.html') about us
+      li.menu__item
+        a.menu__link(href='services.html') services
+      li.menu__item
+        a.menu__link(href='local-presence.html') local presence
+      li.menu__item
+        a.menu__link(href='news.html') news
+      li.menu__item
+        a.menu__link(href='careers.html') careers
+      a.menu__item.menu__item-contacts(href='contact.html')
+        .menu__link contact
+        +svg("arrow-right")

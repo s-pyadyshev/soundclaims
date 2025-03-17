@@ -1,0 +1,24 @@
+.card-employee {
+  width: 182px;
+  height: 182px;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__flag {
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    bottom: 11px;
+    left: 11px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}

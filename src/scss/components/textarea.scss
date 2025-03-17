@@ -1,0 +1,47 @@
+.textarea {
+  font-size: 16px;
+  font-weight: 300;
+  padding: 14px 20px;
+  border: 1px solid $color-secondary;
+  border-radius: 10px;
+  resize: vertical;
+  background-color: $input-background-color;
+  color: $input-color;
+  transition-property: border-color;
+  transition-duration: $transition-duration;
+
+  @include tablet {
+    padding: 14px 30px;
+  }
+
+  &:hover {
+    border-color: $input-color;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border-color: $input-color;
+    outline: none
+  }
+
+  &[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.textarea--default {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  color: #fff;
+
+  &:focus,
+  &:focus-visible {
+    border-color: rgba(255, 255, 255, 0.1);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #fff;
+  }
+}
