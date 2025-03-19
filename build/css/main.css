@@ -1830,7 +1830,7 @@ p {
 
 .about-us .block-wrapper .wrapper-mid .wrapper__line .line__block {
   background-repeat: repeat-y;
-  background-image: url("../images/sprites/png/mobile-border-line-right.png");
+  background-image: url("../images/mobile-border-line-right.png");
   background-position: right;
   background-size: contain;
   height: 100px;
@@ -1842,7 +1842,7 @@ p {
 
 .about-us .block-wrapper .wrapper-mid .wrapper__line .line__mask {
   height: 102px;
-  background-image: url("../images/sprites/png/mobile-border-curve-right.png");
+  background-image: url("../images/mobile-border-curve-right.png");
   background-position: right;
   background-size: contain;
 }
@@ -2185,12 +2185,12 @@ p {
 .block-wrapper .wrapper-bot .wrapper__radius {
   width: 27px;
   height: 100%;
-  background-image: url("../sprites/png/mobile-border-bot-left.png");
+  background-image: url("../images/mobile-border-bot-left.png");
   background-size: contain;
 }
 
 .block-wrapper .wrapper-bot .wrapper__radius:last-of-type {
-  background-image: url("../sprites/png/mobile-border-bot-right.png");
+  background-image: url("../images/mobile-border-bot-right.png");
 }
 
 .block-wrapper .wrapper-bot .wrapper__line {
@@ -2198,7 +2198,7 @@ p {
   flex-direction: row;
   flex-wrap: nowrap;
   width: calc(100% - 54px);
-  background-image: url("../sprites/png/mobile-border-line-bot.png");
+  background-image: url("../images/mobile-border-line-bot.png");
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: contain;
@@ -2222,26 +2222,26 @@ p {
   flex-direction: column;
   flex-wrap: nowrap;
   width: 27px;
-  background-image: url("../sprites/png/mobile-border-line-left.png");
+  background-image: url("../images/mobile-border-line-left.png");
   background-repeat: repeat-y;
   background-position: left;
   background-size: contain;
 }
 
 .block-wrapper .wrapper-mid .wrapper__line:last-of-type {
-  background-image: url("../sprites/png/mobile-border-line-right.png");
+  background-image: url("../images/mobile-border-line-right.png");
   background-position: right;
 }
 
 .block-wrapper .wrapper-top .wrapper__radius {
   width: 27px;
   height: 100%;
-  background-image: url("../sprites/png/mobile-border-top-left.png");
+  background-image: url("../images/mobile-border-top-left.png");
   background-size: contain;
 }
 
 .block-wrapper .wrapper-top .wrapper__radius:last-of-type {
-  background-image: url("../sprites/png/mobile-border-top-right.png");
+  background-image: url("../images/mobile-border-top-right.png");
 }
 
 .block-wrapper .wrapper-top .wrapper__line {
@@ -2249,7 +2249,7 @@ p {
   flex-direction: row;
   flex-wrap: nowrap;
   width: calc(100% - 54px);
-  background-image: url("../sprites/png/mobile-border-line-top.png");
+  background-image: url("../images/mobile-border-line-top.png");
   background-repeat: repeat-x;
   background-position: top;
 }
@@ -3327,7 +3327,7 @@ p {
 
 .help .wrapper-mid .wrapper__line .line__block {
   background-repeat: repeat-y;
-  background-image: url("../sprites/png/mobile-border-line-right.png");
+  background-image: url("../images/mobile-border-line-right.png");
   background-position: right;
   background-size: contain;
   height: 100px;
@@ -3339,7 +3339,7 @@ p {
 
 .help .wrapper-mid .wrapper__line .line__mask {
   height: 102px;
-  background-image: url("../sprites/png/mobile-border-curve-right.png");
+  background-image: url("../images/mobile-border-curve-right.png");
   background-position: right;
   background-size: contain;
 }
@@ -4012,7 +4012,7 @@ p {
 .our-services {
   width: 100%;
   height: auto;
-  background-image: linear-gradient(0deg, rgb(24, 9, 1) 42.5%, rgba(24, 9, 1, 0) 50%), url("../our-services.jpg");
+  background-image: linear-gradient(0deg, rgb(24, 9, 1) 42.5%, rgba(24, 9, 1, 0) 50%), url("../images/our-services.jpg");
   -repeat: no-repeat;
   background-size: cover, cover;
   background-position: center center, top 0px right -350px;
@@ -4163,8 +4163,8 @@ p {
 .page-header__mask {
   height: 102%;
   width: 70px;
-  -webkit-mask-image: url("../page-header-path.svg");
-  mask-image: url("../page-header-path.svg");
+  -webkit-mask-image: url("../images/page-header-path.svg");
+  mask-image: url("../images/page-header-path.svg");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center bottom;
@@ -4702,7 +4702,7 @@ p {
 }
 
 .where-we-operate .wrapper-mid .wrapper__line:first-child .line__block {
-  background-image: url("../sprites/png/mobile-border-line-left.png");
+  background-image: url("../images/mobile-border-line-left.png");
   background-repeat: repeat-y;
   background-position: left;
   background-size: contain;
@@ -4718,7 +4718,7 @@ p {
 
 .where-we-operate .wrapper-mid .wrapper__line:first-child .line__mask {
   height: 102px;
-  background-image: url("../sprites/png/mobile-border-curve-left.png");
+  background-image: url("../images/mobile-border-curve-left.png");
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;
@@ -6009,7 +6009,7 @@ p {
   }
 
   .about-us .block-wrapper .wrapper-mid .wrapper__line .line__block {
-    background-image: url("../images/sprites/png/desktop-border-line-right.png");
+    background-image: url("../images/desktop-border-line-right.png");
     height: 80px;
   }
 
@@ -6019,7 +6019,7 @@ p {
 
   .about-us .block-wrapper .wrapper-mid .wrapper__line .line__mask {
     height: 95px;
-    background-image: url("../images/sprites/png/desktop-border-curve-right.png");
+    background-image: url("../images/desktop-border-curve-right.png");
   }
 
   .about-us__content {
@@ -6218,16 +6218,16 @@ p {
 
   .block-wrapper .wrapper-bot .wrapper__radius {
     width: 40px;
-    background-image: url("../sprites/png/desktop-border-bot-left.png");
+    background-image: url("../images/desktop-border-bot-left.png");
   }
 
   .block-wrapper .wrapper-bot .wrapper__radius:last-of-type {
-    background-image: url("../sprites/png/desktop-border-bot-right.png");
+    background-image: url("../images/desktop-border-bot-right.png");
   }
 
   .block-wrapper .wrapper-bot .wrapper__line {
     width: calc(100% - 80px);
-    background-image: url("../sprites/png/desktop-border-line-bot.png");
+    background-image: url("../images/desktop-border-line-bot.png");
   }
 
   .block-wrapper .wrapper-mid .wrapper__content {
@@ -6236,20 +6236,20 @@ p {
 
   .block-wrapper .wrapper-mid .wrapper__line {
     width: 40px;
-    background-image: url("../sprites/png/desktop-border-line-left.png");
+    background-image: url("../images/desktop-border-line-left.png");
   }
 
   .block-wrapper .wrapper-mid .wrapper__line:last-of-type {
-    background-image: url("../sprites/png/desktop-border-line-right.png");
+    background-image: url("../images/desktop-border-line-right.png");
   }
 
   .block-wrapper .wrapper-top .wrapper__radius {
     width: 40px;
-    background-image: url("../sprites/png/desktop-border-top-left.png");
+    background-image: url("../images/desktop-border-top-left.png");
   }
 
   .block-wrapper .wrapper-top .wrapper__radius:last-of-type {
-    background-image: url("../sprites/png/desktop-border-top-right.png");
+    background-image: url("../images/desktop-border-top-right.png");
   }
 
   .block-wrapper .wrapper-top .wrapper__line {
@@ -6584,7 +6584,7 @@ p {
 
   .help .wrapper-bot .line__block {
     width: 190px;
-    background-image: url("../sprites/png/desktop-border-line-bot.png");
+    background-image: url("../images/desktop-border-line-bot.png");
     background-repeat: repeat-x;
     background-position: bottom;
     background-size: contain;
@@ -6596,7 +6596,7 @@ p {
 
   .help .wrapper-bot .line__mask {
     width: 95px;
-    background-image: url("../sprites/png/desktop-border-curve-bot.png");
+    background-image: url("../images/desktop-border-curve-bot.png");
     background-position: bottom;
     background-size: contain;
   }
@@ -6613,7 +6613,7 @@ p {
   }
 
   .help .wrapper-mid .wrapper__line .line__block {
-    background-image: url("../sprites/png/desktop-border-line-right.png");
+    background-image: url("../images/desktop-border-line-right.png");
     height: 80px;
   }
 
@@ -6623,7 +6623,7 @@ p {
 
   .help .wrapper-mid .wrapper__line .line__mask {
     height: 95px;
-    background-image: url("../sprites/png/desktop-border-line-right.png");
+    background-image: url("../images/desktop-border-line-right.png");
     background-repeat: repeat-y;
   }
 
@@ -6794,7 +6794,7 @@ p {
   .our-services {
     padding-top: 422px;
     padding-bottom: 142px;
-    background-image: linear-gradient(0deg, rgb(24, 9, 1) 55%, rgba(24, 9, 1, 0) 70%), url("../our-services.jpg");
+    background-image: linear-gradient(0deg, rgb(24, 9, 1) 55%, rgba(24, 9, 1, 0) 70%), url("../images/our-services.jpg");
     background-position: center center, top right;
     background-size: cover, contain;
     margin-inline: auto;
@@ -6937,7 +6937,7 @@ p {
   }
 
   .where-we-operate .wrapper-mid .wrapper__line {
-    background-image: url("../sprites/png/desktop-border-line-left.png");
+    background-image: url("../images/desktop-border-line-left.png");
   }
 
   .where-we-operate .wrapper-mid .wrapper__line:first-child .line__block {
@@ -6953,7 +6953,7 @@ p {
   }
 
   .where-we-operate .wrapper-mid .wrapper__line:last-child .line__block {
-    background-image: url("../sprites/png/desktop-border-line-right.png");
+    background-image: url("../images/desktop-border-line-right.png");
     background-repeat: repeat-y;
     background-position: right;
     background-size: contain;
@@ -6965,7 +6965,7 @@ p {
   }
 
   .where-we-operate .wrapper-mid .wrapper__line:last-child .line__mask {
-    background-image: url("../sprites/png/desktop-border-curve-right.png");
+    background-image: url("../images/desktop-border-curve-right.png");
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
@@ -7246,7 +7246,7 @@ p {
   }
 
   .our-services {
-    background-image: linear-gradient(0deg, rgb(24, 9, 1) 40%, rgba(24, 9, 1, 0) 70%), url("../our-services.jpg");
+    background-image: linear-gradient(0deg, rgb(24, 9, 1) 40%, rgba(24, 9, 1, 0) 70%), url("../images/our-services.jpg");
   }
 }
 
