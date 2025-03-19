@@ -2,7 +2,7 @@
   width: 100%;
   height: auto;
   background-image: linear-gradient(0deg, rgb(24, 9, 1) 42.5%, rgba(24, 9, 1, 0) 50%),
-    url("../../images/our-services.jpg");
+    url("../our-services.jpg");
   -repeat: no-repeat;
   background-size: cover, cover;
   background-position:
@@ -24,7 +24,7 @@
     padding-top: 422px;
     padding-bottom: 142px;
     background-image: linear-gradient(0deg, rgb(24, 9, 1) 55%, rgba(24, 9, 1, 0) 70%),
-      url("../../images/our-services.jpg");
+      url("../our-services.jpg");
     background-position:
       center center,
       top right;
@@ -51,7 +51,7 @@
 
   @include desktop-l {
     background-image: linear-gradient(0deg, rgb(24, 9, 1) 40%, rgba(24, 9, 1, 0) 70%),
-      url("../../images/our-services.jpg");
+      url("../our-services.jpg");
   }
 }
 

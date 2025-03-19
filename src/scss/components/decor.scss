@@ -9,7 +9,7 @@
     left: -84px;
     width: calc(100% + 199px);
     height: auto;
-    background-image: url("/images/bg-page-m.png");
+    background-image: url("images/bg-page-m.png");
     background-repeat: no-repeat;
     background-size: cover;
     pointer-events: none;
@@ -42,14 +42,14 @@
       width: 100%;
       left: 0;
       top: 0;
-      background-image: url("/images/bg-page.png");
+      background-image: url("images/bg-page.png");
     }
 
     &--page-header {
       &::before {
         top: calc(100% - 56px);
         aspect-ratio: 1920 / 869;
-        background-image: url("/images/bg-image-page-header.png");
+        background-image: url("images/bg-image-page-header.png");
       }
     }
   }

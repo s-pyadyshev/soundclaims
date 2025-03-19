@@ -19,19 +19,19 @@
     .wrapper__radius {
       width: 27px;
       height: 100%;
-      background-image: url("../../images/sprites/png/mobile-border-bot-left.png");
+      background-image: url("../sprites/png/mobile-border-bot-left.png");
       background-size: contain;
 
       &:last-of-type {
-        background-image: url("../../images/sprites/png/mobile-border-bot-right.png");
+        background-image: url("../sprites/png/mobile-border-bot-right.png");
       }
 
       @include desktop {
         width: 40px;
-        background-image: url("../../images/sprites/png/desktop-border-bot-left.png");
+        background-image: url("../sprites/png/desktop-border-bot-left.png");
 
         &:last-of-type {
-          background-image: url("../../images/sprites/png/desktop-border-bot-right.png");
+          background-image: url("../sprites/png/desktop-border-bot-right.png");
         }
       }
     }
@@ -41,14 +41,14 @@
       flex-direction: row;
       flex-wrap: nowrap;
       width: calc(100% - 54px);
-      background-image: url("../../images/sprites/png/mobile-border-line-bot.png");
+      background-image: url("../sprites/png/mobile-border-line-bot.png");
       background-repeat: repeat-x;
       background-position: bottom;
       background-size: contain;
 
       @include desktop {
         width: calc(100% - 80px);
-        background-image: url("../../images/sprites/png/desktop-border-line-bot.png");
+        background-image: url("../sprites/png/desktop-border-line-bot.png");
       }
     }
   }
@@ -74,22 +74,22 @@
       flex-direction: column;
       flex-wrap: nowrap;
       width: 27px;
-      background-image: url("../../images/sprites/png/mobile-border-line-left.png");
+      background-image: url("../sprites/png/mobile-border-line-left.png");
       background-repeat: repeat-y;
       background-position: left;
       background-size: contain;
 
       &:last-of-type {
-        background-image: url("../../images/sprites/png/mobile-border-line-right.png");
+        background-image: url("../sprites/png/mobile-border-line-right.png");
         background-position: right;
       }
 
       @include desktop {
         width: 40px;
-        background-image: url("../../images/sprites/png/desktop-border-line-left.png");
+        background-image: url("../sprites/png/desktop-border-line-left.png");
 
         &:last-of-type {
-          background-image: url("../../images/sprites/png/desktop-border-line-right.png");
+          background-image: url("../sprites/png/desktop-border-line-right.png");
         }
       }
     }
@@ -99,19 +99,19 @@
     .wrapper__radius {
       width: 27px;
       height: 100%;
-      background-image: url("../../images/sprites/png/mobile-border-top-left.png");
+      background-image: url("../sprites/png/mobile-border-top-left.png");
       background-size: contain;
 
       &:last-of-type {
-        background-image: url("../../images/sprites/png/mobile-border-top-right.png");
+        background-image: url("../sprites/png/mobile-border-top-right.png");
       }
 
       @include desktop {
         width: 40px;
-        background-image: url("../../images/sprites/png/desktop-border-top-left.png");
+        background-image: url("../sprites/png/desktop-border-top-left.png");
 
         &:last-of-type {
-          background-image: url("../../images/sprites/png/desktop-border-top-right.png");
+          background-image: url("../sprites/png/desktop-border-top-right.png");
         }
       }
     }
@@ -121,7 +121,7 @@
       flex-direction: row;
       flex-wrap: nowrap;
       width: calc(100% - 54px);
-      background-image: url("../../images/sprites/png/mobile-border-line-top.png");
+      background-image: url("../sprites/png/mobile-border-line-top.png");
       background-repeat: repeat-x;
       background-position: top;
 

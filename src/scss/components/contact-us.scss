@@ -136,7 +136,7 @@
     .contact-us {
       &__wrap {
         &::before {
-          background-image: url("/images/contact-us/moon.webp");
+          background-image: url("images/contact-us/moon.webp");
         }
       }
     }
@@ -146,7 +146,7 @@
     .contact-us {
       &__wrap {
         &::before {
-          background-image: url("/images/contact-us/sun.webp");
+          background-image: url("images/contact-us/sun.webp");
         }
       }
     }

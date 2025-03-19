@@ -72,12 +72,12 @@
       background-image: none;
 
       @include desktop {
-        background-image: url("../../images/sprites/png/desktop-border-line-left.png");
+        background-image: url("../sprites/png/desktop-border-line-left.png");
       }
 
       &:first-child {
         .line__block {
-          background-image: url("../../images/sprites/png/mobile-border-line-left.png");
+          background-image: url("../sprites/png/mobile-border-line-left.png");
           background-repeat: repeat-y;
           background-position: left;
           background-size: contain;
@@ -97,7 +97,7 @@
 
         .line__mask {
           height: 102px;
-          background-image: url("../../images/sprites/png/mobile-border-curve-left.png");
+          background-image: url("../sprites/png/mobile-border-curve-left.png");
           background-repeat: no-repeat;
           background-position: left;
           background-size: contain;
@@ -113,7 +113,7 @@
           background-image: none;
 
           .line__block {
-            background-image: url("../../images/sprites/png/desktop-border-line-right.png");
+            background-image: url("../sprites/png/desktop-border-line-right.png");
             background-repeat: repeat-y;
             background-position: right;
             background-size: contain;
@@ -125,7 +125,7 @@
           }
 
           .line__mask {
-            background-image: url("../../images/sprites/png/desktop-border-curve-right.png");
+            background-image: url("../sprites/png/desktop-border-curve-right.png");
             background-repeat: no-repeat;
             background-position: right;
             background-size: contain;
