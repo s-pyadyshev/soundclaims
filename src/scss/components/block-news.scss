@@ -73,13 +73,24 @@
   &--other-news {
     --padding-bottom: 12px;
 
+    .block-news__wrapper {
+      align-items: baseline;
+
+      @include desktop {
+        align-items: flex-start;
+      }
+    }
+
     .section-title {
       @include desktop {
         margin-bottom: 34px;
       }
     }
 
-    .section-title h2 {
+    .section-title {
+      order: -1;
+      margin-bottom: 0;
+
       @include desktop {
         order: 1;
       }

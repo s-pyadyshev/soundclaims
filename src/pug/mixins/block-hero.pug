@@ -1,13 +1,13 @@
 mixin block-hero(obj)
-    .block-hero&attributes(attributes)
+    .hero&attributes(attributes)
         .container 
-            .block-hero__content(style=( obj.background_img ? "background-image: url(" + obj.background_img + ")" : "background-image: url(images/market.png)"
+            .hero__content(style=( obj.background_img ? "background-image: url(" + obj.background_img + ")" : "background-image: url(images/market.png)"
             ))
-                .block-hero__block
-                    .block-hero__title 
+                .hero__block
+                    .hero__title 
                         | !{obj.title ? obj.title : "Hero title"}
-                    .block-hero__text 
+                    .hero__text 
                         p !{obj.text ? obj.text : "Hero text"} 
-                    a.button.button--block-hero(href=obj.button.href ? obj.button.href : "#" ) 
+                    a.button.button--hero(href=obj.button.href ? obj.button.href : "#" ) 
                         span !{obj.button.text}
                         +svg('arrow-right').button__icon
