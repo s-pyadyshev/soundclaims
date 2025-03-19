@@ -2760,11 +2760,11 @@ p {
 }
 
 .contact-us--moon .contact-us__wrap::before {
-  background-image: url("images/contact-us/moon.webp");
+  background-image: url("../images/moon.webp");
 }
 
 .contact-us--sun .contact-us__wrap::before {
-  background-image: url("images/contact-us/sun.webp");
+  background-image: url("../images/sun.webp");
 }
 
 .contact-us--local {
