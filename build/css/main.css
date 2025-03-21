@@ -4552,7 +4552,6 @@ p {
   padding: 14px 20px;
   border: 1px solid #e72a33;
   border-radius: 10px;
-  resize: vertical;
   background-color: #fff;
   color: #000;
   transition-property: border-color;
