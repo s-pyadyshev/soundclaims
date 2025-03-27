@@ -56,7 +56,6 @@
 :where(textarea) {
   overflow: auto;
   vertical-align: top;
-  resize: vertical;
 }
 
 :where([type="checkbox"], [type="radio"]) {
