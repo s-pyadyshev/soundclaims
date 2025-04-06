@@ -1,10 +1,15 @@
 [data-scrollspy] {
-  opacity: 0;
+  opacity: 1;
 }
 
 .page-loaded {
   .animate__animated {
     animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  .animate__animated[data-scrollspy=animate__fadeInDownBefore]::before {
+    animation-duration: 2s;
     animation-fill-mode: both;
   }
 }
@@ -156,4 +161,14 @@
 
 .animate__slideInRight {
   animation-name: slideInRight;
+}
+
+.animate__fadeInDownBefore {
+  &:before {
+    animation-name: fadeInDown;
+  }
+}
+
+[data-scrollspy=animate__fadeInDownBefore]::before {
+  opacity: 0;
 }

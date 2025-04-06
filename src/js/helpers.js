@@ -51,18 +51,13 @@ export function isElementInViewport(element) {
 }
 
 export function isElementCompletelyInViewport(element) {
-  let coordinates = element.getBoundingClientRect();
+  const rect = element.getBoundingClientRect();
+  const html = document.documentElement;
 
-  if (
-    coordinates.right > window.innerWidth ||
-    coordinates.bottom > window.innerHeight
-  ) {
-    return false;
-  }
-
-  if (coordinates.top < 0 || coordinates.left < 0) {
-    return false;
-  }
-
-  return true;
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || html.clientHeight) &&
+    rect.right <= (window.innerWidth || html.clientWidth)
+  );
 }

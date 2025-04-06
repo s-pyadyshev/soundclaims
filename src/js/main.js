@@ -6,7 +6,7 @@ import { videoFile } from "./components/video-file.js";
 import { fileInput } from "./components/fileInput.js";
 import { slider } from "./components/slider.js";
 import { sliderServices } from "./components/sliderServices.js";
-import { sliderOurServices } from "./components/sliderOurServices.js"
+import { sliderOurServices } from "./components/sliderOurServices.js";
 import { FancySelect } from "./vendor.js";
 
 window.addEventListener(

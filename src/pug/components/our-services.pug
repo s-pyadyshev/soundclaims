@@ -22,6 +22,6 @@ mixin our-services(obj)
           .mask.mask-right
             button.swiper-button-next
               +svg('arrow-right-rounded')
-      a.button.button--our-services(href=obj.button.href ? obj.button.href : "#"  )
+      a.button(href=obj.button.href ? obj.button.href : "#"  )
             span !{obj.button.text}
             +svg('arrow-right').button__icon

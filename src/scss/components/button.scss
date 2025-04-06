@@ -28,9 +28,10 @@ $button-color-active: $color-white;
   &:focus,
   &:hover,
   &:active {
-    background-color: $color-secondary;
-    border-color: $color-secondary;
+    background-color: $color-black;
+    border-color: $color-black;
     color: $color-white;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
 
     .button__icon {
       fill: currentColor;
@@ -49,16 +50,27 @@ $button-color-active: $color-white;
     }
   }
 
-  &--about-us {
+  &--secondary {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: fit-content;
-    min-width: 215px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px 0px rgba(42, 44, 81, 0.35);
     background: rgb(24, 9, 1);
     color: white;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-primary;
+      border-color: $color-primary;
+      color: $color-black;
+
+      .button__icon {
+        fill: currentColor;
+      }
+    }
   }
 
   &__icon {
@@ -89,14 +101,6 @@ $button-color-active: $color-white;
     min-width: 199px;
     column-gap: 43px;
     box-shadow: 0px 4px 10px 0px rgba(42, 44, 81, 0.35);
-  }
-
-  &--our-services {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: fit-content;
-    column-gap: 23px;
   }
 
   &--from-start-to-finish {

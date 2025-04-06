@@ -204,3 +204,29 @@
 .mb-lg {
   margin-top: 120px;
 }
+
+.has-ticker {
+  .header__inner {
+    padding-top: 100px;
+  }
+}
+
+.contact-page .menu__item.menu__item-contacts {
+  background-color: $color-primary;
+
+
+  .menu__link {
+    color: $color-black;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $color-black;
+
+
+    .menu__link {
+      color: $color-white;
+    }
+  }
+}

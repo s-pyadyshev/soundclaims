@@ -38,27 +38,19 @@
 
   @include desktop {
     max-height: 140px;
-    // justify-content: flex-end;
   }
 }
 
 .header__logo {
   position: relative;
+  display: flex;
+  align-items: center;
   transition: none;
   width: 141px;
   height: 35px;
 
   @include tablet {
-    height: 79px;
-    padding: 21px 0;
-  }
-
-  @include desktop {
-    flex-shrink: 0;
-    margin: 0 23px;
     width: 224px;
-    height: 140px;
-    padding: 42px 0;
   }
 }
 
@@ -97,19 +89,5 @@
     position: fixed;
     right: calc((100% - var(--container-max-width)) / 2);
     z-index: 101;
-  }
-}
-
-.logo {
-  display: none;
-
-  @include laptop {
-    display: block;
-  }
-}
-
-.logo-mobile {
-  @include laptop {
-    display: none;
   }
 }

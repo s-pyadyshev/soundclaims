@@ -940,7 +940,6 @@ button.swiper-pagination-bullet {
 :where(textarea) {
   overflow: auto;
   vertical-align: top;
-  resize: vertical;
 }
 
 :where([type=checkbox], [type=radio]) {
@@ -1614,6 +1613,30 @@ body {
   margin-top: 120px;
 }
 
+.has-ticker .header__inner {
+  padding-top: 100px;
+}
+
+.contact-page .menu__item.menu__item-contacts {
+  background-color: #e2f038;
+}
+
+.contact-page .menu__item.menu__item-contacts .menu__link {
+  color: #000;
+}
+
+.contact-page .menu__item.menu__item-contacts:focus,
+.contact-page .menu__item.menu__item-contacts:hover,
+.contact-page .menu__item.menu__item-contacts:active {
+  background-color: #000;
+}
+
+.contact-page .menu__item.menu__item-contacts:focus .menu__link,
+.contact-page .menu__item.menu__item-contacts:hover .menu__link,
+.contact-page .menu__item.menu__item-contacts:active .menu__link {
+  color: #fff;
+}
+
 h1,
 h2,
 h3,
@@ -1659,11 +1682,16 @@ p {
 }
 
 [data-scrollspy] {
-  opacity: 0;
+  opacity: 1;
 }
 
 .page-loaded .animate__animated {
   animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.page-loaded .animate__animated[data-scrollspy=animate__fadeInDownBefore]::before {
+  animation-duration: 2s;
   animation-fill-mode: both;
 }
 
@@ -1814,6 +1842,14 @@ p {
 
 .animate__slideInRight {
   animation-name: slideInRight;
+}
+
+.animate__fadeInDownBefore:before {
+  animation-name: fadeInDown;
+}
+
+[data-scrollspy=animate__fadeInDownBefore]::before {
+  opacity: 0;
 }
 
 .about-us {
@@ -2280,9 +2316,10 @@ p {
 .button:focus,
 .button:hover,
 .button:active {
-  background-color: #e72a33;
-  border-color: #e72a33;
+  background-color: #000;
+  border-color: #000;
   color: #fff;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .button:focus .button__icon,
@@ -2301,17 +2338,30 @@ p {
   transform: translateY(-50%) rotate(180deg);
 }
 
-.button--about-us {
+.button--secondary {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: -moz-fit-content;
   width: fit-content;
-  min-width: 215px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px 0px rgba(42, 44, 81, 0.35);
   background: rgb(24, 9, 1);
   color: white;
+}
+
+.button--secondary:focus,
+.button--secondary:hover,
+.button--secondary:active {
+  background-color: #e2f038;
+  border-color: #e2f038;
+  color: #000;
+}
+
+.button--secondary:focus .button__icon,
+.button--secondary:hover .button__icon,
+.button--secondary:active .button__icon {
+  fill: currentColor;
 }
 
 .button__icon {
@@ -2346,16 +2396,6 @@ p {
   -moz-column-gap: 43px;
   column-gap: 43px;
   box-shadow: 0px 4px 10px 0px rgba(42, 44, 81, 0.35);
-}
-
-.button--our-services {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: -moz-fit-content;
-  width: fit-content;
-  -moz-column-gap: 23px;
-  column-gap: 23px;
 }
 
 .button--from-start-to-finish {
@@ -2414,6 +2454,37 @@ p {
   overflow: hidden;
   flex-shrink: 0;
   position: relative;
+}
+
+.card-employee:hover .card-employee__detail {
+  transform: translateY(0);
+}
+
+.card-employee__detail {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  background-color: #000;
+  transition-property: transform;
+  transition-duration: 1s;
+  transform: translateY(100%);
+}
+
+.card-employee__detail h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: #e2f038;
+}
+
+.card-employee__detail p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
 }
 
 .card-employee__img {
@@ -3289,6 +3360,8 @@ p {
 
 .header__logo {
   position: relative;
+  display: flex;
+  align-items: center;
   transition: none;
   width: 141px;
   height: 35px;
@@ -3306,10 +3379,6 @@ p {
   min-width: 154px;
   box-shadow: 0px 4px 30px 0px rgba(42, 44, 81, 0.15);
   max-height: 51px;
-}
-
-.logo {
-  display: none;
 }
 
 .help {
@@ -3507,14 +3576,14 @@ p {
 }
 
 .input--default {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   border-color: #fff;
   color: #fff;
 }
 
 .input--default:focus,
 .input--default:focus-visible {
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
   outline: none;
 }
 
@@ -5396,8 +5465,7 @@ p {
   }
 
   .header__logo {
-    height: 79px;
-    padding: 21px 0;
+    width: 224px;
   }
 
   .input {
@@ -5680,7 +5748,7 @@ p {
     height: auto;
     border-bottom: none;
     border-left: solid 1px rgba(255, 255, 255, 0.5);
-    margin: 0 62px;
+    margin: 0;
   }
 
   .footer__text {
@@ -5753,6 +5821,20 @@ p {
     padding: var(--padding-top, 32px) 20px 0 39px;
   }
 
+  .step:hover {
+    border-top: 1px solid transparent;
+  }
+
+  .step:hover:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 17px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='345.562' height='17.003' fill='none' viewBox='0 0 345.562 17.003'%3E%3Cpath stroke='%23E72A33' d='M0 .5h245.96c16.14 1.21 32.46 6.45 49.07 15.81L303.65.5h41.91'/%3E%3C/svg%3E");
+  }
+
   .step h3 {
     font-size: 20px;
     line-height: 32px;
@@ -5773,14 +5855,6 @@ p {
     height: 80px;
     margin-left: auto;
     margin-bottom: -1px;
-  }
-
-  .logo {
-    display: block;
-  }
-
-  .logo-mobile {
-    display: none;
   }
 
   .help .wrapper-mid .wrapper__content {
@@ -5875,6 +5949,10 @@ p {
 
   .page-header__title {
     font-size: 32px;
+  }
+
+  .section-jobs {
+    margin-top: 120px;
   }
 
   .section-jobs__aside {
@@ -6119,7 +6197,7 @@ p {
     margin-bottom: 34px;
   }
 
-  .block-news--other-news .section-title {
+  .block-news--other-news .section-title h2 {
     order: 1;
   }
 
@@ -6557,14 +6635,6 @@ p {
     max-height: 140px;
   }
 
-  .header__logo {
-    flex-shrink: 0;
-    margin: 0 23px;
-    width: 224px;
-    height: 140px;
-    padding: 42px 0;
-  }
-
   .header__menu-toggle {
     display: none;
   }
@@ -6636,7 +6706,7 @@ p {
   }
 
   .help__img {
-    width: 35%;
+    width: 38%;
     max-width: 490px;
     left: auto;
     right: 16.5px;

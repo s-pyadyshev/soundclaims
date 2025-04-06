@@ -6,6 +6,39 @@
   flex-shrink: 0;
   position: relative;
 
+  &:hover {
+    .card-employee__detail {
+      transform: translateY(0);
+    }
+  }
+
+  &__detail {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background-color: #000;
+    transition-property: transform;
+    transition-duration: 1s;
+    transform: translateY(100%);
+
+    h3 {
+      margin-bottom: 16px;
+      font-size: 18px;
+      color: $color-primary;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.4;
+      color: $color-white;
+    }
+  }
+
   &__img {
     width: 100%;
     height: 100%;

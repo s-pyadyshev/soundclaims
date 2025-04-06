@@ -1,6 +1,10 @@
 .section-jobs {
   margin-top: 47px;
   margin-bottom: 40px;
+
+  @include laptop {
+    margin-top: 120px;
+  }
 }
 
 .section-jobs__wrap {
