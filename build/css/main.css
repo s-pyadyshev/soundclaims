@@ -1229,22 +1229,6 @@ label:has(+ input:disabled)) {
 * В Chrome качество фонового изображения не самое лучшее при использовании background-size
 */
 
-.sprite-blank {
-  display: inline-block;
-  vertical-align: middle;
-  width: 57px;
-  height: 59px;
-  background: url("../images/sprites.png") 0px 0px/81px 59px no-repeat;
-}
-
-.sprite-login {
-  display: inline-block;
-  vertical-align: middle;
-  width: 22px;
-  height: 26px;
-  background: url("../images/sprites.png") -59px 0px/81px 59px no-repeat;
-}
-
 @font-face {
   font-family: "At Hauss Std";
   src: url("../fonts/athaussstd-thin.woff2") format("woff2"), url("../fonts/athaussstd-thin.woff") format("woff");
@@ -1327,6 +1311,7 @@ html {
   line-height: 1.7;
   color: #000;
   color-scheme: dark light;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -1617,23 +1602,23 @@ body {
   padding-top: 100px;
 }
 
-.contact-page .menu__item.menu__item-contacts {
+.contact-page .menu__item.menu__item-contact {
   background-color: #e2f038;
 }
 
-.contact-page .menu__item.menu__item-contacts .menu__link {
+.contact-page .menu__item.menu__item-contact .menu__link {
   color: #000;
 }
 
-.contact-page .menu__item.menu__item-contacts:focus,
-.contact-page .menu__item.menu__item-contacts:hover,
-.contact-page .menu__item.menu__item-contacts:active {
+.contact-page .menu__item.menu__item-contact:focus,
+.contact-page .menu__item.menu__item-contact:hover,
+.contact-page .menu__item.menu__item-contact:active {
   background-color: #000;
 }
 
-.contact-page .menu__item.menu__item-contacts:focus .menu__link,
-.contact-page .menu__item.menu__item-contacts:hover .menu__link,
-.contact-page .menu__item.menu__item-contacts:active .menu__link {
+.contact-page .menu__item.menu__item-contact:focus .menu__link,
+.contact-page .menu__item.menu__item-contact:hover .menu__link,
+.contact-page .menu__item.menu__item-contact:active .menu__link {
   color: #fff;
 }
 
@@ -3883,6 +3868,11 @@ p {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  background: linear-gradient(111.69deg, rgb(243, 247, 255) -60.944%, rgb(255, 246, 252) -12.215%, rgb(255, 243, 243) 36.514%, rgb(255, 239, 235) 85.243%);
+}
+
+.has-ticker .menu {
+  top: 180px;
 }
 
 .menu__lang {
@@ -3978,7 +3968,6 @@ p {
 
 .menu.menu--open {
   position: fixed;
-  background: linear-gradient(111.69deg, rgb(243, 247, 255) -60.944%, rgb(255, 246, 252) -12.215%, rgb(255, 243, 243) 36.514%, rgb(255, 239, 235) 85.243%);
   transform: translateX(0);
   transition-property: all;
   transition-duration: 0.4s;
@@ -3994,7 +3983,7 @@ p {
   margin: 0 auto;
 }
 
-.menu__item-contacts {
+.menu__item-contact {
   background: #000;
   padding: 20px 0;
   border-radius: 10px;
@@ -4002,24 +3991,24 @@ p {
   text-decoration: none;
 }
 
-.menu__item-contacts .menu__link {
+.menu__item-contact .menu__link {
   color: #fff;
 }
 
-.menu__item-contacts:hover {
+.menu__item-contact:hover {
   color: #e2f038;
 }
 
-.menu__item-contacts:hover .menu__link {
+.menu__item-contact:hover .menu__link {
   color: #e2f038;
 }
 
-.menu__item-contacts:hover svg {
+.menu__item-contact:hover svg {
   opacity: 1;
   fill: currentColor;
 }
 
-.menu__item-contacts svg {
+.menu__item-contact svg {
   opacity: 0;
   width: 11px;
   height: 10px;
@@ -4031,7 +4020,7 @@ p {
   transition-duration: 0.2s;
 }
 
-.menu__item-contacts .menu__link {
+.menu__item-contact .menu__link {
   line-height: 18px;
   border-bottom: none;
 }
@@ -4082,7 +4071,7 @@ p {
   width: 100%;
   height: auto;
   background-image: linear-gradient(0deg, rgb(24, 9, 1) 42.5%, rgba(24, 9, 1, 0) 50%), url("../images/our-services.jpg");
-  -repeat: no-repeat;
+  background-repeat: no-repeat;
   background-size: cover, cover;
   background-position: center center, top 0px right -350px;
   padding-top: 315px;
@@ -4090,6 +4079,7 @@ p {
   border-radius: 0px 0px 20px 20px;
   margin-top: -40px;
   margin-bottom: 60px;
+  overflow: hidden;
 }
 
 .our-services__header,
@@ -4625,6 +4615,7 @@ p {
   color: #000;
   transition-property: border-color;
   transition-duration: 0.2s;
+  resize: none;
 }
 
 .textarea:hover {
@@ -6849,7 +6840,7 @@ p {
     align-items: center;
   }
 
-  .menu__item-contacts {
+  .menu__item-contact {
     border-radius: 100px;
     padding: 20px 40px;
   }
@@ -6866,6 +6857,7 @@ p {
     background-image: linear-gradient(0deg, rgb(24, 9, 1) 55%, rgba(24, 9, 1, 0) 70%), url("../images/our-services.jpg");
     background-position: center center, top right;
     background-size: cover, contain;
+    background-repeat: no-repeat;
     margin-inline: auto;
     max-width: 1920px;
     margin-top: -160px;
@@ -7359,15 +7351,5 @@ p {
 
   html {
     scroll-behavior: smooth;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (resolution >= 192dpi) {
-  .sprite-blank {
-    background-image: url("../images/sprites@2x.png");
-  }
-
-  .sprite-login {
-    background-image: url("../images/sprites@2x.png");
   }
 }

@@ -8,6 +8,7 @@
   color: $input-color;
   transition-property: border-color;
   transition-duration: $transition-duration;
+  resize: none;
 
   @include tablet {
     padding: 14px 30px;

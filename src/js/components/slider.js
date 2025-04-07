@@ -9,12 +9,12 @@ export const slider = (function () {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      // pagination: {
-      //   el: ".swiper-pagination",
-      //   clickable: "true",
-      //   type: "bullets",
-      //   bulletElement: "button",
-      // },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: "true",
+        type: "bullets",
+        bulletElement: "button",
+      },
     });
   };
 

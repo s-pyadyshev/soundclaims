@@ -3,7 +3,7 @@
   height: auto;
   background-image: linear-gradient(0deg, rgb(24, 9, 1) 42.5%, rgba(24, 9, 1, 0) 50%),
     url("../images/our-services.jpg");
-  -repeat: no-repeat;
+  background-repeat: no-repeat;
   background-size: cover, cover;
   background-position:
     center center,
@@ -13,6 +13,7 @@
   border-radius: 0px 0px 20px 20px;
   margin-top: -40px;
   margin-bottom: 60px;
+  overflow: hidden;
 
   &__header,
   &__title,
@@ -29,6 +30,7 @@
       center center,
       top right;
     background-size: cover, contain;
+    background-repeat: no-repeat;
     margin-inline: auto;
     max-width: 1920px;
     margin-top: -160px;
@@ -61,7 +63,6 @@
   line-height: 170%;
   margin-bottom: 38px;
   margin-top: 0;
-
 
   @include laptop {
     font-size: 20px;

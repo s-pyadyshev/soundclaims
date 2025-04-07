@@ -16,7 +16,7 @@ mixin block-news(obj)
                         p !{obj.text}
 
                     if obj.subtitle
-                        a.link.link--secondary(href="javascript: void(0);" title="Read article")
+                        a.link.link--secondary(href="#" title="Read article")
                             span Read article
                             +svg('arrow-right').link__icon-right
                 .block-news__right

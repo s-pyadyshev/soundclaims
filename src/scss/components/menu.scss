@@ -14,6 +14,15 @@
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  background: linear-gradient(111.69deg,
+      rgb(243, 247, 255) -60.944%,
+      rgb(255, 246, 252) -12.215%,
+      rgb(255, 243, 243) 36.514%,
+      rgb(255, 239, 235) 85.243%);
+
+  .has-ticker & {
+    top: 180px;
+  }
 
   @include laptop {
     top: 145px;
@@ -177,11 +186,6 @@
 
 .menu.menu--open {
   position: fixed;
-  background: linear-gradient(111.69deg,
-      rgb(243, 247, 255) -60.944%,
-      rgb(255, 246, 252) -12.215%,
-      rgb(255, 243, 243) 36.514%,
-      rgb(255, 239, 235) 85.243%);
   transform: translateX(0);
   transition-property: all;
   transition-duration: $transition-duration * 2;
@@ -218,7 +222,7 @@
   }
 }
 
-.menu__item-contacts {
+.menu__item-contact {
   background: $color-black;
   padding: 20px 0;
   border-radius: 10px;

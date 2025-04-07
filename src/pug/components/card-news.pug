@@ -10,7 +10,7 @@ mixin card-news(obj)
             h4 !{obj.text}
 
         if !obj.boldTitle
-            a.link.link--small.link--primary(href="javascript: void(0);" title="Read more")
+            a.link.link--small.link--primary(href="#" title="Read more")
                 span Read more
                 +svg('arrow-right').link__icon-right
         if obj.badge

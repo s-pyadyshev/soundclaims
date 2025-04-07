@@ -8,6 +8,7 @@ html {
   line-height: $line-height;
   color: $color-black;
   color-scheme: dark light;
+  scroll-behavior: smooth;
 
   @include laptop {
     font-size: $font-size-desktop;
