@@ -56,6 +56,18 @@
   }
 }
 
+@keyframes fadeInDownMoon {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -15%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .animate__fadeInDown {
   animation-name: fadeInDown;
 }
@@ -165,7 +177,7 @@
 
 .animate__fadeInDownBefore {
   &:before {
-    animation-name: fadeInDown;
+    animation-name: fadeInDownMoon;
   }
 }
 

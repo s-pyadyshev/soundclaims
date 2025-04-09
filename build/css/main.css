@@ -1722,6 +1722,18 @@ p {
   }
 }
 
+@keyframes fadeInDownMoon {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -15%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .animate__fadeInDown {
   animation-name: fadeInDown;
 }
@@ -1830,7 +1842,7 @@ p {
 }
 
 .animate__fadeInDownBefore:before {
-  animation-name: fadeInDown;
+  animation-name: fadeInDownMoon;
 }
 
 [data-scrollspy=animate__fadeInDownBefore]::before {
@@ -3888,6 +3900,7 @@ p {
   align-items: center;
   overflow-x: hidden;
   background: linear-gradient(111.69deg, rgb(243, 247, 255) -60.944%, rgb(255, 246, 252) -12.215%, rgb(255, 243, 243) 36.514%, rgb(255, 239, 235) 85.243%);
+  padding: 0 39px 39px;
 }
 
 .has-ticker .menu {
@@ -3990,7 +4003,6 @@ p {
   transform: translateX(0);
   transition-property: all;
   transition-duration: 0.4s;
-  padding: 0 39px 39px;
 }
 
 .menu.menu--open .menu__item--submenu > a.menu__link {
@@ -5938,6 +5950,7 @@ p {
   }
 
   .menu {
+    padding: 0;
     top: 145px;
     max-height: calc(100% - 145px);
   }

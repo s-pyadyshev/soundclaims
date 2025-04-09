@@ -19,12 +19,14 @@
       rgb(255, 246, 252) -12.215%,
       rgb(255, 243, 243) 36.514%,
       rgb(255, 239, 235) 85.243%);
+  padding: 0 39px 39px;
 
   .has-ticker & {
     top: 180px;
   }
 
   @include laptop {
+    padding: 0;
     top: 145px;
     max-height: calc(100% - 145px);
   }
@@ -190,7 +192,6 @@
   transform: translateX(0);
   transition-property: all;
   transition-duration: $transition-duration * 2;
-  padding: 0 39px 39px;
 
   @include desktop {
     transition: none;
