@@ -1,6 +1,7 @@
 mixin contact-us(obj)
   .contact-us#contact&attributes(attributes)
     .container.container-lg
+      img(src="images/sc_footer_s.png", alt="letter s." width="190" height="219" data-scrollspy="animate__fadeInDown").contact-us__letter
       .contact-us__wrap(data-scrollspy="animate__fadeInDownBefore")
         .contact-us__bg-wrap
           img.contact-us__bg(src=obj.bgImg, alt="", width=obj.width ? obj.width : "1920", height=obj.height ? obj.height : "1280", loading="lazy")

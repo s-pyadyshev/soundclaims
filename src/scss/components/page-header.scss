@@ -1,4 +1,5 @@
 .page-header {
+  z-index: 1;
   width: 100%;
   position: relative;
 }
@@ -20,7 +21,7 @@
 
 .page-header__bot__left {
   height: 100%;
-  width: calc(77% - 35px);
+  width: calc(55% - 35px);
   border-bottom-left-radius: 20px;
   background: linear-gradient(111.69deg,
       rgb(243, 247, 255) -60.944%,
@@ -35,7 +36,7 @@
 }
 
 .page-header__bot__right {
-  width: calc(23% - 35px);
+  width: calc(45% - 35px);
   border-bottom-right-radius: 20px;
 
   @include laptop {

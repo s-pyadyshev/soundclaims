@@ -1,19 +1,23 @@
 .our-services {
   width: 100%;
   height: auto;
-  background-image: linear-gradient(0deg, rgb(24, 9, 1) 42.5%, rgba(24, 9, 1, 0) 50%),
+  background-image: linear-gradient(0deg, rgb(24, 9, 1) 41.5%, rgba(24, 9, 1, 0) 55%),
     url("../images/our-services.jpg");
   background-repeat: no-repeat;
-  background-size: cover, cover;
+  background-size: cover, 150vh;
   background-position:
     center center,
-    top 0px right -350px;
-  padding-top: 315px;
+    75% 0;
+  padding-top: 250px;
   padding-bottom: 100px;
   border-radius: 0px 0px 20px 20px;
   margin-top: -40px;
   margin-bottom: 60px;
   overflow: hidden;
+
+  .container {
+    position: relative;
+  }
 
   &__header,
   &__title,
@@ -21,15 +25,24 @@
     color: $color-white;
   }
 
-  @include desktop {
-    padding-top: 422px;
-    padding-bottom: 142px;
-    background-image: linear-gradient(0deg, rgb(24, 9, 1) 55%, rgba(24, 9, 1, 0) 70%),
+  @include tablet {
+    background-image: linear-gradient(0deg, rgb(24, 9, 1) 42.5%, rgba(24, 9, 1, 0) 50%),
       url("../images/our-services.jpg");
     background-position:
       center center,
-      top right;
-    background-size: cover, contain;
+      0 -55%;
+    background-size: cover, cover;
+  }
+
+  @include desktop {
+    padding-top: 422px;
+    padding-bottom: 142px;
+    background-image: linear-gradient(0deg, rgb(24, 9, 1) 55%, rgba(24, 9, 1, 0) 65%),
+      url("../images/our-services.jpg");
+    background-position:
+      center center,
+      0 -35%;
+    background-size: cover, 100%;
     background-repeat: no-repeat;
     margin-inline: auto;
     max-width: 1920px;
@@ -42,7 +55,7 @@
       .our-services__header,
       .our-services__title,
       .our-services__desc {
-        padding-inline: 40px;
+        padding-inline: 0 40px;
       }
 
       .button--our-services {
@@ -54,6 +67,9 @@
   @include desktop-l {
     background-image: linear-gradient(0deg, rgb(24, 9, 1) 40%, rgba(24, 9, 1, 0) 70%),
       url("../images/our-services.jpg");
+    background-position:
+      center center,
+      0 -200px;
   }
 }
 
@@ -99,7 +115,7 @@
   padding: 20px 0;
 
   @include desktop {
-    padding: 20px 40px;
+    padding: 20px 40px 20px 0;
   }
 
   .swiper-slide {
@@ -144,7 +160,7 @@
     @include desktop {
       left: 50%;
       transform: translateX(calc(-50%));
-      max-width: 1510px;
+      max-width: 1025px;
       width: 100vw;
     }
   }
@@ -155,10 +171,6 @@
     align-items: center;
     width: 78px;
 
-    @include desktop {
-      width: 320px;
-    }
-
     &:has(.swiper-button-disabled) {
       opacity: 0;
       width: 0px;
@@ -166,25 +178,33 @@
   }
 
   .mask-left {
-    background: linear-gradient(91.17deg, rgb(24, 9, 1) 36.313%, rgba(24, 9, 1, 0) 97.205%);
-    padding-right: 20px;
+    background: linear-gradient(91.17deg, rgb(24, 9, 1) 36.313%, rgba(24, 9, 1, 0) 45.205%);
+    padding-right: 35px;
 
     @include desktop {
+      padding-right: 0;
+      width: 140px;
+    }
+
+    @include desktop-l {
       background: linear-gradient(91.17deg, rgb(24, 9, 1) 88.876%, rgba(24, 9, 1, 0) 99.825%);
-      padding-right: 110px;
-      justify-content: end;
+      width: 70px;
     }
   }
 
   .mask-right {
     justify-content: end;
     background: linear-gradient(91.17deg, rgba(24, 9, 1, 0) 2.795%, rgb(24, 9, 1) 63.687%);
-    padding-left: 20px;
+    padding-left: 35px;
 
     @include desktop {
+      padding-left: 0;
+      width: 140px;
+    }
+
+    @include desktop-l {
       background: linear-gradient(91.17deg, rgba(24, 9, 1, 0) 0.175%, rgb(24, 9, 1) 11.124%);
-      padding-left: 110px;
-      justify-content: start;
+      width: 70px;
     }
   }
 }
@@ -200,5 +220,38 @@
   @include laptop {
     font-size: 36px;
     margin-bottom: 25px;
+  }
+}
+
+.our-services__letter {
+  position: absolute;
+  top: -12%;
+  right: -7%;
+  width: 162px;
+  animation-duration: 2s;
+
+  @include tablet {
+    top: -5%;
+    right: 5%;
+  }
+
+  @include desktop {
+    top: -49%;
+    right: 14%;
+  }
+}
+
+.our-services__sun {
+  position: absolute;
+  top: -245px;
+  left: -175px;
+  width: 409px;
+  animation-duration: 2s;
+
+  @include desktop {
+    left: 0;
+    right: 0;
+    top: -400px;
+    margin-inline: auto;
   }
 }

@@ -1713,7 +1713,7 @@ p {
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translate3d(0, -25%, 0);
+    transform: translate3d(0, -50%, 0);
   }
 
   to {
@@ -2071,6 +2071,7 @@ p {
   --padding-top: 37px;
   --padding-bottom: 37px;
   z-index: 1;
+  overflow: hidden;
 }
 
 .block-news h2 {
@@ -2446,6 +2447,7 @@ p {
 }
 
 .card-employee__detail {
+  box-sizing: border-box;
   z-index: 1;
   position: absolute;
   top: 0;
@@ -2461,13 +2463,13 @@ p {
 
 .card-employee__detail h3 {
   margin-bottom: 16px;
-  font-size: 18px;
+  font-size: 16px;
   color: #e2f038;
 }
 
 .card-employee__detail p {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.4;
   color: #fff;
 }
@@ -2698,6 +2700,7 @@ p {
 }
 
 .contact-us {
+  position: relative;
   --padding-top-image: 97px;
   --height-bg-img: 571px;
   --object-position-offset: -84px;
@@ -2827,6 +2830,10 @@ p {
   --object-position-offset: -19px;
 }
 
+.contact-us--local .contact-us__letter {
+  display: none;
+}
+
 .contact-us--services {
   --object-position-offset: -195px;
 }
@@ -2869,6 +2876,18 @@ p {
   width: 100%;
   max-width: 100% !important;
   margin: 0 auto;
+}
+
+.contact-us__letter {
+  position: absolute;
+  right: 21%;
+  z-index: 1;
+  width: 64px;
+  top: 26%;
+}
+
+.contact-us--aside .contact-us__letter {
+  top: 15%;
 }
 
 :root {
@@ -4070,16 +4089,20 @@ p {
 .our-services {
   width: 100%;
   height: auto;
-  background-image: linear-gradient(0deg, rgb(24, 9, 1) 42.5%, rgba(24, 9, 1, 0) 50%), url("../images/our-services.jpg");
+  background-image: linear-gradient(0deg, rgb(24, 9, 1) 41.5%, rgba(24, 9, 1, 0) 55%), url("../images/our-services.jpg");
   background-repeat: no-repeat;
-  background-size: cover, cover;
-  background-position: center center, top 0px right -350px;
-  padding-top: 315px;
+  background-size: cover, 150vh;
+  background-position: center center, 75% 0;
+  padding-top: 250px;
   padding-bottom: 100px;
   border-radius: 0px 0px 20px 20px;
   margin-top: -40px;
   margin-bottom: 60px;
   overflow: hidden;
+}
+
+.our-services .container {
+  position: relative;
 }
 
 .our-services__header,
@@ -4166,14 +4189,14 @@ p {
 }
 
 .out-services__slider-block .mask-left {
-  background: linear-gradient(91.17deg, rgb(24, 9, 1) 36.313%, rgba(24, 9, 1, 0) 97.205%);
-  padding-right: 20px;
+  background: linear-gradient(91.17deg, rgb(24, 9, 1) 36.313%, rgba(24, 9, 1, 0) 45.205%);
+  padding-right: 35px;
 }
 
 .out-services__slider-block .mask-right {
   justify-content: end;
   background: linear-gradient(91.17deg, rgba(24, 9, 1, 0) 2.795%, rgb(24, 9, 1) 63.687%);
-  padding-left: 20px;
+  padding-left: 35px;
 }
 
 .our-services__title {
@@ -4185,7 +4208,24 @@ p {
   margin-bottom: 19px;
 }
 
+.our-services__letter {
+  position: absolute;
+  top: -12%;
+  right: -7%;
+  width: 162px;
+  animation-duration: 2s;
+}
+
+.our-services__sun {
+  position: absolute;
+  top: -245px;
+  left: -175px;
+  width: 409px;
+  animation-duration: 2s;
+}
+
 .page-header {
+  z-index: 1;
   width: 100%;
   position: relative;
 }
@@ -4203,13 +4243,13 @@ p {
 
 .page-header__bot__left {
   height: 100%;
-  width: calc(77% - 35px);
+  width: calc(55% - 35px);
   border-bottom-left-radius: 20px;
   background: linear-gradient(111.69deg, rgb(243, 247, 255) -60.944%, rgb(255, 246, 252) -12.215%, rgb(255, 243, 243) 36.514%, rgb(255, 239, 235) 85.243%);
 }
 
 .page-header__bot__right {
-  width: calc(23% - 35px);
+  width: calc(45% - 35px);
   border-bottom-right-radius: 20px;
 }
 
@@ -4417,6 +4457,7 @@ p {
   content: "";
   width: 20px;
   height: 2px;
+  margin-top: -3px;
   background-color: rgb(231, 42, 51);
 }
 
@@ -4594,6 +4635,13 @@ p {
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+}
+
+.slider-teams {
+  margin-right: -40px;
+  margin-left: -40px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .tabs {
@@ -5232,6 +5280,14 @@ p {
     padding-right: 0;
   }
 
+  .card-employee__detail h3 {
+    font-size: 18px;
+  }
+
+  .card-employee__detail p {
+    font-size: 16px;
+  }
+
   .card__footer {
     padding: 34px 0;
   }
@@ -5291,6 +5347,10 @@ p {
   .contact-us__wrapper {
     padding-right: 60px;
     padding-left: 60px;
+  }
+
+  .contact-us--aside .contact-us__letter {
+    top: 24%;
   }
 
   .decor::before {
@@ -5469,6 +5529,17 @@ p {
 
   .news-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .our-services {
+    background-image: linear-gradient(0deg, rgb(24, 9, 1) 42.5%, rgba(24, 9, 1, 0) 50%), url("../images/our-services.jpg");
+    background-position: center center, 0 -55%;
+    background-size: cover, cover;
+  }
+
+  .our-services__letter {
+    top: -5%;
+    right: 5%;
   }
 
   .section-jobs__wrap {
@@ -6399,6 +6470,12 @@ p {
     left: -50px !important;
   }
 
+  .contact-us--moon .contact-us__wrap::before,
+  .contact-us--sun .contact-us__wrap::before {
+    background-size: contain;
+    top: 10px;
+  }
+
   .contact-us {
     --padding-top-image: 231px;
     --height-bg-img: 1007px;
@@ -6462,6 +6539,12 @@ p {
 
   .contact-us__form {
     margin-top: -10px;
+  }
+
+  .contact-us__letter {
+    width: 105px;
+    top: 24%;
+    left: 39%;
   }
 
   .content {
@@ -6855,9 +6938,9 @@ p {
   .our-services {
     padding-top: 422px;
     padding-bottom: 142px;
-    background-image: linear-gradient(0deg, rgb(24, 9, 1) 55%, rgba(24, 9, 1, 0) 70%), url("../images/our-services.jpg");
-    background-position: center center, top right;
-    background-size: cover, contain;
+    background-image: linear-gradient(0deg, rgb(24, 9, 1) 55%, rgba(24, 9, 1, 0) 65%), url("../images/our-services.jpg");
+    background-position: center center, 0 -35%;
+    background-size: cover, 100%;
     background-repeat: no-repeat;
     margin-inline: auto;
     max-width: 1920px;
@@ -6872,7 +6955,7 @@ p {
   .our-services .container .our-services__header,
   .our-services .container .our-services__title,
   .our-services .container .our-services__desc {
-    padding-inline: 40px;
+    padding-inline: 0 40px;
   }
 
   .our-services .container .button--our-services {
@@ -6880,7 +6963,7 @@ p {
   }
 
   .our-services__slider {
-    padding: 20px 40px;
+    padding: 20px 40px 20px 0;
   }
 
   .out-services__slider-block .swiper-pagination button {
@@ -6890,24 +6973,30 @@ p {
   .out-services__slider-block .swiper-pagination {
     left: 50%;
     transform: translateX(-50%);
-    max-width: 1510px;
+    max-width: 1025px;
     width: 100vw;
   }
 
-  .out-services__slider-block .mask {
-    width: 320px;
-  }
-
   .out-services__slider-block .mask-left {
-    background: linear-gradient(91.17deg, rgb(24, 9, 1) 88.876%, rgba(24, 9, 1, 0) 99.825%);
-    padding-right: 110px;
-    justify-content: end;
+    padding-right: 0;
+    width: 140px;
   }
 
   .out-services__slider-block .mask-right {
-    background: linear-gradient(91.17deg, rgba(24, 9, 1, 0) 0.175%, rgb(24, 9, 1) 11.124%);
-    padding-left: 110px;
-    justify-content: start;
+    padding-left: 0;
+    width: 140px;
+  }
+
+  .our-services__letter {
+    top: -49%;
+    right: 14%;
+  }
+
+  .our-services__sun {
+    left: 0;
+    right: 0;
+    top: -400px;
+    margin-inline: auto;
   }
 
   .page-header__top {
@@ -6962,6 +7051,13 @@ p {
   .slider-clients .swiper-slide img {
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .slider-teams {
+    margin-right: -160px;
+    margin-left: -160px;
+    padding-right: 40px;
+    padding-left: 160px;
   }
 
   .video {
@@ -7255,11 +7351,6 @@ p {
     padding-inline: 240px;
   }
 
-  .contact-us--moon .contact-us__wrap::before,
-  .contact-us--sun .contact-us__wrap::before {
-    top: -50px;
-  }
-
   .contact-us__wrapper {
     padding-left: 269px;
   }
@@ -7309,6 +7400,24 @@ p {
 
   .our-services {
     background-image: linear-gradient(0deg, rgb(24, 9, 1) 40%, rgba(24, 9, 1, 0) 70%), url("../images/our-services.jpg");
+    background-position: center center, 0 -200px;
+  }
+
+  .out-services__slider-block .mask-left {
+    background: linear-gradient(91.17deg, rgb(24, 9, 1) 88.876%, rgba(24, 9, 1, 0) 99.825%);
+    width: 70px;
+  }
+
+  .out-services__slider-block .mask-right {
+    background: linear-gradient(91.17deg, rgba(24, 9, 1, 0) 0.175%, rgb(24, 9, 1) 11.124%);
+    width: 70px;
+  }
+
+  .slider-teams {
+    margin-right: -360px;
+    margin-left: -160px;
+    padding-right: 0;
+    padding-left: 160px;
   }
 }
 

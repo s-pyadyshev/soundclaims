@@ -7,6 +7,7 @@ import { fileInput } from "./components/fileInput.js";
 import { slider } from "./components/slider.js";
 import { sliderServices } from "./components/sliderServices.js";
 import { sliderOurServices } from "./components/sliderOurServices.js";
+import { sliderTeams } from "./components/sliderTeams.js";
 import { FancySelect } from "./vendor.js";
 
 window.addEventListener(
@@ -21,6 +22,7 @@ window.addEventListener(
     slider.init();
     sliderServices.init();
     sliderOurServices.init();
+    sliderTeams.init();
     document.querySelector("body").classList.add("page-loaded");
   },
   false

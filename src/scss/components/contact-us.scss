@@ -1,4 +1,5 @@
 .contact-us {
+  position: relative;
   --padding-top-image: 97px;
   --height-bg-img: 571px;
   --object-position-offset: -84px;
@@ -123,8 +124,9 @@
           z-index: 1;
           pointer-events: none;
 
-          @media (min-width: 1510px) {
-            top: -50px;
+          @include desktop {
+            background-size: contain;
+            top: 10px;
           }
         }
       }
@@ -154,6 +156,10 @@
 
   &--local {
     --object-position-offset: -19px;
+
+    .contact-us__letter {
+      display: none;
+    }
   }
 
   &--services {
@@ -352,5 +358,27 @@
   @include tablet {
     padding-right: 60px;
     padding-left: 60px;
+  }
+}
+
+.contact-us__letter {
+  position: absolute;
+  right: 21%;
+  z-index: 1;
+  width: 64px;
+  top: 26%;
+
+  @include desktop {
+    width: 105px;
+    top: 24%;
+    left: 39%;
+  }
+}
+
+.contact-us--aside .contact-us__letter {
+  top: 15%;
+
+  @include tablet {
+    top: 24%;
   }
 }
