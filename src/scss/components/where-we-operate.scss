@@ -8,6 +8,8 @@
   }
 
   .where-we-operate__content {
+
+
     @include desktop {
       max-width: 535px;
     }
@@ -58,7 +60,11 @@
 
   .wrapper-mid {
     .wrapper__content {
-      padding: 396px 20px 20px;
+      z-index: 1;
+      position: relative;
+      padding: 20px 20px 20px;
+      display: flex;
+      flex-direction: column-reverse;
 
       @include desktop {
         display: flex;
@@ -133,6 +139,24 @@
           }
         }
       }
+    }
+  }
+}
+
+.where-we-operate__map {
+  width: calc(100% + 200px);
+  margin: 0 -100px;
+
+  @include desktop {
+    width: 100%;
+    margin: 0;
+  }
+
+  >svg {
+    width: calc(100% + 200px);
+
+    @include desktop {
+      width: 100%;
     }
   }
 }

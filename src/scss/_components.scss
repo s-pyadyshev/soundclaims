@@ -4,6 +4,7 @@
 @import "components/article";
 @import "components/aside";
 @import "components/badge";
+@import "components/block-hero.scss";
 @import "components/block-news";
 @import "components/block-wrapper.scss";
 @import "components/bullet-list";
@@ -31,9 +32,11 @@
 @import "components/link";
 @import "components/list";
 @import "components/local-teams";
+@import "components/map";
 @import "components/menu-toggle";
 @import "components/menu";
 @import "components/navbar";
+@import "components/news-and-stories.scss";
 @import "components/news-list";
 @import "components/news";
 @import "components/our-services.scss";
@@ -47,5 +50,3 @@
 @import "components/textarea";
 @import "components/video";
 @import "components/where-we-operate.scss";
-@import "components/block-hero.scss";
-@import "components/news-and-stories.scss";

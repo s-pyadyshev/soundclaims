@@ -1,0 +1,65 @@
+:root {
+  --not-active: #F9E9EA;
+  --color-active: #e72a33;
+  --color-hover: #e72a33;
+  --color-stroke: white;
+}
+
+svg#Africa {
+  height: 100%;
+  width: 100%;
+}
+
+.inland {
+  fill: var(--not-active);
+  stroke: var(--color-stroke);
+  stroke-width: 2;
+  stroke-miterlimit: 3.9745;
+  transition: all 0.6s;
+}
+
+.island {
+  fill: var(--not-active);
+  stroke: var(--color-stroke);
+  stroke-width: 0.3;
+  stroke-miterlimit: 3.9745;
+  transition: all 0.7s;
+}
+
+.active-country .inland,
+.active-country .island {
+  fill: var(--color-active);
+}
+
+.inland:hover,
+.island:hover {
+  cursor: pointer;
+  fill: var(--color-hover);
+}
+
+.st2 {
+  fill: green;
+  fill-opacity: 0;
+}
+
+.tippy-box {
+  font-size: 15px;
+  font-weight: 300;
+  padding: 15px 25px;
+  background-color: $color-secondary;
+  color: #fff;
+
+  b,
+  strong,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-style: 17px;
+    font-weight: 500;
+  }
+
+  ul {
+    list-style-position: inside;
+  }
+}
