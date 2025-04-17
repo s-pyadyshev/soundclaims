@@ -23,6 +23,11 @@
       top: calc(100% - 100px);
       z-index: -1;
     }
+
+    +* {
+      z-index: 1;
+      position: relative;
+    }
   }
 
   @include tablet {
@@ -61,6 +66,16 @@
         max-width: 100%;
         mask-image: linear-gradient(90deg, transparent 0%, black 10px, black calc(100% - 10px), transparent 100%);
       }
+    }
+  }
+}
+
+.decor--desktop {
+  &:before {
+    display: none;
+
+    @include desktop {
+      display: block;
     }
   }
 }

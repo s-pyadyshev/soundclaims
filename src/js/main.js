@@ -8,6 +8,7 @@ import { slider } from "./components/slider.js";
 import { sliderServices } from "./components/sliderServices.js";
 import { sliderOurServices } from "./components/sliderOurServices.js";
 import { sliderTeams } from "./components/sliderTeams.js";
+import { sliderFacts } from "./components/sliderFacts.js";
 import tippy from "tippy.js";
 import { FancySelect } from "./vendor.js";
 
@@ -24,16 +25,13 @@ window.addEventListener(
     sliderServices.init();
     sliderOurServices.init();
     sliderTeams.init();
+    sliderFacts.init();
 
     tippy("[data-template]", {
       content(reference) {
         const id = reference.getAttribute("data-template");
         const template = document.getElementById(id);
-        if (template) {
-          return template.innerHTML;
-        } else {
-          return null;
-        }
+        return template?.innerHTML || null;
       },
       allowHTML: true,
       arrow: true,

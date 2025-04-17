@@ -2,10 +2,9 @@ extends pug/base
 
 prepend vars
   - title = 'News'
-  - pageWrapperClass = 'decor'
+  - pageWrapperClass = 'decor has-ticker'
 
 append vars
- - pageWrapperClass = 'has-ticker'
 
 block content
   +news-and-stories

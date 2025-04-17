@@ -1,21 +1,49 @@
 .where-we-operate {
-  margin-top: 90px;
-  margin-bottom: 70px;
+  padding-top: 90px;
+  padding-bottom: 70px;
 
   @include desktop {
-    margin-top: 120px;
-    margin-bottom: 133px;
+    padding-top: 120px;
+    padding-bottom: 133px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 390px;
+    height: 100%;
+    background-image: url(../images/africa-bg-mobile.png);
+    background-size: 390px;
+    background-position: -20px -95px;
+    background-repeat: no-repeat;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+
+    @include desktop {
+      width: 1200px;
+      height: 100%;
+      background-image: url(../images/africa-bg.png);
+      background-size: contain;
+      background-position: 123px -45px;
+      transform: scale(1.5);
+    }
+
+    @include desktop-l {
+      background-position: 110px -45px;
+      transform: scale(1.6);
+    }
   }
 
   .where-we-operate__content {
-
-
     @include desktop {
-      max-width: 535px;
+      width: 535px;
     }
 
     .where-we-operate__text {
-      color: rgb(0, 0, 0);
+      color: #000;
       font-family: $font-primary;
       font-size: 16px;
       font-weight: 300;
@@ -35,7 +63,7 @@
         }
       }
 
-      @include laptop {
+      @include desktop {
         font-size: 20px;
       }
     }
@@ -46,7 +74,7 @@
       font-weight: 700;
       margin-bottom: 18px;
 
-      @include laptop {
+      @include desktop {
         font-size: 36px;
       }
 
@@ -65,12 +93,13 @@
       padding: 20px 20px 20px;
       display: flex;
       flex-direction: column-reverse;
+      align-items: center;
 
       @include desktop {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: flex-end;
-        padding: 64px 67px;
+        padding: 60px 67px;
       }
     }
 
@@ -144,12 +173,20 @@
 }
 
 .where-we-operate__map {
-  width: calc(100% + 200px);
-  margin: 0 -100px;
+  width: calc(100% + 240px);
+  margin: -75px -120px 0;
 
   @include desktop {
-    width: 100%;
+    width: calc(100% + 120px);
     margin: 0;
+    margin-left: -210px;
+    margin-top: -35px;
+    margin-bottom: -175px;
+    width: 691px;
+  }
+
+  @include desktop-l {
+    margin-left: -250px;
   }
 
   >svg {

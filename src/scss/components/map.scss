@@ -7,7 +7,35 @@
 
 svg#Africa {
   height: 100%;
-  width: 100%;
+  width: inherit;
+  max-width: 456px;
+  margin: 0 auto;
+
+  @include desktop {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  path {
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  [data-template] {
+    fill: var(--color-hover);
+
+    @include desktop {
+      fill: var(--not-active);
+    }
+  }
+
+  [data-template]:hover {
+    cursor: pointer;
+    fill: var(--color-hover);
+  }
 }
 
 .inland {
@@ -15,7 +43,7 @@ svg#Africa {
   stroke: var(--color-stroke);
   stroke-width: 2;
   stroke-miterlimit: 3.9745;
-  transition: all 0.6s;
+  transition: all 0.3s;
 }
 
 .island {
@@ -31,11 +59,7 @@ svg#Africa {
   fill: var(--color-active);
 }
 
-.inland:hover,
-.island:hover {
-  cursor: pointer;
-  fill: var(--color-hover);
-}
+
 
 .st2 {
   fill: green;
@@ -55,8 +79,9 @@ svg#Africa {
   h4,
   h5,
   h6 {
-    font-style: 17px;
+    font-size: 17px;
     font-weight: 500;
+    margin-bottom: 0;
   }
 
   ul {

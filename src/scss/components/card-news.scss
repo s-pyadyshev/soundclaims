@@ -3,7 +3,7 @@
   background-color: $color-blackcurrant;
   color: $color-white;
   padding: 30px 30px 28px;
-  width: 234px;
+  max-width: 234px;
   min-height: 212px;
   display: flex;
   flex-direction: column;
@@ -42,7 +42,8 @@
   }
 
   @include desktop {
-    width: 400px;
+    height: 100%;
+    max-width: 400px;
     min-height: 320px;
     border-radius: 40px;
     padding: 52px 84px 52px 50px;

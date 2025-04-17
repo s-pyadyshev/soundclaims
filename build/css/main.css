@@ -1671,7 +1671,7 @@ p {
 }
 
 .page-loaded .animate__animated {
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-fill-mode: both;
 }
 
@@ -1713,7 +1713,7 @@ p {
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -100%, 0);
   }
 
   to {
@@ -2154,6 +2154,7 @@ p {
   font-size: 16px;
   line-height: 27px;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .block-news__list {
@@ -2163,7 +2164,7 @@ p {
   padding-inline: calc(var(--padding-left) + var(--container-padding)) calc(var(--padding-right) + var(--container-padding));
   -moz-column-gap: 20px;
   column-gap: 20px;
-  margin-top: 20px;
+  margin-top: 0;
   overflow: auto hidden;
   scrollbar-width: none;
 }
@@ -2355,7 +2356,7 @@ p {
   background-color: #000;
   border-color: #000;
   color: #fff;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 10px 0px rgba(243, 250, 159, 0.6);
 }
 
 .button:focus .button__icon,
@@ -2402,7 +2403,7 @@ p {
 
 .button__icon {
   width: 12px;
-  height: 10px;
+  height: 12px;
   fill: currentColor;
 }
 
@@ -2493,10 +2494,11 @@ p {
 }
 
 .card-employee:hover .card-employee__detail {
-  transform: translateY(0);
+  opacity: 1;
 }
 
 .card-employee__detail {
+  opacity: 0;
   box-sizing: border-box;
   z-index: 1;
   position: absolute;
@@ -2506,9 +2508,7 @@ p {
   height: 100%;
   padding: 30px;
   background-color: #000;
-  transition-property: transform;
-  transition-duration: 1s;
-  transform: translateY(100%);
+  transition: opacity 0.25s ease-in-out;
 }
 
 .card-employee__detail h3 {
@@ -2546,7 +2546,7 @@ p {
   background-color: #0a050f;
   color: #fff;
   padding: 30px 30px 28px;
-  width: 234px;
+  max-width: 234px;
   min-height: 212px;
   display: flex;
   flex-direction: column;
@@ -2782,7 +2782,7 @@ p {
 }
 
 .contact-us__wrapper {
-  padding: 208px 0px 20px 38px;
+  padding: 208px 38px 20px 38px;
   color: #fff;
   position: relative;
   overflow: clip;
@@ -2801,6 +2801,7 @@ p {
   font-size: 24px;
   line-height: 34px;
   margin-bottom: 19px;
+  max-width: 140px;
 }
 
 .contact-us p {
@@ -2810,6 +2811,7 @@ p {
   line-height: 27px;
   margin: 0;
   margin-bottom: 28px;
+  max-width: 210px;
 }
 
 .contact-us__bg-wrap {
@@ -2888,6 +2890,10 @@ p {
   --object-position-offset: -195px;
 }
 
+.contact-us--services .contact-us__letter {
+  display: none;
+}
+
 .contact-us--about {
   --object-position-offset: -200px;
 }
@@ -2934,6 +2940,7 @@ p {
   z-index: 1;
   width: 64px;
   top: 26%;
+  animation-delay: 1.5s;
 }
 
 .contact-us--aside .contact-us__letter {
@@ -3009,6 +3016,15 @@ p {
 .decor--page-header::before {
   top: calc(100% - 100px);
   z-index: -1;
+}
+
+.decor--page-header + * {
+  z-index: 1;
+  position: relative;
+}
+
+.decor--desktop:before {
+  display: none;
 }
 
 .footer {
@@ -3167,6 +3183,7 @@ p {
   margin-block: 39px 32px;
 }
 
+.from-start-to-finish__content,
 .from-start-to-finish__banner {
   min-height: min(calc(390px + (100vw - 390px) / 2), 516px);
   border-radius: 20px;
@@ -3180,6 +3197,7 @@ p {
   margin-bottom: 32px;
 }
 
+.from-start-to-finish__content::before,
 .from-start-to-finish__banner::before {
   content: "";
   position: absolute;
@@ -3187,13 +3205,14 @@ p {
   left: 0;
   width: 100%;
   height: calc(100% - 117px);
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 90%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 90%, rgba(0, 0, 0, 0) 100%);
   background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
   z-index: -1;
 }
 
+.from-start-to-finish__content p,
 .from-start-to-finish__banner p {
   font-weight: 300;
   font-size: 16px;
@@ -3217,11 +3236,13 @@ p {
   font-size: 24px;
   line-height: 34px;
   margin-bottom: 14px;
+  max-width: 145px;
 }
 
 .from-start-to-finish p {
   margin-top: 0;
   margin-bottom: 20px;
+  max-width: 232px;
 }
 
 .from-start-to-finish p:last-child {
@@ -3532,7 +3553,6 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 240px;
   gap: 20px;
   padding: 50px;
   font-family: "Oddval", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
@@ -3541,9 +3561,9 @@ p {
   border-radius: 10px;
   color: #e72a33;
   transition-duration: 0.2s;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none'%3E%3Crect width='227' height='271' x='.5' y='.5' stroke='%23E72A33' stroke-dasharray='10 10' rx='10'/%3E%3C/svg%3E");
-  width: 228px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none'%3E%3Crect width='100%' height='271' x='.10' y='.5' stroke='%23E72A33' stroke-dasharray='10 10' rx='10'/%3E%3C/svg%3E");
   height: 272px;
+  width: 100%;
   text-align: center;
 }
 
@@ -3591,7 +3611,7 @@ p {
   font-size: 16px;
   line-height: 1.6;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
   color: #000;
   transition-property: border-color;
   transition-duration: 0.2s;
@@ -3599,16 +3619,16 @@ p {
 
 .input:focus,
 .input:focus-visible {
-  border-color: #000;
+  border-color: rgba(255, 255, 255, 0.5);
   outline: none;
 }
 
 .input:hover {
-  border-color: #000;
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .input:active {
-  border-color: #000;
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .input[disabled] {
@@ -3630,14 +3650,14 @@ p {
 }
 
 .input--default {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
 
 .input--default:focus,
 .input--default:focus-visible {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
   outline: none;
 }
 
@@ -3727,9 +3747,8 @@ p {
 }
 
 .link__icon-right {
-  width: 12px;
-  height: 10px;
-  fill: currentColor;
+  width: 15px;
+  height: 13px;
 }
 
 .link--small {
@@ -3737,6 +3756,15 @@ p {
   line-height: 16px;
   -moz-column-gap: 18px;
   column-gap: 18px;
+}
+
+.link--small:focus svg,
+.link--small:hover svg {
+  transform: translate(6px);
+}
+
+.link--small svg {
+  transition: all 0.25s ease-in-out;
 }
 
 .link--secondary {
@@ -3831,7 +3859,23 @@ p {
 
 svg#Africa {
   height: 100%;
-  width: 100%;
+  width: inherit;
+  max-width: 456px;
+  margin: 0 auto;
+}
+
+svg#Africa path:focus,
+svg#Africa path:active {
+  outline: none;
+}
+
+svg#Africa [data-template] {
+  fill: var(--color-hover);
+}
+
+svg#Africa [data-template]:hover {
+  cursor: pointer;
+  fill: var(--color-hover);
 }
 
 .inland {
@@ -3839,7 +3883,7 @@ svg#Africa {
   stroke: var(--color-stroke);
   stroke-width: 2;
   stroke-miterlimit: 3.9745;
-  transition: all 0.6s;
+  transition: all 0.3s;
 }
 
 .island {
@@ -3853,12 +3897,6 @@ svg#Africa {
 .active-country .inland,
 .active-country .island {
   fill: var(--color-active);
-}
-
-.inland:hover,
-.island:hover {
-  cursor: pointer;
-  fill: var(--color-hover);
 }
 
 .st2 {
@@ -3880,8 +3918,9 @@ svg#Africa {
 .tippy-box h4,
 .tippy-box h5,
 .tippy-box h6 {
-  font-style: 17px;
+  font-size: 17px;
   font-weight: 500;
+  margin-bottom: 0;
 }
 
 .tippy-box ul {
@@ -4252,6 +4291,7 @@ svg#Africa {
   flex-wrap: nowrap;
   gap: 40px;
   width: 100%;
+  text-decoration: none;
 }
 
 .news-card__author {
@@ -4471,7 +4511,7 @@ svg#Africa {
 }
 
 .page-header {
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   position: relative;
 }
@@ -4507,7 +4547,7 @@ svg#Africa {
 
 .page-header__mask {
   height: 102%;
-  width: 70px;
+  width: 72px;
   -webkit-mask-image: url("../images/page-header-path.svg");
   mask-image: url("../images/page-header-path.svg");
   -webkit-mask-repeat: no-repeat;
@@ -4890,22 +4930,102 @@ svg#Africa {
   padding-left: 40px;
 }
 
-.tabs {
-  display: flex;
-  gap: 16px;
+.tippy-box[data-animation=fade][data-state=hidden] {
+  opacity: 0;
 }
 
-.tab-button {
-  background: none;
+[data-tippy-root] {
+  max-width: calc(100vw - 10px);
+}
+
+.tippy-box {
+  position: relative;
+  background-color: #e72a33;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: normal;
+  outline: 0;
+  transition-property: transform, visibility, opacity;
+}
+
+.tippy-box[data-placement^=top] > .tippy-arrow {
+  bottom: 0;
+}
+
+.tippy-box[data-placement^=top] > .tippy-arrow:before {
+  bottom: -9px;
+  left: 0;
+  border-width: 12px 12px 0;
+  border-top-color: initial;
+  transform-origin: center top;
+}
+
+.tippy-box[data-placement^=bottom] > .tippy-arrow {
+  top: 0;
+}
+
+.tippy-box[data-placement^=bottom] > .tippy-arrow:before {
+  top: -9px;
+  left: 0;
+  border-width: 0 12px 12px;
+  border-bottom-color: initial;
+  transform-origin: center bottom;
+}
+
+.tippy-box[data-placement^=left] > .tippy-arrow {
+  right: 0;
+}
+
+.tippy-box[data-placement^=left] > .tippy-arrow:before {
+  border-width: 12px 0 12px 12px;
+  border-left-color: initial;
+  right: -9px;
+  transform-origin: center left;
+}
+
+.tippy-box[data-placement^=right] > .tippy-arrow {
+  left: 0;
+}
+
+.tippy-box[data-placement^=right] > .tippy-arrow:before {
+  left: -9px;
+  border-width: 12px 12px 12px 0;
+  border-right-color: initial;
+  transform-origin: center right;
+}
+
+.tippy-box[data-inertia][data-state=visible] {
+  transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+}
+
+.tippy-arrow {
+  width: 16px;
+  height: 16px;
+  color: #e72a33;
+}
+
+.tippy-arrow:before {
+  content: "";
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tippy-content {
+  position: relative;
+  padding: 5px 9px;
+  z-index: 1;
 }
 
 .textarea {
   font-size: 16px;
   font-weight: 300;
   padding: 14px 20px;
-  border: 1px solid #e72a33;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
   color: #000;
   transition-property: border-color;
   transition-duration: 0.2s;
@@ -4913,12 +5033,12 @@ svg#Africa {
 }
 
 .textarea:hover {
-  border-color: #000;
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .textarea:focus,
 .textarea:focus-visible {
-  border-color: #000;
+  border-color: rgba(255, 255, 255, 0.5);
   outline: none;
 }
 
@@ -4929,13 +5049,13 @@ svg#Africa {
 
 .textarea--default {
   background-color: rgba(255, 255, 255, 0.1);
-  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
 
 .textarea--default:focus,
 .textarea--default:focus-visible {
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
   outline: none;
 }
 
@@ -4972,10 +5092,12 @@ svg#Africa {
   font-weight: 700;
   font-size: 18px;
   position: absolute;
-  top: 20px;
-  left: 20px;
+  bottom: 20px;
+  left: 40px;
   padding-right: 20px;
   color: #fff;
+  margin: 0;
+  max-width: 200px;
 }
 
 .video-vimeo {
@@ -5017,12 +5139,28 @@ svg#Africa {
 }
 
 .where-we-operate {
-  margin-top: 90px;
-  margin-bottom: 70px;
+  padding-top: 90px;
+  padding-bottom: 70px;
+}
+
+.where-we-operate:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 390px;
+  height: 100%;
+  background-image: url(../images/africa-bg-mobile.png);
+  background-size: 390px;
+  background-position: -20px -95px;
+  background-repeat: no-repeat;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
 }
 
 .where-we-operate .where-we-operate__content .where-we-operate__text {
-  color: rgb(0, 0, 0);
+  color: #000;
   font-family: "At Hauss Std", -apple-system, BlinkMacSystemFont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -5052,6 +5190,7 @@ svg#Africa {
   padding: 20px 20px 20px;
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
 }
 
 .where-we-operate .wrapper-mid .wrapper__line {
@@ -5082,8 +5221,8 @@ svg#Africa {
 }
 
 .where-we-operate__map {
-  width: calc(100% + 200px);
-  margin: 0 -100px;
+  width: calc(100% + 240px);
+  margin: -75px -120px 0;
 }
 
 .where-we-operate__map > svg {
@@ -5391,6 +5530,14 @@ svg#Africa {
     padding: 35px;
   }
 
+  .contact-us h3 {
+    max-width: 100%;
+  }
+
+  .contact-us p {
+    max-width: 100%;
+  }
+
   .contact-us {
     --height-bg-img: 683px;
   }
@@ -5483,6 +5630,14 @@ svg#Africa {
 
   .form--contact .form-group .form-control {
     width: calc(50% - 20px);
+  }
+
+  .from-start-to-finish h2 {
+    max-width: 100%;
+  }
+
+  .from-start-to-finish p {
+    max-width: 100%;
   }
 
   .col-md {
@@ -5610,6 +5765,12 @@ svg#Africa {
     width: 224px;
   }
 
+  .input-file {
+    max-width: 240px;
+    width: 228px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none'%3E%3Crect width='227' height='271' x='.5' y='.5' stroke='%23E72A33' stroke-dasharray='10 10' rx='10'/%3E%3C/svg%3E");
+  }
+
   .input {
     padding: 14px 30px;
   }
@@ -5636,15 +5797,6 @@ svg#Africa {
   .section-jobs__wrap {
     flex-direction: row;
     gap: 90px;
-  }
-
-  [data-tab-content] {
-    display: block;
-    position: static;
-    overflow: visible;
-    margin: 0;
-    height: auto;
-    clip: auto;
   }
 
   .textarea {
@@ -5938,16 +6090,19 @@ svg#Africa {
     margin-bottom: 22px;
   }
 
+  .from-start-to-finish__content,
   .from-start-to-finish__banner {
     margin-bottom: 0;
     border-radius: 40px;
     padding: 60px 60px 63px;
   }
 
+  .from-start-to-finish__content::before,
   .from-start-to-finish__banner::before {
     content: none;
   }
 
+  .from-start-to-finish__content p,
   .from-start-to-finish__banner p {
     font-size: 20px;
     line-height: 34px;
@@ -6169,6 +6324,7 @@ svg#Africa {
     font-size: 32px;
     top: 60px;
     left: 60px;
+    max-width: 100%;
   }
 
   .video-vimeo > div:before {
@@ -6177,14 +6333,6 @@ svg#Africa {
 
   .video-vimeo iframe {
     border-radius: 40px;
-  }
-
-  .where-we-operate .where-we-operate__content .where-we-operate__text {
-    font-size: 20px;
-  }
-
-  .where-we-operate .where-we-operate__content .where-we-operate__title {
-    font-size: 36px;
   }
 }
 
@@ -6315,7 +6463,7 @@ svg#Africa {
   }
 
   .badge--card-news {
-    bottom: 10px;
+    bottom: 44px;
     width: -moz-fit-content;
     width: fit-content;
     max-width: 200px;
@@ -6520,7 +6668,8 @@ svg#Africa {
   }
 
   .card-news {
-    width: 400px;
+    height: 100%;
+    max-width: 400px;
     min-height: 320px;
     border-radius: 40px;
     padding: 52px 84px 52px 50px;
@@ -6670,6 +6819,10 @@ svg#Africa {
     font-size: 20px;
     line-height: 34px;
     margin-bottom: 34px;
+  }
+
+  .decor--desktop:before {
+    display: block;
   }
 
   .footer .container {
@@ -6946,10 +7099,10 @@ svg#Africa {
   }
 
   .link--small {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 18px;
-    -moz-column-gap: 20px;
-    column-gap: 20px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
   }
 
   .local-teams {
@@ -6964,6 +7117,15 @@ svg#Africa {
   .local-teams__list {
     margin-inline: min(calc(var(--container-padding) * -1), calc(var(--container-padding) * -1 - (100vw - 1290px) / 2));
     padding-inline: max(var(--container-padding), calc(var(--container-padding) + (100vw - 1290px) / 2));
+  }
+
+  svg#Africa {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  svg#Africa [data-template] {
+    fill: var(--not-active);
   }
 
   .menu-toggle__text {
@@ -7162,7 +7324,7 @@ svg#Africa {
   .our-services__sun {
     left: 0;
     right: 0;
-    top: -400px;
+    top: -330px;
     margin-inline: auto;
   }
 
@@ -7238,16 +7400,33 @@ svg#Africa {
   }
 
   .where-we-operate {
-    margin-top: 120px;
-    margin-bottom: 133px;
+    padding-top: 120px;
+    padding-bottom: 133px;
+  }
+
+  .where-we-operate:before {
+    width: 1200px;
+    height: 100%;
+    background-image: url(../images/africa-bg.png);
+    background-size: contain;
+    background-position: 123px -45px;
+    transform: scale(1.5);
   }
 
   .where-we-operate .where-we-operate__content {
-    max-width: 535px;
+    width: 535px;
   }
 
   .where-we-operate .where-we-operate__content .where-we-operate__text ul {
     margin-left: 25px;
+  }
+
+  .where-we-operate .where-we-operate__content .where-we-operate__text {
+    font-size: 20px;
+  }
+
+  .where-we-operate .where-we-operate__content .where-we-operate__title {
+    font-size: 36px;
   }
 
   .where-we-operate .where-we-operate__content .where-we-operate__title br {
@@ -7256,9 +7435,9 @@ svg#Africa {
 
   .where-we-operate .wrapper-mid .wrapper__content {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: flex-end;
-    padding: 64px 67px;
+    padding: 60px 67px;
   }
 
   .where-we-operate .wrapper-mid .wrapper__line {
@@ -7298,8 +7477,12 @@ svg#Africa {
   }
 
   .where-we-operate__map {
-    width: 100%;
+    width: calc(100% + 120px);
     margin: 0;
+    margin-left: -210px;
+    margin-top: -35px;
+    margin-bottom: -175px;
+    width: 691px;
   }
 
   .where-we-operate__map > svg {
@@ -7452,6 +7635,11 @@ svg#Africa {
     padding-inline: 240px;
   }
 
+  .block-news__list.slider-facts {
+    padding: 0;
+    margin: 0;
+  }
+
   .contact-us__wrapper {
     padding-left: 269px;
   }
@@ -7519,6 +7707,15 @@ svg#Africa {
     margin-left: -160px;
     padding-right: 0;
     padding-left: 160px;
+  }
+
+  .where-we-operate:before {
+    background-position: 110px -45px;
+    transform: scale(1.6);
+  }
+
+  .where-we-operate__map {
+    margin-left: -250px;
   }
 }
 

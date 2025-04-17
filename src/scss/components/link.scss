@@ -1,51 +1,57 @@
 .link {
-    font-family: $font-primary;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: fit-content;
-    column-gap: 20px;
-    color: currentColor;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  column-gap: 20px;
+  color: currentColor;
 
-    span {
-        text-decoration: underline;
-        text-underline-position: under;
-    }
+  span {
+    text-decoration: underline;
+    text-underline-position: under;
+  }
 
-    &__icon-right {
-        width: 12px;
-        height: 10px;
-        fill: currentColor;
-    }
+  &__icon-right {
+    width: 15px;
+    height: 13px;
+  }
 
-    &--small {
-        font-size: 14px;
-        line-height: 16px;
-        column-gap: 18px;
-    }
-
-    &--secondary {
-        color: $color-secondary;
-    }
-
-    &--primary {
-        color: $color-primary;
-    }
-
-    &--all-news {
-        margin-top: 8px;
-        margin-left: auto;
-        order: -1;
-    }
+  &--small {
+    font-size: 14px;
+    line-height: 16px;
+    column-gap: 18px;
 
     @include desktop {
-        &--small {
-            font-size: 16px;
-            line-height: 18px;
-            column-gap: 20px;
-        }
+      font-size: 18px;
+      line-height: 18px;
+      column-gap: 10px;
     }
+
+    &:focus svg,
+    &:hover svg {
+      transform: translate(6px);
+    }
+
+    svg {
+      transition: all 0.25s ease-in-out;
+    }
+  }
+
+  &--secondary {
+    color: $color-secondary;
+  }
+
+  &--primary {
+    color: $color-primary;
+  }
+
+  &--all-news {
+    margin-top: 8px;
+    margin-left: auto;
+    order: -1;
+  }
 }

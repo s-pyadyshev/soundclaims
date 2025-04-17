@@ -4,7 +4,7 @@
 
 .page-loaded {
   .animate__animated {
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-fill-mode: both;
   }
 
@@ -47,7 +47,7 @@
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -100%, 0);
   }
 
   to {

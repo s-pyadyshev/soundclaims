@@ -94,6 +94,7 @@
   flex-wrap: nowrap;
   gap: 40px;
   width: 100%;
+  text-decoration: none;
 
   @include laptop {
     width: calc((100% - 66px) / 2);
