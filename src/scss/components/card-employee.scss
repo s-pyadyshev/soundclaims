@@ -1,11 +1,13 @@
 .card-employee {
-  width: 182px;
   height: 182px;
   border-radius: 20px;
   overflow: hidden;
   flex-shrink: 0;
   position: relative;
 
+  @media (min-width: 560px) {
+    width: 182px;
+  }
 
   &:hover {
     .card-employee__detail {

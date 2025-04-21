@@ -16,19 +16,19 @@
   }
 
   &__icon-right {
-    width: 15px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
   }
 
   &--small {
     font-size: 14px;
     line-height: 16px;
-    column-gap: 18px;
+    column-gap: 30px;
 
     @include desktop {
       font-size: 18px;
       line-height: 18px;
-      column-gap: 10px;
+      column-gap: 20px;
     }
 
     &:focus svg,

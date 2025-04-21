@@ -6,6 +6,7 @@ mixin contact-us(obj)
         .contact-us__bg-wrap
           img.contact-us__bg(src=obj.bgImg, alt="", width=obj.width ? obj.width : "1920", height=obj.height ? obj.height : "1280", loading="lazy")
         .contact-us__wrapper
+          .contact-us__gradient
           img.contact-us__bg.contact-us__bg--inner(src=obj.bgImg, alt="", width=obj.width ? obj.width : "1920", height=obj.height ? obj.height : "1280", loading="lazy")
           .section-title
             h2 !{obj.title ? obj.title : 'Contact us'}

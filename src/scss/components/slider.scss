@@ -180,3 +180,21 @@
     padding-left: 160px;
   }
 }
+
+.slider-news .swiper-slide {
+  height: auto;
+
+  .card-news {
+    max-width: 400px;
+  }
+}
+
+.slider-facts .swiper-slide {
+  height: auto;
+}
+
+.block-news__list.slider-facts {
+  @media (min-width: 1510px) {
+    width: calc(100vw - (100vw - 1000px) / 2);
+  }
+}

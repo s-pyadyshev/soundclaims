@@ -12,7 +12,7 @@ export const sliderTeams = (function () {
         prevEl: ".swiper-button-prev",
       },
       breakpoints: {
-        640: {
+        560: {
           slidesPerView: 2.5,
         },
         800: {

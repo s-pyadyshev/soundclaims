@@ -24,15 +24,16 @@ mixin block-news(obj)
                         a.link.link--small.link--secondary.link--all-news(href="/news.html" title="All news")
                             span All news
                             +svg('arrow-right').link__icon-right
-                    .block-news__list
-                        each news, index in obj.list
-                            +card-news({
-                                boldTitle: news.boldTitle,
-                                title: news.title,
-                                text: news.text,
-                                badge: news.badge
-                            })(class=(obj.subtitle ? 'card-news--other-news' : '' || news.boldTitle ? 'card-news--fact-figures' : ''))
-
+                    .block-news__list.swiper.slider-news
+                        .swiper-wrapper
+                            each news, index in obj.list
+                                .swiper-slide
+                                    +card-news({
+                                        boldTitle: news.boldTitle,
+                                        title: news.title,
+                                        text: news.text,
+                                        badge: news.badge
+                                    })(class=(obj.subtitle ? 'card-news--other-news' : '' || news.boldTitle ? 'card-news--fact-figures' : ''))
 mixin block-news-facts(obj)
     .block-news&attributes(attributes)
         .container.container-sm

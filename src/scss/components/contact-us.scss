@@ -3,6 +3,7 @@
   --padding-top-image: 97px;
   --height-bg-img: 571px;
   --object-position-offset: -84px;
+  background-color: #000;
 
   &__wrap {
     margin-inline: calc(var(--container-padding) * -1);
@@ -13,20 +14,6 @@
     padding-top: var(--padding-top-image);
     isolation: isolate;
     margin-top: calc(var(--padding-top-image) * -1 + 11px);
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 65%;
-      background-image: linear-gradient(0deg, rgb(10, 5, 15) 77%, rgba(10, 5, 15, 0) 100%);
-      background-repeat: no-repeat;
-      background-size: cover;
-      z-index: -1;
-      pointer-events: none;
-    }
   }
 
   &__wrapper {
@@ -202,10 +189,6 @@
       &::before {
         object-position: initial;
       }
-
-      &::after {
-        height: 45%;
-      }
     }
 
     &__bg {
@@ -246,10 +229,7 @@
       padding-inline: var(--container-padding);
       margin-top: calc(var(--padding-top-image) * -1 + 43px);
 
-      &:after {
-        background-image: linear-gradient(0deg, rgb(10, 5, 15) 61.894%, rgba(10, 5, 15, 0) 100%);
-        height: 182px;
-      }
+
     }
 
     &__wrapper {
@@ -395,4 +375,60 @@
   @include tablet {
     top: 24%;
   }
+}
+
+.contact-us__gradient {
+  &::after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+    width: calc(100% + 80px);
+    height: 65%;
+    background-image: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.5) 75%, transparent 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    pointer-events: none;
+  }
+
+  @include laptop {
+    &::after {
+      height: 110%;
+      left: -40px;
+      width: calc(100% + 80px);
+      bottom: -200px;
+    }
+  }
+
+  @include desktop {
+    &:after {
+      z-index: 1;
+      bottom: -130px;
+      background-image: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.5) 75%, transparent 100%);
+      height: 400px;
+      width: calc(100% + 100px);
+      left: -50px;
+    }
+  }
+}
+
+.contact-us__bg-wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(0deg, rgb(0, 0, 0) 21%, rgb(0, 0, 0) 38%, rgba(0, 0, 0, 0.5) 55%, transparent 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-us__wrapper p,
+.contact-us__wrapper h3,
+.contact-us__wrapper .section-title,
+.contact-us__wrapper .button {
+  z-index: 112;
+  position: relative;
 }

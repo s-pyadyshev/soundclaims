@@ -160,7 +160,7 @@
     @include desktop {
       left: 50%;
       transform: translateX(calc(-50%));
-      max-width: 1025px;
+      max-width: 1050px;
       width: 100vw;
     }
   }
@@ -204,7 +204,7 @@
 
     @include desktop-l {
       background: linear-gradient(91.17deg, rgba(24, 9, 1, 0) 0.175%, rgb(24, 9, 1) 11.124%);
-      width: 70px;
+      width: 110px;
     }
   }
 }
