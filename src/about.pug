@@ -2,6 +2,7 @@ extends pug/base
 
 prepend vars
   - title = 'About us'
+  - pageWrapperClass = 'has-ticker'
 
 block content
   +page-header({
@@ -9,8 +10,23 @@ block content
     desc: "Soundclaims is your trusted partner for debt recovery and claims management across Africa. With deep local knowledge and global expertise, we help international credit insurers, export credit agencies, and financial institutions succeed in even the most complex markets."
   }).decor.decor--page-header.content-blocks-margin 
   +here-to-help
-  .container.container-sm
-    +videoFile
+  section.section-video.mt-md.mb-md
+    .container.container-sm
+      +videoFile
+  section.section-video-aside.mt-md.mb-md
+    .container.container-sm
+      .row
+        .col-lg-4
+          aside.aside
+            img(src="images/aside.jpg" alt="building." width="362" height="560")
+            .aside__inner
+              h3 Seamless coordination
+              p starts right here in our Amsterdam office.
+              a(href="").button
+                span Get in touch
+                +svg('arrow-right').button__icon
+        .col-lg-8
+          +videoFile
   +block-news-facts({
     title: 'Facts & Figures',
     hideLinkNews: true,

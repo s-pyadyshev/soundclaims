@@ -12,7 +12,6 @@ import { sliderFacts } from "./components/sliderFacts.js";
 import { sliderNews } from "./components/sliderNews.js";
 import { sliderOtherNews } from "./components/sliderOtherNews.js";
 import tippy from "tippy.js";
-import { FancySelect } from "./vendor.js";
 
 window.addEventListener(
   "load",

@@ -190,7 +190,11 @@
 }
 
 .mt-md {
-  margin-top: 90px;
+  margin-top: 50px;
+
+  @include desktop {
+    margin-top: 80px;
+  }
 }
 
 .mt-lg {
@@ -198,7 +202,11 @@
 }
 
 .mb-md {
-  margin-top: 90px;
+  margin-bottom: 50px;
+
+  @include desktop {
+    margin-bottom: 80px;
+  }
 }
 
 .mb-lg {

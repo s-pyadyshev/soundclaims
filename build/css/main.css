@@ -1583,7 +1583,7 @@ body {
 }
 
 .mt-md {
-  margin-top: 90px;
+  margin-top: 50px;
 }
 
 .mt-lg {
@@ -1591,7 +1591,7 @@ body {
 }
 
 .mb-md {
-  margin-top: 90px;
+  margin-bottom: 50px;
 }
 
 .mb-lg {
@@ -2031,6 +2031,59 @@ p {
   margin-right: auto;
   margin-left: auto;
   max-width: 338px;
+}
+
+.aside {
+  position: relative;
+  height: 100%;
+  border-radius: 40px;
+  color: #fff;
+  min-height: 390px;
+}
+
+.aside img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.aside h3 {
+  font-size: 24px;
+  margin: 0;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+.aside p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.aside__inner {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 35px 40px;
+  border-radius: 40px;
+  background: linear-gradient(180deg, rgba(0, 6, 48, 0.52) 0%, rgba(3, 0, 25, 0) 100%);
+}
+
+.aside .button {
+  margin-top: auto;
+  gap: 12px;
+}
+
+.section-video-aside .row {
+  row-gap: 50px;
 }
 
 .badge {
@@ -3339,8 +3392,8 @@ p {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -0.75rem;
-  margin-left: -0.75rem;
+  margin-right: -1rem;
+  margin-left: -1rem;
 }
 
 .g-0,
@@ -3404,7 +3457,7 @@ p {
 }
 
 .row {
-  --bs-gutter-x: 1.5rem;
+  --bs-gutter-x: 2rem;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
@@ -3473,7 +3526,7 @@ p {
 
 .help {
   margin-top: 90px;
-  margin-bottom: 51px;
+  margin-bottom: 50px;
 }
 
 .help .container {
@@ -5096,7 +5149,7 @@ svg#Africa [data-template]:hover {
 
 .video {
   position: relative;
-  margin-bottom: 50px;
+  height: 100%;
 }
 
 .video:before {
@@ -5112,6 +5165,8 @@ svg#Africa [data-template]:hover {
 
 .video__file {
   border-radius: 20px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .video__title {
@@ -5847,6 +5902,10 @@ svg#Africa [data-template]:hover {
     display: none;
   }
 
+  .aside {
+    min-height: 560px;
+  }
+
   .col-lg {
     flex: 1 0 0%;
   }
@@ -6385,6 +6444,14 @@ svg#Africa [data-template]:hover {
     display: block;
   }
 
+  .mt-md {
+    margin-top: 80px;
+  }
+
+  .mb-md {
+    margin-bottom: 80px;
+  }
+
   h1,
   .h1 {
     font-size: 48px;
@@ -6489,6 +6556,23 @@ svg#Africa [data-template]:hover {
   .article__slider .slider-photo {
     margin-left: -142px;
     width: calc(100% + 213px);
+  }
+
+  .aside h3 {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+  .aside p {
+    font-size: 20px;
+  }
+
+  .aside__inner {
+    padding: 50px 50px 40px 50px;
+  }
+
+  .section-video-aside .row {
+    row-gap: 0;
   }
 
   .badge {
@@ -7062,7 +7146,7 @@ svg#Africa [data-template]:hover {
 
   .help {
     margin-top: 120px;
-    margin-bottom: 120px;
+    margin-bottom: 0;
   }
 
   .help .wrapper-bot .line__block {
@@ -7459,10 +7543,6 @@ svg#Africa [data-template]:hover {
     margin-left: -160px;
     padding-right: 40px;
     padding-left: 160px;
-  }
-
-  .video {
-    margin-bottom: 120px;
   }
 
   .video-vimeo iframe {

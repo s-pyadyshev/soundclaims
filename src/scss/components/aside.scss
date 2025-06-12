@@ -1,0 +1,74 @@
+.aside {
+  position: relative;
+  height: 100%;
+  border-radius: 40px;
+  color: $color-white;
+  min-height: 390px;
+
+  @media (min-width: 992px) {
+    min-height: 560px;
+  }
+}
+
+.aside img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.aside h3 {
+  font-size: 24px;
+  margin: 0;
+  line-height: 1.4;
+  margin-bottom: 14px;
+
+  @include desktop {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+}
+
+.aside p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+
+  @include desktop {
+    font-size: 20px;
+  }
+}
+
+.aside__inner {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 35px 40px;
+  border-radius: 40px;
+  background: linear-gradient(180deg, rgba(0, 6, 48, 0.52) 0%, rgba(3, 0, 25, 0) 100%);
+
+  @include desktop {
+    padding: 50px 50px 40px 50px;
+  }
+}
+
+.aside .button {
+  margin-top: auto;
+  gap: 12px;
+}
+
+.section-video-aside {
+  .row {
+    row-gap: 50px;
+
+    @include desktop {
+      row-gap: 0;
+    }
+  }
+}

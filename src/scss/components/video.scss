@@ -1,10 +1,6 @@
 .video {
   position: relative;
-  margin-bottom: 50px;
-
-  @include desktop {
-    margin-bottom: 120px;
-  }
+  height: 100%;
 
   &:before {
     content: "";
@@ -24,6 +20,7 @@
 
 .video__file {
   border-radius: 20px;
+  object-fit: cover;
 
   @include laptop {
     border-radius: 40px;
