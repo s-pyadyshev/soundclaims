@@ -1,10 +1,12 @@
 import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 export const sliderTeams = (function () {
   const init = function () {
     const swiperTeams = new Swiper(".slider-teams", {
-      modules: [Navigation],
+      modules: [Navigation, Autoplay],
+      autoplay: true,
+      loop: true,
       slidesPerView: 1.5,
       spaceBetween: 30,
       navigation: {

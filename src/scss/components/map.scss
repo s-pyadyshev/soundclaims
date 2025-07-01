@@ -32,7 +32,8 @@ svg#Africa {
     }
   }
 
-  [data-template]:hover {
+  [data-template]:hover,
+  [data-template].is-hover {
     cursor: pointer;
     fill: var(--color-hover);
   }

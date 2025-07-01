@@ -3941,7 +3941,8 @@ svg#Africa [data-template] {
   fill: var(--color-hover);
 }
 
-svg#Africa [data-template]:hover {
+svg#Africa [data-template]:hover,
+svg#Africa [data-template].is-hover {
   cursor: pointer;
   fill: var(--color-hover);
 }

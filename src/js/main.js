@@ -11,6 +11,7 @@ import { sliderTeams } from "./components/sliderTeams.js";
 import { sliderFacts } from "./components/sliderFacts.js";
 import { sliderNews } from "./components/sliderNews.js";
 import { sliderOtherNews } from "./components/sliderOtherNews.js";
+import { map } from "./components/map.js";
 import tippy from "tippy.js";
 
 window.addEventListener(
@@ -29,6 +30,7 @@ window.addEventListener(
     sliderFacts.init();
     sliderNews.init();
     sliderOtherNews.init();
+    map.init();
 
     tippy("[data-template]", {
       content(reference) {
