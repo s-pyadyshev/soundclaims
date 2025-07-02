@@ -23,7 +23,7 @@ const argv = yargs(hideBin(process.argv)).default({
   fix: false,
   minifyHtml: null,
   minifyCss: null,
-  minifyJs: null,
+  minifyJs: true,
   minifySvg: null,
   notify: true,
   open: true,

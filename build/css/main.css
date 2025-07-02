@@ -5312,6 +5312,16 @@ svg#Africa [data-template].is-hover {
   width: calc(100% + 200px);
 }
 
+[data-country-map] {
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+[data-country-map]:focus,
+[data-country-map]:hover {
+  color: #e72a33;
+}
+
 @media (min-width: 0) {
   .hidden-xs {
     display: none;
@@ -7901,14 +7911,4 @@ svg#Africa [data-template].is-hover {
   html {
     scroll-behavior: smooth;
   }
-}
-
-[data-country-map] {
-  text-decoration: underline;
-  transition: color 0.2s;
-}
-
-[data-country-map]:focus,
-[data-country-map]:hover {
-  color: #e72a33;
 }

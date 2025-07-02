@@ -83,6 +83,7 @@
     "sass": "1.79.6",
     "scrollmagic": "2.0.8",
     "scrolltosmooth": "3.0.2",
-    "swiper": "11.2.4"
+    "swiper": "11.2.4",
+    "tippy.js": "6.3.7"
   }
 }

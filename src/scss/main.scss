@@ -10,3 +10,13 @@
 @import "helpers";
 @import "typography";
 @import "components";
+
+[data-country-map] {
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+[data-country-map]:focus,
+[data-country-map]:hover {
+  color: #e72a33;
+}

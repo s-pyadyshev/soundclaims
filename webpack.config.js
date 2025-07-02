@@ -56,4 +56,5 @@ export default {
       },
     },
   },
+  mode: 'production'
 };
