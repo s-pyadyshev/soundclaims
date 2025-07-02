@@ -24,13 +24,16 @@ export const sliderTeams = (function () {
           slidesPerView: 4.5,
         },
         1200: {
-          slidesPerView: 5.5,
+          slidesPerView: 5,
         },
         1300: {
-          slidesPerView: 6.5,
+          slidesPerView: 6,
         },
         1600: {
-          slidesPerView: 7.5,
+          slidesPerView: 7,
+        },
+        1800: {
+          slidesPerView: 8,
         },
       },
     });

@@ -45,3 +45,14 @@
     }
   }
 }
+
+.local-teams .container {
+
+  @include desktop-l {
+    max-width: 1550px !important;
+  }
+
+  @media (min-width: 1800px) {
+    max-width: 1920px !important;
+  }
+}

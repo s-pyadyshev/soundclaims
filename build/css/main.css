@@ -2536,6 +2536,7 @@ p {
   overflow: hidden;
   flex-shrink: 0;
   position: relative;
+  width: 182px;
 }
 
 .card-employee:hover .card-employee__detail {
@@ -5441,12 +5442,6 @@ svg#Africa [data-template].is-hover {
   }
 }
 
-@media (min-width: 560px) {
-  .card-employee {
-    width: 182px;
-  }
-}
-
 @media (min-width: 576px) {
   .hidden-sm {
     display: none;
@@ -6829,6 +6824,10 @@ svg#Africa [data-template].is-hover {
     border-radius: 15px;
   }
 
+  .card-employee {
+    width: 100%;
+  }
+
   .card-news {
     height: 100%;
     max-width: 400px;
@@ -7550,10 +7549,10 @@ svg#Africa [data-template].is-hover {
   }
 
   .slider-teams {
-    margin-right: -160px;
-    margin-left: -160px;
-    padding-right: 40px;
-    padding-left: 160px;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .video-vimeo iframe {
@@ -7825,12 +7824,20 @@ svg#Africa [data-template].is-hover {
     width: calc(100% + 359px);
   }
 
+  .card-employee {
+    width: 182px;
+  }
+
   .card--contact p {
     font-size: 20px;
   }
 
   .form--contact {
     row-gap: 10px;
+  }
+
+  .local-teams .container {
+    max-width: 1550px !important;
   }
 
   .menu-active .menu__list {
@@ -7853,13 +7860,6 @@ svg#Africa [data-template].is-hover {
     width: 110px;
   }
 
-  .slider-teams {
-    margin-right: -360px;
-    margin-left: -160px;
-    padding-right: 0;
-    padding-left: 160px;
-  }
-
   .where-we-operate:before {
     background-position: 110px -45px;
     transform: scale(1.6);
@@ -7873,6 +7873,10 @@ svg#Africa [data-template].is-hover {
 @media (min-width: 1800px) {
   .card-contact {
     padding: 70px 70px 40px;
+  }
+
+  .local-teams .container {
+    max-width: 1920px !important;
   }
 
   .news-list {
