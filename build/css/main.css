@@ -3939,7 +3939,7 @@ svg#Africa path:active {
 }
 
 svg#Africa [data-template] {
-  fill: var(--color-hover);
+  fill: var(--not-active);
 }
 
 svg#Africa [data-template]:hover,
