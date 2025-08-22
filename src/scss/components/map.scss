@@ -25,7 +25,7 @@ svg#Africa {
   }
 
   [data-template] {
-    fill: var(--color-hover);
+    fill: var(--not-active);
 
     @include desktop {
       fill: var(--not-active);
