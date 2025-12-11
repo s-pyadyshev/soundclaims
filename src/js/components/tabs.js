@@ -20,9 +20,9 @@ export const tabs = (() => {
       const currentTab = tabContainer.getAttribute("data-tabs");
 
       tabContainer.addEventListener("click", (event) => {
-        const target = event.target;
+        const target = event.target.closest("[data-tab]");
 
-        if (!target.hasAttribute("data-tab")) {
+        if (!target) {
           return;
         }
 
@@ -40,19 +40,23 @@ export const tabs = (() => {
         );
 
         const activeTabButton = document.querySelector(
-          `[data-tabs=${currentTab}] > button.is-active`
+          `[data-tabs="${currentTab}"] button.is-active`
         );
 
         const tabButtonAll = document.querySelectorAll(
-          `[data-tabs=${currentTab}] > button`
+          `[data-tabs="${currentTab}"] button`
         );
 
         matchingTabDataAll.forEach((item) => {
           item.classList.add("visually-hidden");
           item.classList.remove("is-active");
         });
-        activeTabContent.classList.remove("is-active");
-        activeTabButton.classList.remove("is-active");
+        if (activeTabContent) {
+          activeTabContent.classList.remove("is-active");
+        }
+        if (activeTabButton) {
+          activeTabButton.classList.remove("is-active");
+        }
 
         tabButtonAll.forEach((item) => item.classList.remove("is-active"));
         matchingTabData.classList.add("is-active");
