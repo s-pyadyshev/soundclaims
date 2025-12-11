@@ -50,6 +50,8 @@ export const mapCountryDetails = (() => {
       detailTitle.textContent = countryName;
     }
     
+    updateFlagImage(countryId, countryName);
+    
     updateTabContent(countryId, countryDetailId);
     
     detailPanel.style.display = 'flex';
@@ -93,6 +95,35 @@ export const mapCountryDetails = (() => {
       return countryNameElement ? countryNameElement.textContent : countryId;
     }
     return countryId;
+  };
+
+  const getCountryFlagFilename = (countryId) => {
+    const countryDataDiv = document.querySelector(`#${countryId}`);
+    if (countryDataDiv) {
+      const dataFlag = countryDataDiv.getAttribute('data-flag');
+      if (dataFlag) {
+        return dataFlag;
+      }
+    }
+    return countryId;
+  };
+
+  const updateFlagImage = (countryId, countryName) => {
+    const flagElement = document.querySelector('.where-we-operate__detail-flag');
+    if (flagElement && countryId) {
+      const flagFilename = getCountryFlagFilename(countryId);
+      
+      let flagSrc;
+      if (flagFilename.includes('/') || flagFilename.endsWith('.svg')) {
+        flagSrc = flagFilename;
+      } else {
+        flagSrc = `images/${flagFilename}.svg`;
+      }
+      
+      flagElement.src = flagSrc;
+      
+      flagElement.style.display = 'block';
+    }
   };
 
   const updateTabContent = (countryId, countryDetailId) => {
