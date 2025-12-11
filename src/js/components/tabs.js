@@ -62,6 +62,12 @@ export const tabs = (() => {
         matchingTabData.classList.add("is-active");
         matchingTabData.classList.remove("visually-hidden");
         tabButton.classList.add("is-active");
+
+        if (currentTab === "tabs-map") {
+          setTimeout(() => {
+            window.dispatchEvent(new CustomEvent('mapTabChanged'));
+          }, 50);
+        }
       });
     });
   };

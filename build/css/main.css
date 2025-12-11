@@ -5325,8 +5325,7 @@ svg#Africa [data-template].is-hover {
   flex-direction: column;
   width: calc(100% + 80px);
   max-width: calc(100% + 80px);
-  height: auto;
-  bottom: -20px;
+  height: calc(100% + 20px);
   margin-bottom: -20px;
   left: -40px;
   border-radius: 20px;
@@ -5341,7 +5340,6 @@ svg#Africa [data-template].is-hover {
 
 .where-we-operate__detail-body {
   padding: 20px;
-  height: 100%;
 }
 
 .where-we-operate__detail-tabs {

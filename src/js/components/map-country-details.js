@@ -9,6 +9,10 @@ export const mapCountryDetails = (() => {
       return;
     }
 
+    window.addEventListener('mapTabChanged', () => {
+      adjustWrapperPadding();
+    });
+
     countryElements.forEach(countryElement => {
       countryElement.addEventListener('click', (event) => {
         event.preventDefault();
@@ -36,6 +40,11 @@ export const mapCountryDetails = (() => {
 
         mapTitle.style.opacity = '1';
         mapInfo.style.opacity = '1';
+        
+        const wrapperContent = document.querySelector('.where-we-operate .wrapper-mid .wrapper__content');
+        if (wrapperContent) {
+          wrapperContent.style.paddingBottom = '';
+        }
       });
     }
   };
@@ -59,6 +68,10 @@ export const mapCountryDetails = (() => {
     mapInfo.style.opacity = '0';
     
     resetToFirstTab();
+    
+    setTimeout(() => {
+      adjustWrapperPadding();
+    }, 100);
   };
 
   const resetToFirstTab = () => {
@@ -203,6 +216,31 @@ export const mapCountryDetails = (() => {
       if (tabContent4) {
         tabContent4.innerHTML = '<p></p>';
       }
+    }
+
+    setTimeout(() => {
+      adjustWrapperPadding();
+    }, 50);
+  };
+
+  const adjustWrapperPadding = () => {
+    const wrapperContent = document.querySelector('.where-we-operate .wrapper-mid .where-we-operate__content');
+    const detailBody = document.querySelector('.where-we-operate__detail-body');
+
+    if (!wrapperContent || !detailBody) return;
+
+    wrapperContent.style.paddingBottom = '';
+
+    if (!wrapperContent.offsetParent || !detailBody.offsetParent) return;
+
+    const wrapperHeight = wrapperContent.offsetHeight;
+    const detailBodyHeight = detailBody.offsetHeight;
+    const heightDifference = detailBodyHeight - wrapperHeight;
+
+    console.log(heightDifference)
+
+    if (heightDifference > 0) {
+      wrapperContent.style.paddingBottom = `${heightDifference}px`;
     }
   };
 
