@@ -5350,6 +5350,24 @@ svg#Africa [data-template].is-hover {
   gap: 10px;
 }
 
+.where-we-operate__detail-tabs-content ul {
+  list-style-type: none;
+  margin-top: 18px;
+}
+
+.where-we-operate__detail-tabs-content ul li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.where-we-operate__detail-tabs-content ul li > span:first-child {
+  display: inline-block;
+  font-weight: 500;
+  min-width: 110px;
+  margin-right: 35px;
+}
+
 .where-we-operate__detail-tab {
   display: flex;
   align-items: center;
@@ -5388,7 +5406,7 @@ svg#Africa [data-template].is-hover {
   line-height: 1.4;
   padding: 12px 20px;
   background-color: #e72a33;
-  border-radius: 100px;
+  border-radius: 20px;
   color: #fff;
 }
 
@@ -5400,11 +5418,12 @@ svg#Africa [data-template].is-hover {
   display: flex;
   align-items: center;
   font-weight: 500;
-  font-size: 16px;
-  gap: 6px;
+  font-size: 11px;
+  gap: 1px;
   padding: 0;
   background: none;
   color: #fff;
+  letter-spacing: -1px;
 }
 
 .where-we-operate__detail-close svg {
@@ -5424,60 +5443,6 @@ svg#Africa [data-template].is-hover {
   height: 65px;
 }
 
-.where-we-operate__detail-tabs-content {
-  margin-top: 20px;
-}
-
-.where-we-operate__detail-tabs-content > div {
-  font-family: "At Hauss Std", -apple-system, BlinkMacSystemFont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-  color: #333;
-}
-
-.where-we-operate__detail-tabs-content > div ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.where-we-operate__detail-tabs-content > div ul li {
-  margin-bottom: 8px;
-}
-
-.where-we-operate__detail-tabs-content > div ul li span:first-child {
-  font-weight: 600;
-}
-
-.where-we-operate__detail-tabs-content > div p {
-  margin: 0;
-  text-align: justify;
-}
-
-.where-we-operate__map svg path[data-template] {
-  cursor: pointer;
-  transition: fill 0.2s ease;
-}
-
-.where-we-operate__map svg path[data-template]:hover {
-  fill: rgb(236.164556962, 87.835443038, 94.8987341772) !important;
-}
-
-.where-we-operate__map svg path[data-template]:active {
-  fill: rgb(199.5189873418, 22.4810126582, 30.9113924051) !important;
-}
-
-[data-country-map] {
-  cursor: pointer;
-  color: #e72a33;
-  text-decoration: underline;
-  transition: color 0.2s ease;
-}
-
-[data-country-map]:hover {
-  color: rgb(176.6012658228, 19.8987341772, 27.3607594937);
-}
-
 [data-country-map] {
   text-decoration: underline;
   transition: color 0.2s;
@@ -5486,6 +5451,7 @@ svg#Africa [data-template].is-hover {
 [data-country-map]:focus,
 [data-country-map]:hover {
   color: #e72a33;
+  cursor: pointer;
 }
 
 @media (min-width: 0) {
@@ -6068,12 +6034,38 @@ svg#Africa [data-template].is-hover {
   }
 
   .where-we-operate__detail {
-    width: 535px;
+    width: 100%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .where-we-operate__detail-body {
+    padding: 30px 20px;
+  }
+
+  .where-we-operate__detail-tabs {
+    gap: 20px;
+  }
+
+  .where-we-operate__detail-tabs-content ul li {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .where-we-operate__detail-tab {
+    font-size: 14px;
+    padding: 4px 16px;
   }
 
   .where-we-operate__detail-title {
-    padding: 18px 60px;
+    padding: 18px 50px 18px 60px;
     font-size: 30px;
+    border-radius: 100px;
+  }
+
+  .where-we-operate__detail-close {
+    font-size: 16px;
   }
 }
 
@@ -7465,7 +7457,7 @@ svg#Africa [data-template].is-hover {
   }
 
   svg#Africa [data-template] {
-    fill: var(--not-active);
+    fill: #f9b0b4;
   }
 
   .menu-toggle__text {
@@ -7823,6 +7815,21 @@ svg#Africa [data-template].is-hover {
 
   .where-we-operate__map > svg {
     width: 100%;
+  }
+
+  .where-we-operate__detail {
+    min-width: 768px;
+    left: auto;
+    margin: 0;
+    min-width: 768px;
+    right: -70px;
+    top: -80px;
+    background: linear-gradient(117.78deg, rgba(255, 222, 214, 0.3) 2.37%, rgba(253, 231, 246, 0.65) 98.75%);
+  }
+
+  .where-we-operate__detail-tabs-content {
+    padding: 10px 40px 40px 40px;
+    font-size: 16px;
   }
 }
 

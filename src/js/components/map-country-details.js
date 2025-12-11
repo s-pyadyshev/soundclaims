@@ -31,13 +31,20 @@ export const mapCountryDetails = (() => {
     if (closeButton) {
       closeButton.addEventListener('click', () => {
         detailPanel.style.display = 'none';
+        const mapTitle = document.querySelector('.where-we-operate__title');
+        const mapInfo = document.querySelector('.where-we-operate__text');
+
+        mapTitle.style.opacity = '1';
+        mapInfo.style.opacity = '1';
       });
     }
   };
 
   const handleCountryClick = (countryId, detailPanel, detailTitle) => {
     const countryDetailId = `${countryId}-detail`;
-    
+    const mapTitle = document.querySelector('.where-we-operate__title');
+    const mapInfo = document.querySelector('.where-we-operate__text');
+
     const countryName = getCountryDisplayName(countryId);
     if (detailTitle) {
       detailTitle.textContent = countryName;
@@ -46,6 +53,8 @@ export const mapCountryDetails = (() => {
     updateTabContent(countryId, countryDetailId);
     
     detailPanel.style.display = 'flex';
+    mapTitle.style.opacity = '0';
+    mapInfo.style.opacity = '0';
     
     resetToFirstTab();
   };
@@ -137,14 +146,14 @@ export const mapCountryDetails = (() => {
       if (legalData && tabContent2) {
         tabContent2.innerHTML = legalData.innerHTML;
       } else if (tabContent2) {
-        tabContent2.innerHTML = '<p>Legal system information not available for this country.</p>';
+        tabContent2.innerHTML = '<p></p>';
       }
 
       const nonpayData = countryDetailData.querySelector('div:nth-child(3)');
       if (nonpayData && tabContent3) {
         tabContent3.innerHTML = nonpayData.innerHTML;
       } else if (tabContent3) {
-        tabContent3.innerHTML = '<p>Non-payment risk information not available for this country.</p>';
+        tabContent3.innerHTML = '<p></p>';
       }
 
       const currencyData = countryDetailData.querySelector('div:nth-child(4)');
