@@ -7843,6 +7843,7 @@ svg#Africa [data-template].is-hover {
     min-width: 768px;
     right: -70px;
     top: -80px;
+    padding-bottom: 90px;
     background: linear-gradient(117.78deg, rgba(255, 222, 214, 0.3) 2.37%, rgba(253, 231, 246, 0.65) 98.75%);
   }
 
