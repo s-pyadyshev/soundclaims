@@ -26,9 +26,9 @@ mixin where-we-operate()
                                     <li>Southern Africa: <span data-country-map="angola">Angola</span>, <span data-country-map="botswana">Botswana</span>, <span data-country-map="madagascar">Madagascar</span>, <span data-country-map="namibia">Namibia</span>, <span data-country-map="south-africa">South Africa</span>, <span data-country-map="zambia">Zambia</span>, <span data-country-map="zimbabwe">Zimbabwe</span></li>
                                 </ul>
                             </div>
-                            .where-we-operate__detail 
+                            .where-we-operate__detail(style="display: none;")
                                 .where-we-operate__detail-title
-                                    span Niger
+                                    span 
                                     button.where-we-operate__detail-close
                                         span close
                                         +svg('close')
@@ -48,26 +48,13 @@ mixin where-we-operate()
                                             span Currency Inconvertibility
                                     .where-we-operate__detail-tabs-content(data-tabs-content="tabs-map")
                                         .is-active(data-tab-content="map1")
-                                            ul
-                                                li
-                                                    span Official Name: 
-                                                    span Republic of Niger
-                                                li
-                                                    span Currency: 
-                                                    span WEST AFRICAN CFA FRANC (XOF)
-                                                li
-                                                    span Population: 
-                                                    span 27,032,412
                                         div(data-tab-content="map2")
-                                            p Niger's legal system is based on the French civil law tradition, with influence from Islamic and customary law. A new constitution was approved in 2010, establishing a republic with a semi-presidential system of government. However, the legal framework has been severely undermined since the 2023 military coup, which suspended the constitution and dissolved government institutions.
                                         div(data-tab-content="map3")
-                                            p Niger faces acute non-payment risks driven by the economic fallout from its political instability. Following the July 2023 coup, Niger has defaulted on USD 520 million in debt payments due to regional sanctions that cut off access to financial markets. The risk is compounded by disruption to oil exports and the mining sector, depriving the country of critical revenues needed for debt servicing. The military junta has struggled to meet its financial obligations, and the inability to access international credit markets continues to undermine its fiscal capacity.
                                         div(data-tab-content="map4")
-                                            p Currency inconvertibility and non-transfer risks in Niger are heightened by ongoing political instability and sanctions. The suspension from the regional financial market has restricted the military government's ability to convert the West African CFA franc into foreign currencies. Additionally, the deteriorating political and security situation has led to a sharp decline in foreign investment, further limiting the availability of foreign currency. Security-related disruptions to the Niger-Benin oil pipeline, a vital source of foreign exchange, will compound these challenges, leaving the country increasingly isolated financially and vulnerable to currency-related risks.
                         </div>
                         <div class="where-we-operate__map">
                             <div style="display: none;">
-                                <div id="algeria">
+                                <div id="algeria" data-name="Algeria">
                                     <b>Algeria</b>
                                     <ul>
                                         <li>Official Name: People's Democratic Republic of Algeria</li>
@@ -77,7 +64,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="angola">
+                                <div id="angola" data-name="Angola">
                                     <b>Angola</b>
                                     <ul>
                                         <li>Official Name: Republic of Angola</li>
@@ -87,7 +74,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="benin">
+                                <div id="benin" data-name="Benin">
                                     <b>Benin</b>
                                     <ul>
                                         <li>Official Name: Republic of Benin</li>
@@ -97,7 +84,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="botswana">
+                                <div id="botswana" data-name="Botswana">
                                     <b>Botswana</b>
                                     <ul>
                                         <li>Official Name: Republic of Botswana</li>
@@ -107,7 +94,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="burkina-faso">
+                                <div id="burkina-faso" data-name="Burkina Faso">
                                     <b>Burkina Faso</b>
                                     <ul>
                                         <li>Official Name: Burkina Faso</li>
@@ -117,7 +104,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="burundi">
+                                <div id="burundi" data-name="Burundi">
                                     <b>Burundi</b>
                                     <ul>
                                         <li>Official Name: Republic of Burundi</li>
@@ -127,7 +114,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="cameroon">
+                                <div id="cameroon" data-name="Cameroon">
                                     <b>Cameroon</b>
                                     <ul>
                                         <li>Official Name: Republic of Cameroon</li>
@@ -137,7 +124,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="cv-">
+                                <div id="cv-" data-name="Cape Verde">
                                     <b>Cape Verde</b>
                                     <ul>
                                         <li>Official Name: Republic of Cabo Verde</li>
@@ -147,7 +134,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="central-african-republic">
+                                <div id="central-african-republic" data-name="Central African Republic">
                                     <b>Central African Republic</b>
                                     <ul>
                                         <li>Official Name: Central African Republic</li>
@@ -157,7 +144,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="chad">
+                                <div id="chad" data-name="Chad">
                                     <b>Chad</b>
                                     <ul>
                                         <li>Official Name: Republic of Chad</li>
@@ -167,7 +154,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="democratic-republic-of-the-congo">
+                                <div id="democratic-republic-of-the-congo" data-name="Democratic Republic of the Congo">
                                     <b>Democratic Republic of the Congo</b>
                                     <ul>
                                         <li>Official Name: Democratic Republic of the Congo</li>
@@ -177,7 +164,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="republic-of-congo">
+                                <div id="republic-of-congo" data-name="Republic of the Congo">
                                     <b>Republic of the Congo</b>
                                     <ul>
                                         <li>Official Name: Republic of the Congo</li>
@@ -187,7 +174,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="djibouti">
+                                <div id="djibouti" data-name="Djibouti">
                                     <b>Djibouti</b>
                                     <ul>
                                         <li>Official Name: Republic of Djibouti</li>
@@ -197,7 +184,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="egypt">
+                                <div id="egypt" data-name="Egypt">
                                     <b>Egypt</b>
                                     <ul>
                                         <li>Official Name: Arab Republic of Egypt</li>
@@ -207,7 +194,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="ethiopia">
+                                <div id="ethiopia" data-name="Ethiopia">
                                     <b>Ethiopia</b>
                                     <ul>
                                         <li>Official Name: Federal Democratic Republic of Ethiopia</li>
@@ -217,7 +204,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="gabon">
+                                <div id="gabon" data-name="Gabon">
                                     <b>Gabon</b>
                                     <ul>
                                         <li>Official Name: Gabonese Republic</li>
@@ -227,7 +214,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="gambia">
+                                <div id="gambia" data-name="Gambia">
                                     <b>Gambia</b>
                                     <ul>
                                         <li>Official Name: Republic of the Gambia</li>
@@ -237,7 +224,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="ghana">
+                                <div id="ghana" data-name="Ghana">
                                     <b>Ghana</b>
                                     <ul>
                                         <li>Official Name: Republic of Ghana</li>
@@ -247,7 +234,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="guinea">
+                                <div id="guinea" data-name="Guinea Conakry">
                                     <b>Guinea Conakry</b>
                                     <ul>
                                         <li>Official Name: Republic of Guinea</li>
@@ -257,7 +244,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="cote-divoire">
+                                <div id="cote-divoire" data-name="Ivory Coast">
                                     <b>Ivory Coast</b>
                                     <ul>
                                         <li>Official Name: Republic of Côte d'Ivoire</li>
@@ -267,7 +254,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="kenya">
+                                <div id="kenya" data-name="Kenya">
                                     <b>Kenya</b>
                                     <ul>
                                         <li>Official Name: Republic of Kenya</li>
@@ -277,7 +264,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="madagascar">
+                                <div id="madagascar" data-name="Madagascar">
                                     <b>Madagascar</b>
                                     <ul>
                                         <li>Official Name: Republic of Madagascar</li>
@@ -285,9 +272,40 @@ mixin where-we-operate()
                                         <li>Population: 31,964,956</li>
                                     </ul>
                                 </div>
+                                <div id="madagascar-detail">
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <span>Official Name: </span>
+                                                <span>Republic of Madagascar</span>
+                                            </li>
+                                            <li>
+                                                <span>Currency: </span>
+                                                <span>MALAGASY ARIARY (MGA)</span>
+                                            </li>
+                                            <li>
+                                                <span>Population: </span>
+                                                <span>31,964,956</span>
+                                            </li>
+                                            <li>
+                                                <span>Capital: </span>
+                                                <span>Antananarivo</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Madagascar's legal system is based on French civil law, reflecting its colonial history. The country has a mixed legal framework that incorporates customary law alongside modern civil and commercial codes. While the judicial system exists, it faces challenges including limited resources, capacity constraints, and occasional political interference. Contract enforcement can be slow and unpredictable, particularly in commercial disputes.</p>
+                                    </div>
+                                    <div>
+                                        <p>Madagascar faces significant non-payment risks due to economic instability and limited fiscal resources. The country has experienced periods of political turmoil that have affected its ability to meet financial obligations. Foreign exchange shortages and a weak banking sector compound payment risks. While the government generally attempts to honor commitments, delays and restructuring of obligations can occur during economic stress periods.</p>
+                                    </div>
+                                    <div>
+                                        <p>Currency inconvertibility risks in Madagascar are moderate to high due to foreign exchange constraints and capital controls. The Malagasy Ariary is subject to volatility, and the central bank maintains restrictions on foreign currency transactions. Businesses may face difficulties accessing foreign exchange for international payments, and currency conversion can be subject to delays and administrative requirements.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div style="display: none;">
-                                <div id="malawi">
+                                <div id="malawi" data-name="Malawi">
                                     <b>Malawi</b>
                                     <ul>
                                         <li>Official Name: Republic of Malawi</li>
@@ -297,7 +315,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="mali">
+                                <div id="mali" data-name="Mali">
                                     <b>Mali</b>
                                     <ul>
                                         <li>Official Name: Republic of Mali</li>
@@ -307,7 +325,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="mauritania">
+                                <div id="mauritania" data-name="Mauritania">
                                     <b>Mauritania</b>
                                     <ul>
                                         <li>Official Name: Islamic Republic of Mauritania</li>
@@ -317,7 +335,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="mauritius">
+                                <div id="mauritius" data-name="Mauritius">
                                     <b>Mauritius</b>
                                     <ul>
                                         <li>Official Name: Republic of Mauritius</li>
@@ -327,7 +345,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="morocco">
+                                <div id="morocco" data-name="Morocco">
                                     <b>Morocco</b>
                                     <ul>
                                         <li>Official Name: Kingdom of Morocco</li>
@@ -337,7 +355,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="mozambique">
+                                <div id="mozambique" data-name="Mozambique">
                                     <b>Mozambique</b>
                                     <ul>
                                         <li>Official Name: Republic of Mozambique</li>
@@ -347,7 +365,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="namibia">
+                                <div id="namibia" data-name="Namibia">
                                     <b>Namibia</b>
                                     <ul>
                                         <li>Official Name: Republic of Namibia</li>
@@ -357,7 +375,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="niger">
+                                <div id="niger" data-name="Niger">
                                     <b>Niger</b>
                                     <ul>
                                         <li>Official Name: Republic of Niger</li>
@@ -366,7 +384,7 @@ mixin where-we-operate()
                                     </ul>
                                 </div>
                                 <div id="niger-detail">
-                                    <div id="niger-detail-country">
+                                    <div>
                                         <ul>
                                             <li>
                                                 <span>Official Name: </span>
@@ -382,19 +400,19 @@ mixin where-we-operate()
                                             </li>
                                         </ul>
                                     </div>
-                                    <div id="niger-detail-legal">
+                                    <div>
                                         <p>Niger's legal system is based on the French civil law tradition, with influence from Islamic and customary law. A new constitution was approved in 2010, establishing a republic with a semi-presidential system of government. However, the legal framework has been severely undermined since the 2023 military coup, which suspended the constitution and dissolved government institutions.</p>
                                     </div>
-                                    <div id="niger-detail-nonpay">
+                                    <div>
                                         <p>Niger faces acute non-payment risks driven by the economic fallout from its political instability. Following the July 2023 coup, Niger has defaulted on USD 520 million in debt payments due to regional sanctions that cut off access to financial markets. The risk is compounded by disruption to oil exports and the mining sector, depriving the country of critical revenues needed for debt servicing. The military junta has struggled to meet its financial obligations, and the inability to access international credit markets continues to undermine its fiscal capacity.</p>
                                     </div>
-                                    <div id="niger-detail-currency">
+                                    <div>
                                         <p>Currency inconvertibility and non-transfer risks in Niger are heightened by ongoing political instability and sanctions. The suspension from the regional financial market has restricted the military government's ability to convert the West African CFA franc into foreign currencies. Additionally, the deteriorating political and security situation has led to a sharp decline in foreign investment, further limiting the availability of foreign currency. Security-related disruptions to the Niger-Benin oil pipeline, a vital source of foreign exchange, will compound these challenges, leaving the country increasingly isolated financially and vulnerable to currency-related risks.</p>
                                     </div>
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="nigeria">
+                                <div id="nigeria" data-name="Nigeria">
                                     <b>Nigeria</b>
                                     <ul>
                                         <li>Official Name: Federal Republic of Nigeria</li>
@@ -402,9 +420,40 @@ mixin where-we-operate()
                                         <li>Population: 232,679,478</li>
                                     </ul>
                                 </div>
+                                <div id="nigeria-detail">
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <span>Official Name: </span>
+                                                <span>Federal Republic of Nigeria</span>
+                                            </li>
+                                            <li>
+                                                <span>Currency: </span>
+                                                <span>NIGERIAN NAIRA (NGN)</span>
+                                            </li>
+                                            <li>
+                                                <span>Population: </span>
+                                                <span>232,679,478</span>
+                                            </li>
+                                            <li>
+                                                <span>Capital: </span>
+                                                <span>Abuja</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Nigeria operates a federal system with a mixed legal framework combining English common law, customary law, and Islamic law (Sharia). The country has a robust judicial system with federal and state courts. However, challenges include judicial delays, corruption concerns, and enforcement issues. The legal system provides reasonable protection for commercial transactions, though contract enforcement can be time-consuming.</p>
+                                    </div>
+                                    <div>
+                                        <p>Nigeria faces moderate non-payment risks primarily due to foreign exchange constraints and economic volatility. The country's dependence on oil revenues makes it vulnerable to commodity price fluctuations. While the government generally honors its obligations, delays in payments can occur during periods of fiscal stress. The banking sector is relatively stable, but businesses may face challenges in accessing foreign currency for international transactions.</p>
+                                    </div>
+                                    <div>
+                                        <p>Currency inconvertibility risks in Nigeria are significant due to foreign exchange scarcity and capital controls. The Central Bank of Nigeria maintains strict foreign exchange regulations, and businesses often face delays in accessing foreign currency. The naira has experienced significant devaluation pressures, and multiple exchange rate systems create additional complexity for international transactions.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div style="display: none;">
-                                <div id="republic-of-the-congo">
+                                <div id="republic-of-the-congo" data-name="Republic of the Congo">
                                     <b>Republic of the Congo</b>
                                     <ul>
                                         <li>Official Name: Republic of the Congo</li>
@@ -414,7 +463,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="rwanda">
+                                <div id="rwanda" data-name="Rwanda">
                                     <b>Rwanda</b>
                                     <ul>
                                         <li>Official Name: Republic of Rwanda</li>
@@ -424,7 +473,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="senegal">
+                                <div id="senegal" data-name="Senegal">
                                     <b>Senegal</b>
                                     <ul>
                                         <li>Official Name: Republic of Senegal</li>
@@ -434,7 +483,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="sierra-leone">
+                                <div id="sierra-leone" data-name="Sierra Leone">
                                     <b>Sierra Leone</b>
                                     <ul>
                                         <li>Official Name: Republic of Sierra Leone</li>
@@ -444,7 +493,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="south-africa">
+                                <div id="south-africa" data-name="South Africa">
                                     <b>South Africa</b>
                                     <ul>
                                         <li>Official Name: Republic of South Africa</li>
@@ -452,9 +501,40 @@ mixin where-we-operate()
                                         <li>Population: 64,007,187</li>
                                     </ul>
                                 </div>
+                                <div id="south-africa-detail">
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <span>Official Name: </span>
+                                                <span>Republic of South Africa</span>
+                                            </li>
+                                            <li>
+                                                <span>Currency: </span>
+                                                <span>SOUTH AFRICAN RAND (ZAR)</span>
+                                            </li>
+                                            <li>
+                                                <span>Population: </span>
+                                                <span>64,007,187</span>
+                                            </li>
+                                            <li>
+                                                <span>Capital: </span>
+                                                <span>Cape Town (Legislative), Pretoria (Executive), Bloemfontein (Judicial)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>South Africa has a well-developed legal system based on Roman-Dutch law, English common law, and customary law. The country has an independent judiciary and strong constitutional framework. Commercial law is well-established with good contract enforcement mechanisms. The legal system provides strong protection for property rights and commercial transactions, making it one of the most reliable legal environments in Africa.</p>
+                                    </div>
+                                    <div>
+                                        <p>South Africa presents relatively low non-payment risks due to its developed financial system and strong institutional framework. The country has a sophisticated banking sector and established credit markets. However, economic challenges including high unemployment, slow growth, and fiscal constraints can create some payment delays. The government generally honors its obligations, though state-owned enterprises may face financial difficulties.</p>
+                                    </div>
+                                    <div>
+                                        <p>Currency inconvertibility risks in South Africa are generally low due to the country's open capital account and well-developed foreign exchange markets. The South African Reserve Bank maintains a flexible exchange rate regime. While the rand can be volatile due to global market conditions and domestic factors, there are no significant restrictions on currency conversion or capital transfers for legitimate business purposes.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div style="display: none;">
-                                <div id="sudan">
+                                <div id="sudan" data-name="Sudan">
                                     <b>Sudan</b>
                                     <ul>
                                         <li>Official Name: Republic of the Sudan</li>
@@ -464,7 +544,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="tanzania">
+                                <div id="tanzania" data-name="Tanzania">
                                     <b>Tanzania</b>
                                     <ul>
                                         <li>Official Name: United Republic of Tanzania</li>
@@ -474,7 +554,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="togo">
+                                <div id="togo" data-name="Togo">
                                     <b>Togo</b>
                                     <ul>
                                         <li>Official Name: Togolese Republic</li>
@@ -484,7 +564,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="tunisia">
+                                <div id="tunisia" data-name="Tunisia">
                                     <b>Tunisia</b>
                                     <ul>
                                         <li>Official Name: Tunisian Republic</li>
@@ -494,7 +574,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="uganda">
+                                <div id="uganda" data-name="Uganda">
                                     <b>Uganda</b>
                                     <ul>
                                         <li>Official Name: Republic of Uganda</li>
@@ -504,7 +584,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="zambia">
+                                <div id="zambia" data-name="Zambia">
                                     <b>Zambia</b>
                                     <ul>
                                         <li>Official Name: Republic of Zambia</li>
@@ -514,7 +594,7 @@ mixin where-we-operate()
                                 </div>
                             </div>
                             <div style="display: none;">
-                                <div id="zimbabwe">
+                                <div id="zimbabwe" data-name="Zimbabwe">
                                     <b>Zimbabwe</b>
                                     <ul>
                                         <li>Official Name: Republic of Zimbabwe</li>
@@ -545,7 +625,7 @@ mixin where-we-operate()
                             <path class="inland" id="south-sudan" d="M719.2,381.8c-0.9,2.9-1,5.9-0.7,8.8c0.3,3.7,1.9,10.4-3.6,11c-1.7,0.2-3.6-0.5-5.4-0.4                c-2.7,0.1-1.7,1.4-2,3.6c-0.3,1.8-3.8,3.5-0.7,5.2c2,1.1,4.6-0.2,6.6,1c2.1,1.2,3.5,2.8,4.5,5.1c0.9,2.1,2.4,3.8,4.2,5.2                c1.7,1.3,2.3,3,4.1,4.1c2.1,1.2,1.5,4.2,2.5,6.1c1.2,2.2,1.3,4.8,2.5,7.1c0.4,0.8,1,2.1,1.9,2.6c1,0.6,0.6,1.9,1.5,2.8                c1.4-1.7,2.5-1.3,4.1-1.2c1.8,0.2,1.3,1.5,1.8,2.8c0.5,1.4-0.4,3.1-0.4,4.5c0,1.8,1,2.8,2,4.1c-5.7,0-12.7-1-18.2,0.3                c-3.5,0.8-6.5,6.4-8.8,9.1c-0.4,0.5-2.1,2.8-2.9,2.6c-1.2-0.3-2.7,0.3-3.8-0.4c-1-0.6-1.4-1.1-2.6-0.9c-2,0.4-10.1,1.5-9.3,4.6                c-2.2-0.8-2.5-1.5-3.6-3.2c-0.9-1.2-2.7,0.3-3.6,0.7c-1.6,0.7-2.6-1.1-3.9-1.4c-2.3-0.5-4.5,2.5-5.3,4.2c-0.3-2-2-2.1-3.6-1.7                c1.8-3.9-4.3-5-6.3-7.2c-0.9-1-1.7-2-2.5-3c-0.9-1.1-0.7-2.4-1.9-3.5c-3.7-3.2-3.4,3.5-6.4,3.2c-3-0.3-3.6-3.6-6.4-0.9                c-2,1.9-3.2,2.7-5.7,1.2c-0.7-0.4-1.7-1.3-2-2c-0.7-1.3-2.3-0.8-3.1-2.6c-0.7-1.8-1.5-2.8-3.1-3.8c-1.1-0.7-1.8-2.6-2.6-3.6                c-1.2-1.4-0.6-3.3-0.7-4.9c-0.2-2.5-3.1-3.1-4.8-4.3c-2-1.4-4.5-1.9-4.5-4.3c0-1.1-1.4-1.6-1.9-2.3c-1-1.4,0.8-2.5,0.3-3.8                c-0.4-1.2-2.3-1.6-3.1-2.6c-1-1.4-0.5-2.2-2.2-3.2c-3.2-1.9-6.4-3.3-8.9-6.1c-0.9-1,0.7-2.1,0.7-3.2c0-1.6-1-1.9-2.3-2.5                c-1.4-0.6-1.4-1.9-2.3-2.9c-0.9-0.9-2.3-1.1-3.5-1.3c-1.8-0.3-5.7-0.1-5.7-2.8c0-0.7,1.2-2.7,0.6-3.3c-1.6-1.7-6.5-1.1-8.6-1.4                c0.4-1.1,1.2-2.3,0.9-3.6c-0.4,0.2-0.9,0.4-1.3,0.6c-0.4-1.9,0.6-2.3,1.6-3.6l-0.2-2.9l8.9-4.5l9.2-15.8l9.1-1.2l5.4,11.1l2.9,1.6                l5.4-1.6l9.9-0.4l3.3,2.5l6.6,0.8l2.9-4.9h4.6l0.8-4.5l5.4-2.9l9.9,7l4.6-0.4l9.5-11.9l5-5.3l-3.7-11.1l12.4-3.3v18.1l9.9,7.8v7.8                l2.9,1.6L719.2,381.8z"></path>
                             <path class="inland botg" id="south-africa" data-template="south-africa" d="M501.9,912c1.2-1.1,3-0.9,3.2-2.7c0.2-1.5,1.2-4.1,2.8-4.6c2.1-0.7,1.8,2.3,3.3,2.7                c2.5,0.7-0.1,3.2,1.2,4.7c2.1,2.6,5.4,2.9,8.5,3.9c2.8,0.9,5.1-0.4,7.9-0.3c2.5,0.1,3.4,1.5,6,0.7c-1.5-1.7,0.4-2,1.4-2.4                c1.4-0.6,1.5-2.4,3.3-2.9c1.2-0.3,3.6-0.5,3.7-2.1l1.1-49.6c1.4,1.9,3.7,2.8,5,4.8c1.4,2.3,2.3,5.3,3.3,7.8c0.9,2.5,1.8,5.3,0.6,7.9                c-1.6,3.4-2.7,5.2-1.2,8.9c2.7-3.2,9.5,1.6,12.5-1.2c0.5-0.5,0.1-1.7,0.8-1.9c0.8-0.2,1.5-0.1,2.3-0.5c2.1-1.2,2.5-3.9,4.6-5.2                c2.4-1.4,3.9-2.9,4.4-5.7c0.5-2.4,0.4-4.5,2.4-6.3c1.8-1.6,4-1.9,6.2-0.9c1.8,0.8,4.3,4.5,6,4.5c3.8-0.1,8.2,4.4,11.8,1.6                c1.6-1.3,4,0.5,6-1c2.1-1.6,2.9-4.2,3.8-6.6c0.5-1.3,0.9-2.6,1.1-3.9c0.3-2.2-0.7-2,1.5-2.7c1.3-0.4,5.1-1,5.8-2.2                c1.3-2.2,3.8-3.1,4.8-5.4c1.1-2.5,0.7-5.1,2.4-7.4c1.5-2,3.1-2.2,5-3.5c1.9-1.3,4.4-3.4,5.9-5.3c1.3-1.6,2.1-4,4-5                c1.9-1,4.1-1,6.1-1.8c1.9-0.7,1.8-1.5,2.8-3c0.8-1.2,2.9-1.6,4.2-1.9c5.3-1.1,8.6,2.4,13.8,2.4c4.6,0,8.8-1.7,10.3,3.9                c0.8,3.2,1.6,6.4,1.7,9.7c0.1,3,1.9,5.6,3,8.2c2.3,5.7,1.8,11.2,1.4,17.3c-0.1,2.3,0,5.2-0.8,7.7c-0.4,1.2-0.6,1.1-0.2,4.6                c0.2,0.1-1.4-1.7-3-2.3c-1.5-0.5-2.9-0.3-4.1-0.3c-1,2-2.6,1.6-3.7,4.1c-1.4,3-2.6,7.7-3.1,7.3c2.2,2,3,3.6,4.4,5.2                c2.3,2.6,5.5,4,8,1.5c0.7-0.7-0.3-1,2.1-4.5l2.1,0.1l7.2,0.3c-1.4,6-3.1,11.4-4.7,17.4c-0.8,3.1-2.5,9.4-6.7,9.1                c0.7,1.5-1.3,1.5-2.2,1.6c-1.1,0.2-2.1,1.7-2.8,2.5c-2.6,2.9-5.2,6.3-6.4,9.9c-0.7,2-2.5,3.3-3.5,5.2c-1.6,2.8-3.2,5.6-5.1,8.3                c-3.3,4.8-6.9,8-11.3,11.6c-3.7,3.1-5.9,7.5-9.6,10.5c-4.7,3.9-9.3,7.9-14.2,11.6c-3.8,2.9-8.2,6.4-13.1,7c-2.4,0.3-4.7-1-7-0.3                c-1.7,0.5-4,2.6-1.7,4c-2.8,1.2-5.8-2.3-8.4-0.5c-3,2.1-3.7,3.3-7.8,1.7c-3.1-1.2-7.1-2.5-10.4-1.2c-1.5,0.6-0.7,1.5-3,0.7                c-1.3-0.5-3.6,0.3-4.3-1.2c0,0.2,0,0.4,0,0.6c-3.4-0.5-8.8,1-10.5,4.1c-1.5,2.7-9-0.1-11.4,0.9c-1.4,0.6-3,0.2-4.3,0.8                c-1.6,0.8-3.4,2.3-4.9,3.5c-1.8,1.4-1.1,1.1-3.2,0.6c-0.9-0.2-1.9,0.3-2.8-0.4c-0.9-0.8-1.8-1.7-3-2c2.1-2.9-4.3-3-5.7-3.2                c0.9-2.2,0-4.2-2.7-3.7c-1.8,0.3-1.1,2.5-1.1,3.7c-3.3-1.3-0.7-5.2-0.4-7.2c0.3-1.7-0.7-3.5-1.5-4.9c-0.5-0.8-4.6-6.5-1.9-3.9                c-1.2-1.2-0.7-2.4-2.4-2.4c-1.5,0,0.1-3.6,0.3-4.1c3.7,2.2,4.7-2.1,4.7-4.9c0.1-4.9-1.2-9-3.8-13.2c-3.8-6.2-7.1-12.4-9.3-19.4                c-1-3.3-1.7-6.7-2.9-9.9C505.2,918.4,502.2,915.5,501.9,912"></path><a>
                                 <path class="inland" id="somalia" d="M803.2,485.8c0-2.2-0.6-5.3,0.4-7.4c0.9-2,2.8-3.5,4.1-5.3c2.5-3.6,4.7-10,8.6-12.4                  c3.5-2.1,7.6-0.7,10.7-4c3.5-3.7,6.8-6.2,12-6.9c3.9-0.6,10.9,2.2,13.6-1.4l34.6-40.9c-4.2,0-8.5,0.7-12.6-0.3                  c-4.7-1.2-9.1-3.4-13.6-5.1c-4.6-1.7-9.3-3.5-13.9-5.3c-4.3-1.6-8-2.8-11.3-6.1c-1.1-1.1-1.5-1.7-3-2.1c-1.6-0.4-2.2-2.8-2.9-4.1                  c-1.2-2.2-2.1-3.9-3.8-5.8c-2.1-2.3-4.5-5.2-3.6-8.6c1-3.7,4.3-7,5.7-10.6c3.8,2.1,5.9,7.2,8.6,10.5c3.3,4.1,8.3,5.3,13.3,3.6                  c1.9-0.6,4.4-2.4,6.1-3.6c2.9-2.2,3.7-1.8,7.3-1.2c3.7,0.6,5.4,1.4,8.9-0.8c1.8-1.1,5.8-5.2,8-4.4c2.5,0.9,4.2,1,6.9,0.1                  c1.6-0.6,3.1-1.4,4.8-1.7c1.9-0.4,3.2,0.4,5,0.6c3,0.3,5.3-1.5,7.9-2.5c2.7-1.1,5.8-0.6,8.5-2c2.3-1.2,2.5-4.1,4.4-5.1                  c1.9-0.9,7.9,0.7,7.2,3.4c-1,3.5-1.6,5.6-1,9.3c0.4,2.6,1.1,6.3-1.1,8.3c1.5,0.6,2.7,0.2,2.4-1.4c0.7,0.5,1.6,0.8,2.4,1                  c-0.5,2.5-6.1-0.9-6.1,3.4c0,3.5,0.3,7.2-0.7,10.7c-0.8,3-2.6,5.2-4.3,7.7c-2,2.9-1.7,7.2-4.1,10c-0.9,1.1-2.2,1.4-2.9,2.8                  c-0.6,1.4-0.1,3-0.6,4.5c-1.2,3.4-3.7,6.2-5.4,9.4c-2.3,4.2-2.5,8.9-4.3,13.2c-1.8,4.4-4.6,8.4-7.2,12.4c-2.5,3.9-4.2,8.4-7.1,12                  c-3.2,4-6.4,8-9.7,12c-6.6,8-13.3,14.5-22,20.1c-3.6,2.4-7.3,4.8-10.3,7.9c-3.4,3.5-7.4,7-10.5,10.8c-3.1,3.8-6.3,7.4-9.3,11.2                  c-1.5,1.8-2.8,3.8-4.2,5.7c-0.9,1.2-3.6,5.3-4,2.9c0,3.9-2.6,7.7-5,10.7c0.2-3.1-2.8-5.7-4.9-8.7c-2.4-3.5-2-5.9-2.1-9.9                  C802.9,509.9,803.2,498,803.2,485.8"></path></a>
-                            <path class="inland botg" id="senegal botg" data-template="senegal" d="M95.8,314.5c-0.7,0-1.3,0.2-1.8,0.7c-0.2-2,3.5-2.6,4.6-3.7c2.5-2.5,4.4-5.8,5.9-8.9                c0.7-1.5,4-15.8,7.5-12.6c1.6,1.5,10,0,11.3-1.6c2.1-2.4,10.2,0.3,11.9,2.3c2.3,2.8,2.6,3.9,6.4,4.3c2.1,0.2,4.4,4.3,3.9,6.3                c-0.2,0.9,2.8,2.6,3.3,3.5c0.7,1.2,1,2.6,1.9,3.7c0.9,1,2.9,1.1,3.5,2.4c0.9,1.8,3.7,2.9,3.9,5c0.1,1-1.5,2.1-0.4,3.1                c0.9,0.8,1.6,1.4,1.7,2.8c0.1,1.5,1.5,5.1,0.2,6.2c-1.3,0.3-1.4,0.9-0.3,1.8c0.3,0.7,0.7,1.3,1.2,1.8c1.1,0.6,0,1.8,1.6,2.2                c0.8-3.3,3.5,2.4,3.9,3.3c0.7,1.3,1,2.3,0.7,3.9c-0.4,1.8,0.7,4,0.1,5.4c-2-0.9-4.1,0.5-6.2,0.1c-2.2-0.4-3.4,0.9-5.5,1.2                c-2.1,0.3-5.5-3.5-7.3-2.3c-1.4,0.9-0.9-1.7-1.2-1.8c-1.9-0.6-1.2-0.9-2.8-0.9l-20.2,0c-2.6,0-3.7,0.2-5.7,1.7                c-1.7,1.4-4.1,1.2-6.7,1.2c-2.2-0.1-3.8,1.3-5.9,1.6c-1,0.2-2.2-0.2-3.1,0.5c-0.2-0.5-1.3-1.6-0.7-2.3c1.4-1.6,2.3-2.4,4.2-1.2                c1.4,0.9,3.2-0.5,4.8-0.5c1.1,0,1.7,0.8,2.8,0.5c0.9-0.3,1.3-0.1,2.1,0.2c1.5,0.5,1.4-3.2,3-3.8c-2.5,0.2-1,2.3-2.5,3.3                c-1.3,0.9-4.7-0.3-5.2-1.8c-0.9,3.9-8.6,1-6.9-0.9c-0.7,1-0.7,2.8-2.2,3.1c-0.3-0.9,0-1.7,0.8-2.3c-2,0.5-0.9-2.6-0.5-4                c0.7-2.1,3-2.2,4.8-2.2l6.6,0c1.2,0.7-1.4-0.4,0.7-1.8c1.9-1.2,3.8-0.4,5.6-0.9c2-0.6,1-3.5,3.7-1.8c3.8,2.4,7.6,4.8,11.9,3.4                c1.7-0.6,3.5-2.2,1.4-3.3c-2.7-1.4-3.2,0.6-5.3,0.5c-2.1-0.1-1.6-3.3-4-2.3c-0.9,0.4-1.8-0.9-2.1-1.5c-0.6-1.3-2.6-0.8-3.8-0.1                c-1.7,1-2.1-0.6-3,0.3c-0.7,0.7-0.4,1.5-1.3,2l-12-0.1c0.5-1-0.5-1.7-1.7-1.8c0.2-1,0.8-1.3,1.7-0.9c-0.2-1-0.1-1.9,0.2-2.9                c-0.7,1.3-1.5,2.3-3.1,2.5c-0.4-1.3,3.3-4.6,4.6-4.7c-1.4-0.6-5.2,2.8-5.2,4.1C102.1,322.8,99.8,315.9,95.8,314.5"></path><a>
+                            <path class="inland botg" id="senegal" data-template="senegal" d="M95.8,314.5c-0.7,0-1.3,0.2-1.8,0.7c-0.2-2,3.5-2.6,4.6-3.7c2.5-2.5,4.4-5.8,5.9-8.9                c0.7-1.5,4-15.8,7.5-12.6c1.6,1.5,10,0,11.3-1.6c2.1-2.4,10.2,0.3,11.9,2.3c2.3,2.8,2.6,3.9,6.4,4.3c2.1,0.2,4.4,4.3,3.9,6.3                c-0.2,0.9,2.8,2.6,3.3,3.5c0.7,1.2,1,2.6,1.9,3.7c0.9,1,2.9,1.1,3.5,2.4c0.9,1.8,3.7,2.9,3.9,5c0.1,1-1.5,2.1-0.4,3.1                c0.9,0.8,1.6,1.4,1.7,2.8c0.1,1.5,1.5,5.1,0.2,6.2c-1.3,0.3-1.4,0.9-0.3,1.8c0.3,0.7,0.7,1.3,1.2,1.8c1.1,0.6,0,1.8,1.6,2.2                c0.8-3.3,3.5,2.4,3.9,3.3c0.7,1.3,1,2.3,0.7,3.9c-0.4,1.8,0.7,4,0.1,5.4c-2-0.9-4.1,0.5-6.2,0.1c-2.2-0.4-3.4,0.9-5.5,1.2                c-2.1,0.3-5.5-3.5-7.3-2.3c-1.4,0.9-0.9-1.7-1.2-1.8c-1.9-0.6-1.2-0.9-2.8-0.9l-20.2,0c-2.6,0-3.7,0.2-5.7,1.7                c-1.7,1.4-4.1,1.2-6.7,1.2c-2.2-0.1-3.8,1.3-5.9,1.6c-1,0.2-2.2-0.2-3.1,0.5c-0.2-0.5-1.3-1.6-0.7-2.3c1.4-1.6,2.3-2.4,4.2-1.2                c1.4,0.9,3.2-0.5,4.8-0.5c1.1,0,1.7,0.8,2.8,0.5c0.9-0.3,1.3-0.1,2.1,0.2c1.5,0.5,1.4-3.2,3-3.8c-2.5,0.2-1,2.3-2.5,3.3                c-1.3,0.9-4.7-0.3-5.2-1.8c-0.9,3.9-8.6,1-6.9-0.9c-0.7,1-0.7,2.8-2.2,3.1c-0.3-0.9,0-1.7,0.8-2.3c-2,0.5-0.9-2.6-0.5-4                c0.7-2.1,3-2.2,4.8-2.2l6.6,0c1.2,0.7-1.4-0.4,0.7-1.8c1.9-1.2,3.8-0.4,5.6-0.9c2-0.6,1-3.5,3.7-1.8c3.8,2.4,7.6,4.8,11.9,3.4                c1.7-0.6,3.5-2.2,1.4-3.3c-2.7-1.4-3.2,0.6-5.3,0.5c-2.1-0.1-1.6-3.3-4-2.3c-0.9,0.4-1.8-0.9-2.1-1.5c-0.6-1.3-2.6-0.8-3.8-0.1                c-1.7,1-2.1-0.6-3,0.3c-0.7,0.7-0.4,1.5-1.3,2l-12-0.1c0.5-1-0.5-1.7-1.7-1.8c0.2-1,0.8-1.3,1.7-0.9c-0.2-1-0.1-1.9,0.2-2.9                c-0.7,1.3-1.5,2.3-3.1,2.5c-0.4-1.3,3.3-4.6,4.6-4.7c-1.4-0.6-5.2,2.8-5.2,4.1C102.1,322.8,99.8,315.9,95.8,314.5"></path><a>
                                 <g id="sierra-leone" transform="translate(-29.9017, -45.0745)">
                                     <path class="island" id="path2896" d="M177.5,457.7c-0.1,0.3-0.2,0.5-0.3,0.8c1.6,0.5,3.1,1.1,4.7,1.4c0.3-0.6,0.5-1.5-0.2-1.9                    C180.5,457.2,178.8,457.8,177.5,457.7"></path>
                                     <path class="inland botg" id="path2902" data-template="sierra-leone" d="M172.8,438.2c1-0.9,2.2-0.1,3.3-0.8c1.1-0.7,0.8-2.5,2.1-2.9c2.1-0.6,3.6-4.7,4.2-6.6                    c1.1-3.1,4.4-0.8,6.7-2.4c2-1.3,7.5-1.4,9.5,0c1.9,1.4,2.8,3.8,4.1,5.7c0.6,1,1.4,2.1,1.8,3.2c0.3,0.8-0.6,1.8,0,2.4                    c0.7,0.7,1.5,0.6,1.6,1.8c0.1,1-0.3,2.6,0.4,3.4c1,1.1-2.5,4.6-2.3,6.5c0.3-0.6,2.8-1.9,3.4-2.3c2.4-1.4,2,0.5,1.4,2.3                    c-0.7,2-3.6,1.5-3.9,4.4c-0.3,2.8-0.4,2.7-1.9,4.3c-1.2,1.3-2.5,2.6-4.2,3.9c-2.4,1.7-3.5,6.2-4.5,5.8c-1.1-0.3-10.4-5.3-11.9-6.6                    c2.6,0.7,0.6-0.5-0.1-0.9c1.1-0.8,2.5-0.8,3.6-1.7c-2.1,0.3-5.2,0.6-3.4-2.5c-1.4,3.2-3.1-0.4-4.3-0.2c-0.8,0.1-1.6-5.5-1.6-6.2                    c-1.8,0.4-4.5-1.1-3.2-3.3c0.8,0.6,1.6,1.1,2.4,1.6c-2-1,0.9-2.7,2.1-2.6c-0.5-0.8-0.2-0.6-0.1-1.5c-1,2.1-2,1-3.3,0.2                    c-0.2,0.4-0.3,0.8-0.5,1.3c-1.5-2.5-0.2-3.5,1.9-4C175,439.5,173.3,439.6,172.8,438.2"></path>
@@ -577,18 +657,18 @@ mixin where-we-operate()
                                     <path class="island" id="path3466" d="M813.4,681c0.4-0.3,0.8-0.5,1.1-0.8c0,0.7-0.1,1.3-0.3,1.9C813.9,681.8,813.6,681.4,813.4,681"></path>
                                 </g></a>
                             <path class="inland botg" id="morocco" data-template="morocco" d="M152.7,136.1c0.6-0.6,2.3-3.4,3-3.7c2.3-0.8,4.7-0.9,7.1-1.4c4.3-1,8.7-2.3,12-5.5                c3.2-3.1,6.5-5.5,9.9-8.3c3.2-2.7,5.7-6.4,8.2-9.7c1.7-2.2,5.8-8.7,2.4-11.2c-1.3-0.9-2.2-1-1.4-2.7c0.8-1.7,0.7-3.5,0.8-5.4                c0.3-5.3,2.2-7.7,5.4-11.6c1.9-2.3,1.3-4.5,2.1-7.1c0.6-1.9,2.1-3.3,3.5-4.6c3-2.7,5.4-6.1,9.1-7.8c4.1-1.9,8.4-3.3,12.4-5.5                c7.7-4.4,11.5-15.1,14.4-23c0.3-0.8,1.3-4.7,2.5-4.5c1.4,0.1,2.9-0.4,4.1-1.1c1.6-0.8,1.9,1.2,2.3,2.3c0.9,2.1,2,3.6,3.9,5                c4,2.8,7.2,2,11.8,1.5c3.7-0.4,8.5,1.8,10.8-2.6c0,1.4,0.4,1.8,0.6,2.9c0.2,1.2,2.3,1.8,0.5-0.1c1,1.4,2.8,2.1,4.4,1.3                c1.6-0.8,2.6,0.9,3.6,1.8c1.1,1,3,1.6,3.7,3c0.7,1.6-0.9,3.1,1.4,4c-1.2,1-0.8,2.7-0.6,4c0.4,2-0.3,3.8-0.1,5.8                c0.2,1.6,1.2,2.6,0.8,4.3c-0.6,2.5-0.3,3.5,0.9,5.7c0.6,1.1,0.1,2.2,0.7,3.2c0.9,1.6,2.4,2.2,3.7,3.2c2.5,2-5,5.2-1,6.8                c-4.1,1.1-18.6-3.9-20.7,1.7c-1.1,2.9-4,4-7.1,3.8c-2.4-0.2-5.3,3.2-2,4.1c-2.7,2.5,2.3,4.3,1.1,5.5c-1.4,1.4-3.7,0.9-5.2,1.9                c-1.5,1.1-3.2,2.8-5.1,3.4c-1.4,0.5-2.9,0.4-4.2,1.2c-2.5,1.4-3.5,4.3-5.4,6.4c-2.1,2.4-6,3.3-9.1,3.4c-2.3,0.1-4.8-0.9-5.7,1.9                c-1,2.9-3.9,0.7-6.2,0.9c-1.6,0.1-2.6,0.9-3.6,2.1c-1.1,1.1-2.3,0.9-3.6,1.4c-1.5,0.6-2.5,2.1-3.7,3.1c-1.3,1.1-2.9,1.8-4.2,2.8                c-2.6,2.1-4.8,2.4-4.6,6c0.3,3.6-0.1,7.6-0.5,11.2C205.6,137.2,157.6,136.1,152.7,136.1"></path>
-                            <g id="mauritania" transform="translate(-29.9017, -45.0745)">
+                            <g id="mauritania" data-template="mauritania" transform="translate(-29.9017, -45.0745)">
                                 <path class="island" id="path3878" d="M139,292.4c0.8-1,1-2.3,1-3.6C139.1,289.7,138.3,291.1,139,292.4"></path>
                                 <path class="inland botg" id="path3882" data-template="mauritania" d="M132.3,276.3c-0.3-2.2-0.1-3.7,0.7-5.8c0.2-0.6,1.1-2,2.6-2.1l44.5-0.1c2.3-1.2,0.7-11,0.6-14.8                  c-0.3-3.8-0.7-6.3,2.4-9.2c2.6-2.4,2.5-1.8,10.6-5.1l1.8-34.8L235,204l0.5-17.7c15.1,10.2,29.9,20.6,44.5,31.5c-7,0-14.1,0-21.1,0                  l8.6,116.2c0.7,1.9,2.7,2.7,2.8,3.2c1.2,3-0.4,3.9-0.5,6.1c-0.1,2.7-0.4,5.1-1.2,5.4l-25.3,0c-14.4,0.5-20.6,2.5-21.8-1.8                  c-0.6,3.9-6.3,4.5-9.1,3.4c-4.4-1.8-7.3-1-9.1,4c-1-1.7-2.5-3.2-4.1-4.7c-1.8-1.8-3.6-2.7-4.6-2.2c-3.6,2,1.4,12.2-7.5,11.6                  c0,0.2-2.4-1.7-3.1-3c-0.8-1.5-1.7-1.1-3.3-2.4c-1.7-1.4-1.6-3.8-2.9-4.7c-3.7-2.4-2.2-2.5-2.6-4.1c-0.4-2-2.5-4.6-3.5-4.7                  c-5.4-0.1-5.8-4.5-9.3-6.2c-1.8-0.9-3.3-1.3-5.7-1.4c-3.7-0.1-5,3.5-13.5,2.9c-1.8-0.1-1.6-1.3-3.1-0.9c-1.5,0.5-3.2,5.3-3.8,6.6                  c0-8.3,5.5-15.1,6.2-23.2c0.5-4.9-0.2-9-0.8-13.8c-0.2-1.7-0.2-3.6-1.3-5.1c-1-1.3-2.6-2.2-2.8-3.9c1.3,0.4,2.7-0.6,2.5-2                  c-0.9,0.2-1.6,0.9-1.8,1.7c0.3-1.7,1.7-2.8,2.4-4.3c0.5-0.9-0.2-2.5,0.3-3.1c2.5-2.9-1.3-7.9-2.3-10.8c-0.4,0.7-0.7,1.4-0.8,2.2                  c-2.5-1.9-1.9-5.9-4.5-7.8C133.2,273,132.6,274.6,132.3,276.3"></path>
                             </g><a>
                                 <path class="inland botg" id="malawi" data-template="malawi" d="M699.9,706.8c0.4-0.8,2.5-4.2,3.3-6.5c0.8-2.3,0.6-2.9,0.1-5.9c-0.4-2.7,5.8-4.5,7-5.8                  c-4.5-1.4-2.6-8.7-2.6-12c0-2.7,1.7-3.9,0.3-6.6c-1.7-3.2,0.8-2.5,2.5-3.7c2-1.5,2.5-4.6-0.9-8.5c-2.7-3.1,0.7-4.1-1.9-5.8                  c-2.1-1.4-2.9-1.3-3.4-1.9c-0.3-0.3,0.5-2-0.2-2.9c0.4,0.3,3,1.3,4.3,1.5c1.6,0.2,1.2,1.4,2.5,1.6c1.3,0.2,4.2-0.1,5,1.5                  c0,2.1,0.1,4.5,2.7,7.6c2.3,2.8,0.1,3.3,0.5,5.5c0.3,1.9,1,10.7,1,11.8c0.1,4.1-5.2,8.1-3.7,10.5c5.4,9.3,3.7,9.2,3.4,11.1                  c-1.3,7.8,4,6,3.2,9.6c-2,8.7,3.3,7.3,3,3.1l4.3,5.6c1,0.5,0.4-7.1-2.5-9.4c-2.6,0.4-1.5-2.1-1.8-2.8c2.1,1,2.3,1.2,4.8,4.9                  c1.6,2.5,3.1,5,5.2,7.6c2.4,2.8,2.5,5.5,1.6,9.1c-0.8,3.2,0.4,6.2-0.1,9.5c-0.2,1.4-0.6,3.1-1.9,4c-1.3,1-3.3,0.7-4.6,1.8                  c-1.3,1.1-0.9,3.4-2.7,4.9c0.4,0.5,1.8,3.2,1.9,4.7c0,0.6,0,2.5-0.6,3.2c-0.6,0.6-2.8,0.5-2.5-0.7c0.7-2.5,1.9-1.8-0.8-4.3                  c-1.8-1.7-6.7-6.5-6.9-8.4c-0.4-3.3-1.3-2.6-0.6-5.2c0.3-1.2,1-3.7,1.9-4.9c1.4-1.8,1.1-2.3,1.3-4.6c0.3-2.7,0.3-6.2-1.6-8.8                  c-0.7-1-2.9,0.4-4.8,0.6c-1.6,0.2-3.9-0.3-4,1.2c-0.9-1-7-8.1-7.3-7.9C702.8,711.5,699.5,708,699.9,706.8z"></path></a>
                             <path class="inland botg" id="mali" data-template="mali" d="M157.2,314c2.2-0.5,3.1,0.6,4.9-1.6c1.5-1.9,0.8-6,1.5-8.3c1.6-5.4,9.1,3.5,9.9,5.2                c1.4-3.9,3.8-6.1,8.3-4.2c3,1.2,9.3,1,9.9-3.1c1.7,4.1,10,2.3,13.3,2c8-0.6,16.2-0.2,24.2-0.2c2.8,0,6.3-0.3,9.1,0                c2,0.2,1.5-3.2,1.7-4.9c0.2-2,2.2-5.8,0.1-7.1c-3.6-2.3-2.6-4.3-2.6-7.2l-8.3-111.7l21.1,0c21.8,16.4,42.3,32.7,63,48.9                c2.5,1.8,7.1,3.6,6.8,7.3c-0.1,1.2-0.3,2.2,1.8,3.1c1,0.4,2.1,0.7,3,1.3c1.4,1,1.2,2.7,2.4,3.8c1.1,1.1,2.2,1.2,3.7,1.5                c1,0.2,0.3-0.9,2.1,0c1.3,0.7,1.9,2.4,3.4,2.9c2.4,0.7,5.5,0.9,7.7,2.2c1.6,0.9,1.1,5.4,0.5,6.9c-0.9,2.1-2.3,4.2,1.1,4.7                c3.6,0.5,7.7-1.4,11.2-1.8c-0.5,9.8,0.9,20.2-0.3,29.9c-0.1,1.1,0.2,1.9-0.6,7.2c-0.3,1.7,0.3-0.5-2.1,4.6c-0.7,1.6-0.7,3.5-1.4,5.1                c-0.7,1.6-2.2,2-3.4,3c-1.5,1.2-0.5,2.7-2.6,2.4c-0.5-0.1-4.7-1.2-4.9-0.5c-0.5,1.9-13.6,1.3-15.5,1.4c-4.8,0.4-4.7-0.2-8.2,3.5                c-1.1,1.2-3.2,1.6-4.7,1.3c-0.9-0.2-2.9-0.2-3.8-0.2c-1.6,0-1.5-1.2-1.5,0.7c-1.1-0.4-2.2-1-3.4-1.5c-2.7-1.1-3.4,0.8-4.4,0                c-1-0.7-2.7-1.7-5,0.3c-2.3,2.1-5.8,3.8-7.1,4.7c-2.3,1.5-3.9,2.7-6.2,3.3c-1.9,0.5-0.4,4.5-3.2,3.3c-1.7-0.8-3.3-1.8-5.1-0.5                c-1.6,1.1-2.4,3.1-3,4.8c-0.3,1-0.8,2.5-1.2,3.5c-0.4-0.3-2.9-0.9-3.9-1.1c0.9,1.6,0,4,0.2,5.7c-1.6-0.1-2.8-0.3-2.4,1.6                c-1.6-0.2-6.4-2.6-6.3-4.6c-3,7.2-5.3,3.8-3.7,6.4c0.8,1.4,0.9,2.5,0.5,3.7c-0.1,0.5-3.8-0.1-2.9,1.4c1.6,2.8,0.9,5.8-2.2,8.5                c-1.5,1.2-3.2,0.7-5,1.1c-1.7,0.3-2.6,2.1-4.4,2c3.2,0.8,0.9,2.5,1.8,3c1.6,1,0.2,5.2-0.7,6.7c-0.3,0.5-2,0.7-1.9,1.2                c0.5,2.4,0.8,5.4-0.8,7.6c-0.7,0.9-2.6,0.8-3.6,1.1c-2,0.5-1,3.2-3.4,2.9c-2.8-0.3-0.9-5.8-1.9-7.5c-1.1,0.4-1.3,2.4-2.3,2.6                c-1.1,0.3-1.9-1.2-2.6-1.6c-0.1,1.3,0.6,4.6-1.3,4.5c-1.5,0-3.6,0.1-2.3,2.1c-1.8,0.8-6.3-1.4-6.1-3.7c-0.9,0.4-2.4-0.1-3.1,0.8                c-1.1,1.3-1,2.9-3.2,3.1c1.6-3-3.8-3.5-3.8-6.1c0-1.7,0.4-3.6,0-5.2c-0.6-2.3-3.6,0.4-4.6,0.3c0.4-1.5,1.6-5.4,3.8-4.6                c0.8-2.2-3.8-3-4-5.2c-1.4,0.8-1.3-0.8-1.2-1.7c0.3-2.1-0.5-2.9-1.4-4.6c-0.7-1.4,0.2-3.3-1.4-4.1c-0.6-0.3-2.8-1.5-3.5-0.9                c-0.7,0.7,1.6,2.4,0,3.1c-1.8,0.8-3.2,2.2-4.9,3.1c-1.2,0.6-2.6-1.2-3.6-1.6c-2.2-0.9-3.9-0.7-5.4,1.1c-3.9,4.6-1.8-0.9-5.1-2                c-2.2-0.7-4.5,6.3-6.7,0.9c-0.7-1.7,2.2-3.3,0.8-5.3c-0.8-1.1-0.2-3.8,0.3-5c0.5-1.4-3.7-9.3-4.6-5.9c-1-0.3-2.6-3.4-3-4.3                c-0.4-0.8,0.9-2.5,0.8-4.2c-0.1-2.5,0.2-3.6-1.6-5.5c-0.6-0.7-1.3-1.5-0.8-2.5C158.4,315.7,157.9,315.7,157.2,314"></path>
-                            <g id="madagascar" transform="translate(-29.9017, -45.0745)">
+                            <g id="madagascar" data-template="madagascar" transform="translate(-29.9017, -45.0745)">
                                 <path class="island botg" id="path2622" data-template="madagascar" d="M851.9,867.3c0.9,3.8-1,8.5,1.7,11.8c1.3,1.6,1.3,3.5,2,5.4c0.6,1.7,2.4,2,0.6,4                  c-1.7,1.9-1.4,8.2-0.3,10.5c1,2.1,2,3.6,2.6,6c0.7,3,2.7,3.9,4.9,5.7c-2.8-1.6-0.4,0.5,0.3,0.8c1,0.3,2.1,0.2,3.1,0.5                  c2.5,0.6,3.9,3.4,6.4,4c4.3,1,8.8-4.6,12.8-5.7c1.5-0.4,3,0.4,4.3-0.1c1.1-0.4,2-1.1,3.1-1.3c1.6-0.3,2.5-2.2,3.2-3.5                  c0.8-1.8,1.4-3.6,1.9-5.5c0.7-2.6,2.3-4.7,3.1-7.2c1.5-4.6,3.1-9.1,4.3-13.8c1.8-6.7,4.5-12.7,6.8-19.3c1.9-5.3,3-10.7,5.3-15.8                  c0.7-1.5,2-3.9,1.3-5.6c0.8,0,1.7-3.2,1.9-3.8c1.3-3.6,2.1-7.4,3.5-10.9c2.1-5.2,4.1-9.5,5.2-15.1c0.8-4.1-2-10.1,3-12.8                  c1-0.5,2.1-3.6,2.2-4.9c0.1-1.1-0.1-2.3,0.1-3.4c0.3-1.5-1.6-1.4-1.6-2.9c0-1.1-1.1-9.9,1.7-8.7c2.4,1,1.6,6,3.9,6.8                  c2.6,0.9,4.3-6.1,4.6-7.6c0.4-2.2-1.1-3.3-1.7-5.3c-1.1-3.6-1-7.1-1.1-10.8c-0.2-6.8-1.9-14.1-4.6-20.2c-0.4,0.3-0.8,0.5-1.1,0.8                  c0.3-0.9-0.1-1.1-0.7-1.7c-0.9-0.9,0.5-1.5-0.3-2.5c-0.8-1-1.3-4.6-3.3-3.4c-0.1-0.4-0.2-0.8-0.1-1.3c3.5,0.3-1.6-4.9-1-0.5                  c0.2,1.7-3.3,4.9-5,4.9c3.1,1.5,1.1,6.1,0.5,8.1c-0.9,3-0.9,5-4.6,5.1c0.5,2.2-0.2,0.5-1.3,1.7c-0.8,0.9-0.8,2.2-1.1,3.3                  c-0.9,0-4.4-7-4.8-2.1c-0.2,1.8,0.4,2.9,1.1,4.5c0.6,1.4-0.4,5.3-0.7,2.5c-0.3,1.4-4.5,1.5-2.8,4.7c0.9,1.7,4.3,1,2.9,3.7                  c0.5-2.1-1.7-2.3-3-1.3c-1.8,1.4-1.7,4.5-4.1,5.3c-0.3-1.8,1.4-3.1,1-4.9c-1.8,0.4-1.4,1.6-2.1,2.9c-0.7,1.2-2.7,1.9-3,3.3                  c-0.2,1,0.9,2.1,1.3,2.9c0.8,1.6-2.1,1.9-3,2.7c0.2-1.1,2.2-4.3-0.6-4.2c-1.6,0-2.9,2.1-4.2,2.9c-0.8,0.6-3.1,1.7-2.8,3                  c0.1,0.7-0.4,1.5-0.2,2.1c0.3,0.9,1.5,0.7,1.7,1.7c-1.3-0.1-2.6,0.2-2.8-1.6c-0.3-2.3-2.5-2.2-2.6,0.1c-0.5-0.9-3.1-1.1-4-0.7                  c-1.1,0.5-0.7,2.4-1.5,3.2c0-2.4-2.7-0.5-2.9,0.9c-0.4-0.7-0.8-1.4-1.4-2.1c-1.4,1-2.4,2.6-4,3.2c-1.5,0.6-4.2-0.7-5.4,0.5                  c-0.6,0.6-0.1,5.1-0.6,4.6c0.4,1.8-0.9,4-1.8,5.4c-1.5,2.5-6.3,7.1-4.4,10.2c1.3,2.1,0.2,5.8,0.4,8.2c0.2,2.8,2.2,5,2.2,7.7                  c0,2.5-0.2,4.1,1.2,6.3c1.5,2.4,0.6,3.5-0.1,5.8c-0.5,1.7,1.6,2.2,0.6,4c-1.1,1.9-2.4,3.8-3.6,5.6c-1.2,2-2.8,4-3.7,6.2                  c-0.7,1.7-0.1,4.6-2.3,5.3c-2.6,0.9-3.2,1-3.5,3.9C854.7,862.5,852.5,864.7,851.9,867.3"></path>
                                 <path class="island" id="path2624" d="M918.9,747.9c0.6-1-0.1-2.1-0.8-2.8C917,746.1,917.2,747.9,918.9,747.9"></path>
                                 <path class="island" id="path2628" d="M936.9,793.9c0-0.2,0-0.5,0-0.7c-0.7,1.3-2.5,2.7-1.7,4.4C935.9,796.5,936.3,795.1,936.9,793.9"></path>
                             </g>
-                            <path class="inland" id="libya" d="M418.5,103.4c-1.5-1.3,1.8-2.9,2.6-3.3c2.6-1.2,3.9-1.9,5.5-4.4c1.2-2,2.5-3,2-5.6                c-0.4-2.2-1.5-4.5-1.3-6.8c0.3-3.2,4.2-2.4,4.8-4.7c0.7-2.5,2.7-3.8,4.8-4.7c1.6-0.8,6.8-2.2,6.8-4.4c0-1.1-1.1-1.8-0.9-2.9                c0.2-2.1,0.3-4.3,0.5-6.4c2.1,1.4,4.8,2.2,7,3.5c2.3,1.4,5,1.9,7.7,1.6c2.7-0.3,4.7-2,7.6-1c2.5,0.9,5.2,1,7.6,2                c2.2,0.9,3.9,2.6,6.1,3.5c1.9,0.8,4.5,0,6.2,1.1c2,1.4,2.4,3.8,2.8,6c0.5,2.9,1.6,5.1,3.8,7.1c4,3.5,9,2.7,13.8,3.5                c4.9,0.9,11.8,3.1,15.7,6.2c3.1,2.5,6,6.8,10.4,6.4c5.1-0.5,10.6-5,11.8-10.2c0.5-2.4-1.1-4.2-1.8-6.4c-0.8-2.4-1.4-5.1-0.6-7.5                c1.5-4.5,8.9-10.1,13.6-10.2c2.4-0.1,3.8-1.8,6.1-2c2.3-0.2,4.7-0.2,7,0.3c2.6,0.6,4.9,1.9,7.4,2.9c2.9,1.2,2.2,1.6,2.3,4.1                c0.1,2.1,3.5,2.5,5,2.6c2.9,0.2,4.8,1.5,7.5,2.3c2.7,0.8,5.5-0.1,8.2,0.4c1.5,0.3,3.9,3.4,3.3,5c-0.6,1.7-2.7,2.1-2.9,4.1                c-0.4,2.6,1.3,4.6,1.8,7.1c0.5,2.8-1.3,5.2-2.2,7.6c-1,2.6,1.6,5.6,2.1,8.2c0.7,4.5,1.5,8.8,1.8,13.4l2.8,120c-4,0-8,0-11.9,0                c0.1,2.3,0,4.6,0.2,6.9l-95.1-53.8l-21.6,10.3c-1.8,0.5-4.1-2.5-5.1-3.5c-4.5-4.4-9.3-5.3-15.2-6.7c-2.1-0.5-4.9-0.7-6.8-1.9                c-1.5-0.9-2.2-3.5-2.8-5.1c-1.8-4.4-4-5.7-8.4-7.3c-1.4-0.5-2.8-1.8-4.4-1.7c-1.5,0-3.2,1.8-4.7,0.2c-1.2-1.3-3.2-4.6-3.3-6.3                c-0.1-3.7-0.4-5-2.5-8.2c-1.6-2.4-6.8-6.7-4.5-10c2.6-3.7,6.5-2.3,4.8-8.4c-0.8-3.1-1.5-5.4-0.4-8.5c0.9-2.7,1.4-4.8,0.4-7.6                c-1-2.9-0.2-5.8,0-8.7c0.3-3.5-0.2-7-1.4-10.3C421.7,108.5,420.2,105.8,418.5,103.4"></path><a>
+                            <path class="inland" id="libya" data-template="kenya" d="M418.5,103.4c-1.5-1.3,1.8-2.9,2.6-3.3c2.6-1.2,3.9-1.9,5.5-4.4c1.2-2,2.5-3,2-5.6                c-0.4-2.2-1.5-4.5-1.3-6.8c0.3-3.2,4.2-2.4,4.8-4.7c0.7-2.5,2.7-3.8,4.8-4.7c1.6-0.8,6.8-2.2,6.8-4.4c0-1.1-1.1-1.8-0.9-2.9                c0.2-2.1,0.3-4.3,0.5-6.4c2.1,1.4,4.8,2.2,7,3.5c2.3,1.4,5,1.9,7.7,1.6c2.7-0.3,4.7-2,7.6-1c2.5,0.9,5.2,1,7.6,2                c2.2,0.9,3.9,2.6,6.1,3.5c1.9,0.8,4.5,0,6.2,1.1c2,1.4,2.4,3.8,2.8,6c0.5,2.9,1.6,5.1,3.8,7.1c4,3.5,9,2.7,13.8,3.5                c4.9,0.9,11.8,3.1,15.7,6.2c3.1,2.5,6,6.8,10.4,6.4c5.1-0.5,10.6-5,11.8-10.2c0.5-2.4-1.1-4.2-1.8-6.4c-0.8-2.4-1.4-5.1-0.6-7.5                c1.5-4.5,8.9-10.1,13.6-10.2c2.4-0.1,3.8-1.8,6.1-2c2.3-0.2,4.7-0.2,7,0.3c2.6,0.6,4.9,1.9,7.4,2.9c2.9,1.2,2.2,1.6,2.3,4.1                c0.1,2.1,3.5,2.5,5,2.6c2.9,0.2,4.8,1.5,7.5,2.3c2.7,0.8,5.5-0.1,8.2,0.4c1.5,0.3,3.9,3.4,3.3,5c-0.6,1.7-2.7,2.1-2.9,4.1                c-0.4,2.6,1.3,4.6,1.8,7.1c0.5,2.8-1.3,5.2-2.2,7.6c-1,2.6,1.6,5.6,2.1,8.2c0.7,4.5,1.5,8.8,1.8,13.4l2.8,120c-4,0-8,0-11.9,0                c0.1,2.3,0,4.6,0.2,6.9l-95.1-53.8l-21.6,10.3c-1.8,0.5-4.1-2.5-5.1-3.5c-4.5-4.4-9.3-5.3-15.2-6.7c-2.1-0.5-4.9-0.7-6.8-1.9                c-1.5-0.9-2.2-3.5-2.8-5.1c-1.8-4.4-4-5.7-8.4-7.3c-1.4-0.5-2.8-1.8-4.4-1.7c-1.5,0-3.2,1.8-4.7,0.2c-1.2-1.3-3.2-4.6-3.3-6.3                c-0.1-3.7-0.4-5-2.5-8.2c-1.6-2.4-6.8-6.7-4.5-10c2.6-3.7,6.5-2.3,4.8-8.4c-0.8-3.1-1.5-5.4-0.4-8.5c0.9-2.7,1.4-4.8,0.4-7.6                c-1-2.9-0.2-5.8,0-8.7c0.3-3.5-0.2-7-1.4-10.3C421.7,108.5,420.2,105.8,418.5,103.4"></path><a>
                                 <path class="inland" id="lesotho" d="M624.9,926.7c1.5,1.5,1.4,3.7,2.6,5.2c1.1,1.3,0.7,3.1,1.8,4.2c1.4,1.4,5.1,6.1,7.5,4.1                  c1.1-0.9,2-3.7,2.7-5c1.2-2,3.2-1.6,5.1-2.1c1.4-0.4,4.4-1.6,5-3c0.8-1.9,0.8-3,2.2-4.6c0.5-0.6,2.1-2.3,1.8-3.2                  c-0.8-2.9-2-3.1-4-5.1c-1.5-1.6-3.1-3-4.6-4.6c-1.3-1.4-3.5,0.8-4.7,1.3c-1.3,0.6-1.9,1.2-3.2,1.9c-1.5,0.8-3,0.5-4.2,2.1                  c-1.3,1.6-1.9,3.7-3.1,5.4C628.6,925.1,626.7,925.4,624.9,926.7"></path></a><a>
                                 <path class="inland botg" id="kenya" data-template="kenya" d="M718.8,532.1c2.4-1.8-3.6-9.1,4.8-7.4c0-0.5,0.5-1.4,0-2.3l5-0.6c-3.3-5-4.7-1.1-6.3,0.3                  c-1.3,1.2-4.6-4-4.5-7.2c1.3-2.3,0.4-3.3,2.8-5.5c1.8-1.6,3.2-6.9,6-8.2c1.4-0.6,1.2-0.8,1.1-2c-0.1-1.9,2-2.7,2.5-4.4                  c0.6-2,0.7-3.9,0.9-5.9c0.2-1.8-1.6-3-2-5c-0.8-4.5-3.6-5.4-4-7.4c-0.3-1.6-1.2-2.9-1.7-4.4c-0.3-0.7-0.5-1.3-0.6-2.1                  c0-1,1.1-1.6,0.8-2.6c-0.3-0.9-1.3-1.2-2.1-1.5c-1.8-0.7-0.5-2-2.4-1.8c0.8-1.8-1.4-3.5-1.2-4.8c0.2-1.3,1.7-2.2,2.6-3.1                  c3-3.1,6.6-2.2,10.5-2.2c2.2,0,4.5-0.2,6.7-0.2c1.1,0,2.2-0.1,3.3,0.1c0.9,0.1,1.2,1.8,2.4,2.2c3.5,1.4,7.4-0.3,10.9,1.3                  c3.7,1.7,7.7,4.9,10.6,7.7c1.5,1.4,2.6,2.5,4.8,2.7c1.4,0.2,4.5-0.7,5.6,0c3,1.9,7.7,0.2,10.3,2.8c0.4-1.8,2.9-4.4,4-6                  c2-2.8,6.2-3.9,9.2-5.2c3.1-1.5,3.7,2,6,3.3c1.6,0.9,3.4,0.3,5,0c1.4-0.2,3,0.6,4.2-0.1c-2,3.3-3.8,7-6.1,10.1                  c-2.5,3.2-4.8,5-4.8,9.4c0,10.3,0.1,20.6,0.1,30.8c0,7.7-1.5,15,3.6,21.3c1.8,2.1,4.4,4.9,2.5,7.7c-1.1,1.7-4.4,4.7-6.5,2.8                  c-0.2,0.4-0.3,0.8-0.5,1.3c-0.3-0.4-0.6-0.8-0.9-1.3c0.5,1.3,1.9,3.6,0.7,4.8c-0.2-3.1-1.5,0.5-1.8,1.2c-0.6,1.5-1.9,1.8-3.3,2                  c-3.1,0.4-4.4,3.2-3.4,5.8c0.5,1.2-1.8,4.7-2.7,5.4c-1.5,1.3-2.9,9.7-4.6,9c0.8,3.3-2.5,5.6-3.1,8.6c-1.3-1-1.2,0.7-2.3,0.5                  c-1.4-0.3-3.2-2.8-4.3-3.6c-4.8-3.7-10.8-7.6-13.8-11.6c-0.8-1-2.2-1.2-0.6-3c2.3-2.6-1.7-5.6-3.8-6.9L718.8,532.1"></path></a>
                             <g id="guinea-bissau" transform="translate(-29.9017, -45.0745)">

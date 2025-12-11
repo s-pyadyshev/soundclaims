@@ -214,9 +214,15 @@
   left: -40px;
   border-radius: 20px;
   background: linear-gradient(180deg, #fff4f2 0%, #fef1fa 100%);
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
   @include tablet {
     width: 535px;
+  }
+
+  &[style*="display: none"] {
+    display: none !important;
   }
 }
 
@@ -339,5 +345,35 @@
       margin: 0;
       text-align: justify;
     }
+  }
+}
+
+// Map country interaction styles
+.where-we-operate__map {
+  svg {
+    path[data-template] {
+      cursor: pointer;
+      transition: fill 0.2s ease;
+      
+      &:hover {
+        fill: lighten($color-secondary, 10%) !important;
+      }
+      
+      &:active {
+        fill: darken($color-secondary, 10%) !important;
+      }
+    }
+  }
+}
+
+// Country spans in text are also clickable
+[data-country-map] {
+  cursor: pointer;
+  color: $color-secondary;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: darken($color-secondary, 15%);
   }
 }

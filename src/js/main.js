@@ -12,6 +12,7 @@ import { sliderFacts } from "./components/sliderFacts.js";
 import { sliderNews } from "./components/sliderNews.js";
 import { sliderOtherNews } from "./components/sliderOtherNews.js";
 import { map } from "./components/map.js";
+import { mapCountryDetails } from "./components/map-country-details.js";
 import tippy from "tippy.js";
 import FancySelect from './vendor/fancySelect.js';
 
@@ -32,6 +33,8 @@ window.addEventListener(
     sliderNews.init();
     sliderOtherNews.init();
     map.init();
+    tabs.init();
+    mapCountryDetails.init();
 
     tippy("[data-template]", {
       content(reference) {
@@ -42,7 +45,6 @@ window.addEventListener(
       allowHTML: true,
       arrow: true,
     });
-    tabs.init();
     document.querySelector("body").classList.add("page-loaded");
   },
   false

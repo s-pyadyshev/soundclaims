@@ -5329,6 +5329,12 @@ svg#Africa [data-template].is-hover {
   left: -40px;
   border-radius: 20px;
   background: linear-gradient(180deg, #fff4f2 0%, #fef1fa 100%);
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.where-we-operate__detail[style*="display: none"] {
+  display: none !important;
 }
 
 .where-we-operate__detail-body {
@@ -5446,6 +5452,30 @@ svg#Africa [data-template].is-hover {
 .where-we-operate__detail-tabs-content > div p {
   margin: 0;
   text-align: justify;
+}
+
+.where-we-operate__map svg path[data-template] {
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+.where-we-operate__map svg path[data-template]:hover {
+  fill: rgb(236.164556962, 87.835443038, 94.8987341772) !important;
+}
+
+.where-we-operate__map svg path[data-template]:active {
+  fill: rgb(199.5189873418, 22.4810126582, 30.9113924051) !important;
+}
+
+[data-country-map] {
+  cursor: pointer;
+  color: #e72a33;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+[data-country-map]:hover {
+  color: rgb(176.6012658228, 19.8987341772, 27.3607594937);
 }
 
 [data-country-map] {
