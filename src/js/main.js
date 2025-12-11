@@ -20,7 +20,6 @@ window.addEventListener(
   () => {
     FancySelect.init();
     mobileMenu.init();
-    tabs.init();
     toggle.init();
     scrollspy.init();
     videoFile.init();
@@ -33,7 +32,6 @@ window.addEventListener(
     sliderNews.init();
     sliderOtherNews.init();
     map.init();
-    
 
     tippy("[data-template]", {
       content(reference) {
@@ -44,7 +42,7 @@ window.addEventListener(
       allowHTML: true,
       arrow: true,
     });
-
+    tabs.init();
     document.querySelector("body").classList.add("page-loaded");
   },
   false

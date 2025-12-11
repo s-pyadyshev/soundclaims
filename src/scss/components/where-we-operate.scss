@@ -197,3 +197,117 @@
     }
   }
 }
+
+.where-we-operate__content {
+  position: relative;
+}
+
+.where-we-operate__detail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% + 80px);
+  max-width: calc(100% + 80px);
+  height: calc(100% + 20px);
+  left: -40px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fff4f2 0%, #fef1fa 100%);
+
+  @include tablet {
+    width: 535px;
+  }
+}
+
+.where-we-operate__detail-body {
+  padding: 20px;
+  height: 100%;
+}
+
+.where-we-operate__detail-tabs {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.where-we-operate__detail-tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.7;
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px solid $color-secondary;
+  border-radius: 20px;
+}
+
+.where-we-operate__detail-tab.is-active {
+  background-color: $color-secondary;
+  color: #fff;
+}
+
+.where-we-operate__detail-tab.is-active svg {
+  fill: #fff;
+}
+
+.where-we-operate__detail-tab svg {
+  width: 16px;
+  height: 16px;
+  fill: $color-secondary;
+}
+
+.where-we-operate__detail-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  font-family: $font-secondary;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  padding: 12px 20px;
+  background-color: $color-secondary;
+  border-radius: 100px;
+  color: #fff;
+
+  @include tablet {
+    padding: 18px 60px;
+    font-size: 30px;
+  }
+}
+
+.where-we-operate__detail-title > span {
+  line-height: 1.5;
+}
+
+.where-we-operate__detail-close {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  gap: 6px;
+  padding: 0;
+  background: none;
+  color: #fff;
+}
+
+.where-we-operate__detail-close svg {
+  width: 29px;
+  height: 29px;
+}
+ 
+.where-we-operate .wrapper-mid .wrapper__content {
+  padding-bottom: 0;
+}
+
+.where-we-operate__detail-flag {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: 65px;
+}
