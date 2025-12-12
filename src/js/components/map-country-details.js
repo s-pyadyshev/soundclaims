@@ -41,7 +41,7 @@ export const mapCountryDetails = (() => {
         mapTitle.style.opacity = '1';
         mapInfo.style.opacity = '1';
         
-        const wrapperContent = document.querySelector('.where-we-operate .wrapper-mid .wrapper__content');
+        const wrapperContent = document.querySelector('.where-we-operate .wrapper__content');
         if (wrapperContent) {
           wrapperContent.style.paddingBottom = '';
         }
@@ -224,21 +224,30 @@ export const mapCountryDetails = (() => {
   };
 
   const adjustWrapperPadding = () => {
-    const wrapperContent = document.querySelector('.where-we-operate .wrapper-mid .where-we-operate__content');
+    const wrapperContent = document.querySelector('.where-we-operate .wrapper__content');
+    const whereWeOperateContent = document.querySelector('.where-we-operate .where-we-operate__content');
     const detailBody = document.querySelector('.where-we-operate__detail-body');
+    const detail = document.querySelector('.where-we-operate__detail');
 
-    if (!wrapperContent || !detailBody) return;
+    if (!whereWeOperateContent || !detailBody) return;
 
     wrapperContent.style.paddingBottom = '';
+    detail.classList.remove('extend');
 
-    if (!wrapperContent.offsetParent || !detailBody.offsetParent) return;
+    if (!whereWeOperateContent.offsetParent || !detailBody.offsetParent) return;
 
-    const wrapperHeight = wrapperContent.offsetHeight;
     const detailBodyHeight = detailBody.offsetHeight;
-    const heightDifference = detailBodyHeight - wrapperHeight;
+    const heightDifference = detailBodyHeight - whereWeOperateContent.offsetHeight + 32;
+
+    console.log(heightDifference)
 
     if (heightDifference > 0) {
       wrapperContent.style.paddingBottom = `${heightDifference}px`;
+    }
+    if (heightDifference < 0) {
+      detail.classList.add('extend')
+    } else {
+      detail.classList.remove('extend');
     }
   };
 
