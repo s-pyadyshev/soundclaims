@@ -51,7 +51,13 @@ mixin where-we-operate()
                                         div(data-tab-content="map2")
                                         div(data-tab-content="map3")
                                         div(data-tab-content="map4")
-                                    img.where-we-operate__detail-flag(src="images/flag-placeholder.svg", alt="Country flag")
+                                    .where-we-operate__detail-flag-pole
+                                        img(src="images/flag-pole.svg")
+                                        img.where-we-operate__detail-flag(src="images/flag-placeholder.svg", alt="Country flag")
+                                .where-we-operate__right
+                                    .where-we-operate__top__right
+                                    .where-we-operate__mask
+                                    .where-we-operate__bot__right
                         </div>
                         <div class="where-we-operate__map">
                             .where-we-operate__map-note * Select a country for more information

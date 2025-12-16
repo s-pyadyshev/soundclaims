@@ -239,8 +239,6 @@ export const mapCountryDetails = (() => {
     const detailBodyHeight = detailBody.offsetHeight;
     const heightDifference = detailBodyHeight - whereWeOperateContent.offsetHeight + 32;
 
-    console.log(heightDifference)
-
     if (heightDifference > 0) {
       wrapperContent.style.paddingBottom = `${heightDifference}px`;
     }
