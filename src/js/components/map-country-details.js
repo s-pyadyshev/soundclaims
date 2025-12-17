@@ -1,4 +1,6 @@
 export const mapCountryDetails = (() => {
+  let currentlySelectedCountry = null;
+
   const init = () => {
     const countryElements = document.querySelectorAll('[data-template]');
     const countryTextElements = document.querySelectorAll('[data-country-map]');
@@ -13,11 +15,32 @@ export const mapCountryDetails = (() => {
       adjustWrapperPadding();
     });
 
+    const selectCountry = (countryId) => {
+      if (currentlySelectedCountry) {
+        const prevElement = document.querySelector(`[data-template="${currentlySelectedCountry}"]`);
+        if (prevElement) prevElement.classList.remove('active-country');
+      }
+
+      const newElement = document.querySelector(`[data-template="${countryId}"]`);
+      if (newElement) {
+        newElement.classList.add('active-country');
+        currentlySelectedCountry = countryId;
+      }
+    };
+
+    const deselectCountry = () => {
+      if (currentlySelectedCountry) {
+        const element = document.querySelector(`[data-template="${currentlySelectedCountry}"]`);
+        if (element) element.classList.remove('active-country');
+        currentlySelectedCountry = null;
+      }
+    };
+
     countryElements.forEach(countryElement => {
       countryElement.addEventListener('click', (event) => {
         event.preventDefault();
-        
         const countryId = countryElement.id;
+        selectCountry(countryId);
         handleCountryClick(countryId, detailPanel, detailTitle);
       });
     });
@@ -25,8 +48,8 @@ export const mapCountryDetails = (() => {
     countryTextElements.forEach(textElement => {
       textElement.addEventListener('click', (event) => {
         event.preventDefault();
-        
         const countryId = textElement.getAttribute('data-country-map');
+        selectCountry(countryId);
         handleCountryClick(countryId, detailPanel, detailTitle);
       });
     });
@@ -41,6 +64,8 @@ export const mapCountryDetails = (() => {
         mapTitle.style.opacity = '1';
         mapInfo.style.opacity = '1';
         
+        deselectCountry();
+
         const wrapperContent = document.querySelector('.where-we-operate .wrapper__content');
         if (wrapperContent) {
           wrapperContent.style.paddingBottom = '';
@@ -60,7 +85,6 @@ export const mapCountryDetails = (() => {
     }
     
     updateFlagImage(countryId, countryName);
-    
     updateTabContent(countryId, countryDetailId);
     
     detailPanel.style.display = 'flex';
@@ -134,7 +158,6 @@ export const mapCountryDetails = (() => {
       }
       
       flagElement.src = flagSrc;
-      
       flagElement.style.display = 'block';
     }
   };
@@ -207,15 +230,9 @@ export const mapCountryDetails = (() => {
         tabContent4.innerHTML = '<p></p>';
       }
     } else {
-      if (tabContent2) {
-        tabContent2.innerHTML = '<p></p>';
-      }
-      if (tabContent3) {
-        tabContent3.innerHTML = '<p></p>';
-      }
-      if (tabContent4) {
-        tabContent4.innerHTML = '<p></p>';
-      }
+      [tabContent2, tabContent3, tabContent4].forEach(tab => {
+        if (tab) tab.innerHTML = '<p></p>';
+      });
     }
 
     setTimeout(() => {
@@ -243,7 +260,7 @@ export const mapCountryDetails = (() => {
       wrapperContent.style.paddingBottom = `${heightDifference}px`;
     }
     if (heightDifference < 0) {
-      detail.classList.add('extend')
+      detail.classList.add('extend');
     } else {
       detail.classList.remove('extend');
     }

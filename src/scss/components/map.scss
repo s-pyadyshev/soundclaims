@@ -55,37 +55,15 @@ svg#Africa {
   transition: all 0.7s;
 }
 
+
 .active-country .inland,
-.active-country .island {
-  fill: var(--color-active);
+.active-country .island,
+.active-country.inland,
+.active-country.island {
+  fill: var(--color-active) !important;
 }
-
-
 
 .st2 {
   fill: green;
   fill-opacity: 0;
-}
-
-.tippy-box {
-  font-size: 15px;
-  font-weight: 300;
-  padding: 15px 25px;
-  background-color: $color-secondary;
-  color: #fff;
-
-  b,
-  strong,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 17px;
-    font-weight: 500;
-    margin-bottom: 0;
-  }
-
-  ul {
-    list-style-position: inside;
-  }
 }

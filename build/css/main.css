@@ -3965,36 +3965,15 @@ svg#Africa [data-template].is-hover {
 }
 
 .active-country .inland,
-.active-country .island {
-  fill: var(--color-active);
+.active-country .island,
+.active-country.inland,
+.active-country.island {
+  fill: var(--color-active) !important;
 }
 
 .st2 {
   fill: green;
   fill-opacity: 0;
-}
-
-.tippy-box {
-  font-size: 15px;
-  font-weight: 300;
-  padding: 15px 25px;
-  background-color: #e72a33;
-  color: #fff;
-}
-
-.tippy-box b,
-.tippy-box strong,
-.tippy-box h3,
-.tippy-box h4,
-.tippy-box h5,
-.tippy-box h6 {
-  font-size: 17px;
-  font-weight: 500;
-  margin-bottom: 0;
-}
-
-.tippy-box ul {
-  list-style-position: inside;
 }
 
 .menu-toggle__text {
@@ -5424,7 +5403,7 @@ svg#Africa [data-template].is-hover {
 .where-we-operate__detail-tabs-content ul li > span:first-child {
   display: inline-block;
   font-weight: 500;
-  min-width: 100px;
+  min-width: 110px;
   margin-right: 35px;
 }
 
@@ -6134,7 +6113,7 @@ svg#Africa [data-template].is-hover {
   }
 
   .where-we-operate__detail-body {
-    padding: 30px 20px;
+    padding: 30px 20px 70px;
   }
 
   .where-we-operate__detail-tabs {

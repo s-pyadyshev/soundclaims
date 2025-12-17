@@ -330,7 +330,7 @@
   padding: 20px;
 
   @include tablet {
-    padding: 30px 20px;
+    padding: 30px 20px 70px;
   }
 }
 
@@ -408,7 +408,7 @@
 .where-we-operate__detail-tabs-content ul li > span:first-child {
   display: inline-block;
   font-weight: 500;
-  min-width: 100px;
+  min-width: 110px;
   margin-right: 35px;
 }
 
